@@ -1,0 +1,117 @@
+ body {
+     background-color: rgba(240, 248, 255, 0.507);
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 18px;
+     margin: 0px;
+     padding: 0px;    
+ }
+
+ p {
+     text-align: justify;
+ }
+
+ main {
+     padding: 20px;
+ }
+
+ li {
+     padding: 5px;
+ }
+
+ /*Aula 2 - Breakpoints no Bootstrap*/
+ table{
+    width: 100%;
+    border-collapse: collapse; /*Deixar uma border simple*/
+}
+
+th{
+    background-color: #ccd595;
+    color: #331f19;
+    padding: 1rem;
+}
+
+td{
+    color: #331f19;
+    padding: 1rem;
+    text-align: center;
+}
+
+tfoot td{
+    text-align: left;
+    background-color: #331f19;
+    color: #F4F0EA;
+}
+
+.tema{
+    width: 80%;
+  
+    background-color:red;
+    margin: auto;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+.u{
+    background-color: red;
+     height: 100px;
+         
+}
+
+
+.d{
+    background-color: green;
+    height: 100px;
+
+}
+
+.t{
+    background-color: aqua;
+    height: 100px;
+    
+}
+
+.q{
+    background-color: gray;
+    height: 100px;
+    margin: 2px;
+}
+
+.fundo{
+    background-color: gray;
+    height: 200px;
+}
+
+.img{
+    width: 500px;
+    height: 300px;
+}
+.img_boot{
+    height: 400px;
+    background-color: gray;
+}
+
+.form-border{
+border: 1px solid black;
+border-radius: 10px;
+padding: 10px;
+background-color: #331f19;
+color: white;
+box-shadow: 1px 2px 3px rgba(0, 0, 255, 0.432);
+}
+
+.carousel-inner{
+    height: 500px;
+}
+
+h5{
+    color: white;
+}
+
+ /* Ajuste para garantir legibilidade da legenda em qualquer dispositivo */
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.781); /* Fundo semi-transparente */
+            border-radius: 10px;
+            padding: 15px;
+            bottom: 20px; /* Posicionamento levemente acima da borda */
+        }

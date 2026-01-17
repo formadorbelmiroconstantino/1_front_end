@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container">
+
+            <h1>Componentes no Bootstrap - Breadcrumb</h1>
+
+<p>O Breadcrumb (ou "migalha de pão") é um componente de navegação que indica a localização atual do usuário dentro da hierarquia de um site. Ele funciona como uma trilha de links que permite visualizar o caminho percorrido desde a página inicial até a página atual.</p>
+
+<h3>Características e Funções</h3>
+<ul>
+    <li>
+        Hierarquia Visual: Geralmente aparece no topo da página, abaixo do cabeçalho, mostrando a estrutura de pastas ou categorias (ex: Home > Eletrônicos > Smartphones).
+    </li>
+    <li>
+      Navegação Facilitada: Permite que o usuário retorne rapidamente a níveis superiores com apenas um clique.
+    </li>
+    <li>
+      Benefício para SEO: Ajuda motores de busca, como o Google, a entenderem a organização e a hierarquia do seu site, o que pode melhorar o ranqueamento.
+    </li>
+</ul> 
+
+<h3>Implementação no Bootstrap</h3>
+<p>
+  No Bootstrap (incluindo a versão v5.3), o breadcrumb é construído usando uma lista ordenada (&lt;ol&gt;) dentro de um elemento &lt;nav&gt;.
+  Exemplo de Código:
+</p>
+
+<p><strong>Exemplo 1</strong></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Dados</li>
+  </ol>
+</nav>
+<hr>
+<h2>Separadores</h2>
+
+<p>Os separadores são adicionados automaticamente em CSS através de ::beforee e content. Eles podem ser alterados modificando uma propriedade personalizada local do CSS --bs-breadcrumb-divider ou através da $breadcrumb-divider variável Sass — e $breadcrumb-divider-flipped para sua contraparte RTL, se necessário. Por padrão, usamos nossa variável Sass, que é definida como alternativa à propriedade personalizada. Dessa forma, você obtém um separador global que pode ser sobrescrito sem precisar recompilar o CSS.</p>
+
+<p><strong>Exemplo</strong></p>
+<nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+
+<h3>Melhores Práticas</h3>
+<ul>
+  <li>
+    Acessibilidade: É essencial usar o atributo aria-label="breadcrumb" no elemento &lt;nav&gt; e aria-current="page" no item da página atual para que leitores de tela identifiquem corretamente o componente.</li>
+  <li>
+   Consistência: Utilize o breadcrumb de forma padronizada em todas as páginas internas para não confundir o usuário.
+  </li>
+  <li>
+   Simplicidade: O design deve ser discreto para não competir com o conteúdo principal da página.
+  </li>
+</ul> 
+       </div>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+
+
+</script>

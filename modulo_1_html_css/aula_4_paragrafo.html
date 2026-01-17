@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parágrafo</title>
+</head>
+<body>
+	<h1>O que são parágrafos?</h1>
+Um parágrafo em HTML é um bloco de texto estruturado usando a tag < p>, que agrupa conteúdo relacionado (texto, imagens, formulários) e, visualmente, separa um bloco de outro com espaços em branco verticais, sendo um elemento de nível de bloco (block-level) que sempre começa em uma nova linha. A tag < p> serve para organizar o conteúdo textual em uma página web, melhorando a legibilidade e a experiência do usuário. 
+
+<p><b>Vamos mostrar o mesmo texto de cima, mas como parágrafos:</b></p>
+
+<p>Um parágrafo em HTML é um bloco de texto estruturado usando a tag < p>, que agrupa conteúdo relacionado (texto, imagens, formulários) e, visualmente, separa um bloco de outro com espaços em branco verticais, sendo um elemento de nível de bloco (block-level) que sempre começa em uma nova linha.</p>
+<p> A tag < p> serve para organizar o conteúdo textual em uma página web, melhorando a legibilidade e a experiência do usuário. </p>
+
+<p>Os parágrafos funcionam, por padrão, como se tivéssemos uma utilizado uma quebra de linha com a tag < br> antes e depois do texto.</p>
+
+A tag principal para parágrafos em HTML é a < p>< /p>, que cria blocos de texto com espaçamento automático antes e depois, e para formatação dentro desses parágrafos, você usa tags como < strong> para negrito, < em> para ênfase ( itálico), < u> para sublinhado, < i> para itálico, < mark> para realce e < sup>/< sub> para sobrescrito/subscrito, controlando a estrutura e o estilo do texto. 
+
+<p><b>Tags de parágrafo e estrutura:</b></p>
+< p>: Define um parágrafo de texto. O navegador adiciona uma linha vazia antes e depois;<br>
+< span>: Para agrupar pequenos trechos de texto ou elementos para estilização com CSS, sem adicionar quebras de linha;<br>
+< br>: Insere uma única quebra de linha, sem espaçamento extra;<br>
+< pre>: Exibe o texto pré-formatado, mantendo espaços e quebras de linha como no código. 
+<p><b>Tags de formatação (semântica e visual):</b></p>
+< strong>: Texto importante (fica em negrito);<br>
+< b>: Texto em negrito (semântica de destaque visual);<br>
+< em>: Texto com ênfase (fica em itálico);<br>
+< i>: Texto em itálico (semântica de voz diferente);<br>
+< u>: Texto sublinhado;<br>
+< mark>: Texto realçado (marcado);<br>
+< sub>: Texto subscrito (ex: H₂O);<br>
+< sup>: Texto sobrescrito (ex: x²), potenciação;<br>
+< small>: Texto menor;<br>
+(Inserted Text): Texto menor;<br>
+< ins>:  Indica que um novo texto foi adicionado ou inserido;<br>
+<ins>Este texto foi adicionado</ins> <br>
+< del> (Deleted Text): Sinaliza que um trecho de texto foi excluído ou não é mais válido;<br><del>Este texto será removido</del>
+
+<p>Este é o <strong>primeiro parágrafo</strong>, com texto em <em>ênfase</em> e um sublinhado em <u>esta palavra</u>.</p>
+<p>Outro parágrafo, com um elemento <span>realçado</span> e um sobrescrito: E = mc<sup>2</sup>.</p>
+<p>O preço antigo era <del>R$ 100,00</del> <ins>R$ 90,00</ins>.</p>
+
+<p><b>Diferença entre as tags < strong> e < b></b></p>
+
+A principal diferença entre < strong> e < b> é semântica: < strong> indica grande importância ou urgência (alertas, conceitos cruciais, lidos com mais força por leitores de tela), enquanto < b> é para destaque visual sem importância adicional, como palavras-chave decorativas ou em resumos. Ambas exibem o texto em negrito visualmente, mas < strong> adiciona significado, sendo melhor para SEO e acessibilidade, enquanto < b> é apenas estilo. 
+<p><strong>(Strong Importance)</strong><</p>
+<b>Semântica:</b> Indica que o texto tem grande importância, seriedade ou urgência;<br>
+<b>Uso:</b> Alertas, avisos, palavras-chave cruciais, títulos importantes;<br>
+<b>Acessibilidade:</b> Leitores de tela leem o texto com ênfase ou força maior;<br>
+<b>Exemplo:</b> <p>Atenção: o prazo final é **20 de dezembro**!</p>. 
+<p><strong>(Bold)</strong></p>
+<b>Semântica:</b> Apenas marca o texto como estilisticamente diferente, sem relevância adicional;<br>
+<b>Uso:</b> Destaque visual, palavras-chave em resumos, nomes em um texto sem hierarquia;<br>
+<b>Acessibilidade:</b> É lido como texto normal, sem ênfase extra.<br>
+<b>Exemplo:</b> <p>O livro tem <b>capítulos interessantes</b>.</p>
+<b>Em resumo</b><br>
+Use <strong> para dar significado e <b> para estilo. Para controle total do visual, utilize CSS (ex: font-weight: bold;). 
+</body>
+</html>

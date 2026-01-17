@@ -1,0 +1,64 @@
+/*Testar se o aula_22_design_responsivo.html ja esta a chamar, correctamente, esse arquivo*/
+/**{
+	background: lightblue;
+}*/
+
+.body{
+	width: 100%;
+	height: 100vh; /*Altura relativa em relacao a tela*/
+	display: flex;
+	justify-content: center; /*Alinha no centro em ralacao a horizontal*/
+	align-items: center;/*Alinha no centro em ralacao a vertical*/
+}
+#container{
+	width: 80%;
+	/*height: 400px; Testar primeiro essa altura no container quando no item for 90%*/
+	height: auto;
+	/*background: #000000;*/
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		/*background: red;*/
+}
+
+.item{
+	width: 23%;
+	/*height: 90%; Testar essa altura aqui quando no container for 400px*/ 
+	height: 300px;
+	background: lightblue;
+}
+/*DESKTOP*/
+@media(max-width: 1200px){
+body{
+	background: green;
+}
+}
+
+/*TABLET*/
+@media(max-width: 820px){
+body{
+	background: lightcoral;
+}
+
+#container{
+	flex-wrap: wrap;
+}
+.item{
+	width: 49%; /*Multiplicar por 2 = 23*23=46, mas ainda nao vai quebrar, temos de utilizar o flex-wrap:wrap no container*/
+	
+	background: lightblue;
+	margin-bottom: 10px;
+}
+}
+
+/*MOBILE*/
+@media(max-width: 512px){
+body{
+	background: lightcyan;
+}
+
+.item{
+	width: 100%; /*Deixar a 100% para posicionar em uma coluna de cima para baixo*/
+	
+}
+}

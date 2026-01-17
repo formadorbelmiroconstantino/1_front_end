@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fornmulários</title>
+	
+</head>
+<body>
+<h1>O que são formulários em HTML?</h1>
+
+<p>Formulários HTML são áreas interactivas em páginas web que permitem aos usuários inserir e enviar dados (como nome, email, senhas, mensagens) para um site, usando elementos como campos de texto (< input>), caixas de seleção (< select>), botões (< button>) e checkboxes, fundamentais para logins, cadastros, pesquisas e contacto, sendo a tag < form> a estrutura básica que os envolve e direcciona os dados para um servidor para processamento. </p>
+
+<h1> Para que servem</h1>
+<ul> <li> Interacção: São a principal forma de o usuário interagir e enviar informações ao site/aplicativo.</li>
+<li> Colecta de Dados: Coletam informações pessoais para cadastros, pedidos, login e formulários de contato.</li>
+<li> Comandos: Podem enviar comandos ou solicitações para o servidor, como buscar ou actualizar dados.</li></ul> 
+<h1>Como são feitos/Estrutura e Controlos Principais</h1>
+<ul> <li> Tag < form>: Define a área do formulário e seus atributos (como action e method) controlam o envio dos dados.</li>
+<li> Campos (Widgets): Elementos dentro do formulário para entrada de dados, como:</li>
+<ul> <li> < input type="text"> (campo de texto)</li>
+<li> < input type="checkbox"> (caixas de selecção múltiplas)</li>
+<li> < input type="radio"> (botões de rádio para selecção única)</li>
+<li> < textarea> (para textos longos)</li>
+<li> < select> (menus suspensos)</li>
+<li> < button> (para botões de acção, como "Enviar")</li></ul>
+<li> Rótulos (<label>): Descrevem a função de cada campo, melhorando a usabilidade e acessibilidade.</li> </ul>
+
+<h1> Outros Elementos Úteis</h1>
+<ul> <li> < textarea>: Para entradas de texto com múltiplas linhas.
+<li> < select> e < option>: Para criar listas suspensas (dropdowns).</li>
+<li> < fieldset> e < legend>: Para agrupar campos relacionados e dar-lhes um título. </li></ul>
+
+<h1>Exemplo de uso</h1>
+
+<ul> <li> Login: Campos para nome de usuário e senha.</li>
+<li> Cadastro: Campos para nome, email, CPF, endereço, etc.</li>
+<li> Contato: Campo de texto para a mensagem e email.</li></ul> 
+
+<h1>Exemplos de formulários com vários inputs</h1>
+
+<form action="/processar-dados" method="POST">
+	<input type="text" name="usu" placeholder="Nome de utilizador">
+	<label>L2</label> 
+	<input type="password" name="senha"> <br>
+	<input type="mail" name="">
+	<label>L3</label>
+	<input type="number" name=""> <br>
+	<label>L4</label>
+	<input type="date" name=""> 
+	<select>
+		<option>Angola</option>
+		<option>Brasil</option>
+		<option>Cuba</option>
+		<option>China</option>
+		<option>Turquia</option>
+	</select> <br>
+	
+	<textarea rows="10"></textarea> <br>
+	<button>Gravar</button>
+</form>
+
+
+    <h1>Cadastro de Usuário</h1>
+
+    <form action="submit-form.html" method="post">
+
+        <!-- Fieldset para agrupar campos relacionados (Dados Pessoais) -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+           
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+           
+            
+                <label>Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino">Masculino</label><br>
+
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino">Feminino</label><br>
+
+            <input type="file" id="arquivo" name="arquivo">
+        </fieldset>
+
+        <!-- Fieldset para agrupar preferências -->
+        <fieldset>
+            <legend>Preferências</legend>
+            
+                <p>Interesses:</p>
+                <input type="checkbox" id="esportes" name="interesses" value="esportes">
+                <label for="esportes">Esportes</label><br>
+
+                <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+                <label for="tecnologia">Tecnologia</label><br>
+
+                <input type="checkbox" id="musica" name="interesses" value="musica">
+                <label for="musica">Música</label>
+           
+        </fieldset>
+
+        <button type="submit">Enviar Formulário</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+
+</body>
+</html>

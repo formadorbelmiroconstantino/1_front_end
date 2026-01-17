@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITFocursos</title>
+
+    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!--INICIO TOPO-->
+        <div id="top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <img src="img/logo_400_100.png" alt="ITFocursos" class="logo img-thumbnail">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-2"><i class="bi bi-person-lines-fill"></i></div>
+                            <div class="col-md-10">
+                                <h6>Email:</h6>
+                                <p>contacto@itfocuros.co.ao</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-2"><i class="bi bi-telephone-plus-fill"></i></div>
+                            <div class="col-md-10">
+                                <h6>Telemóvel:</h6>
+                                <p>+244 922 686 394</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="btn btn-inscricao">Inscrever-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIM TOPO-->
+
+        <!--INICIO MENU-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sobre</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Cursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Todos os cursos</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Promoções</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Categorias</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Notícias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contactos</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar"
+                                aria-label="Search" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--FIM MENU-->
+    </header>
+
+    <main>
+        <!--INICIO SLIDE-->
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slide/slide.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide/slid2_360_200.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide/slid3_360_200.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--FIM SLIDE-->
+
+        <!--INICIO DESTAQUE-->
+        <section id="destaque">
+            <div class="row dest">
+                <div class="col-sm-12 col-md-6 col-lg-3 destaque-item1">
+                    <i class="bi bi-person-bounding-box"></i>
+                    <h5>Intuitivo</h5>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta
+                        eveniet
+                        aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+                        esse mollitia.
+                    </p>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 destaque-item2">
+                    <i class="bi bi-arrow-down-up"></i>
+                    <h5>Aplicável</h5>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta
+                        eveniet
+                        aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+                        esse mollitia.
+                    </p>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 destaque-item1">
+                    <i class="bi bi-speaker"></i>
+                    <h5>Acompanhamento</h5>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta
+                        eveniet
+                        aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+                        esse mollitia.
+                    </p>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 destaque-item2">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h5>Progresso Visual</h5>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta
+                        eveniet
+                        aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+                        esse mollitia.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--FIM DESTAQUE-->
+
+        <!--INICIO CURSO EM DESTAQUE-->
+        <section id="curso_destaque">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>CURSOS EM DESTAQUE</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="HTML">
+                            <div class="price_curse">
+                                <h4>50.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de HTML</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid1_360_200.jpg" class="card-img-top img-fluid img" alt="...">
+                            <div class="price_curse">
+                                <h4>50.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de CSS</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>70.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de JavaScript</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid2_360_200.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>80.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de MySQL</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid3_360_200.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid1_360_200.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid2_360_200.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/c1_html.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="img/cursos/slid3_360_200.jpg" class="card-img-top img img-fluid" alt="...">
+                            <div class="price_curse">
+                                <h4>40.000, 00 <sup>Kz</sup></h4> <!--sup vai por a moeda acima do valor-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de Lógica de Programação</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-curso-destaque">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM CURSO EM DESTAQUE-->
+
+        <!--INICIO INFORMACAO RAPIDA-->
+        <section id="informacao">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6 align-self-center">
+                        <!--align-self-center serve para centralizar o conteudo da coluna em relacao a vertical-->
+                        <h2>Torne-se um desenvolvedor Full-Stack sem sair de casa.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad velit nobis nisi numquam
+                            nihil ab, nesciunt accusantium, doloribus quidem culpa odit saepe. Praesentium recusandae
+                            iure vel asperiores quo dignissimos?</p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <img src="img/info/info_rapida.jpg" class="img-fluid virar" alt="informacao">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM INFORMACAO RAPIDA-->
+        <!--INICIO SOBRE-->
+        <section id="sobre">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <img src="img/logo_400_100.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <p>A ITFocurso oferece lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, commodi
+                            et? Quae cum accusamus nihil necessitatibus accusantium similique nemo totam ea ipsum,
+                            molestiae inventore sint consequuntur! Quia eligendi alias sequi!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM SOBRE-->
+
+        <!--INICIO CARACTERISCAS-->
+        <section id="caracteriscas">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>PRINCIPAIS CARACTERÍSTICAS</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica1">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica2">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica1">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica1">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica2">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card caracteristica1">
+                            <i class="bi bi-person-workspace"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Variedades de cursos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-caracteristica">Saiba mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM CARACTERISCAS-->
+
+
+        <!--INICIO RECORD-->
+
+        <section id="record">
+            <div class="record_background">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 record_center">
+                        <div class="record_item">
+                            <h3>1000<sup>+</sup></h3>
+                            <p>Alunos Inscritos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 record_center">
+                        <div class="record_item">
+                            <h3>50<sup>+</sup></h3>
+                            <p>Cursos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 record_center">
+                        <div class="record_item">
+                            <h3>900<sup>+</sup></h3>
+                            <p>Certificados emitidos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 record_center">
+                        <div class="record_item">
+                            <h3>200<sup>+</sup></h3>
+                            <p>Aulas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM RECORD-->
+
+        <!--INICIO EXPERIENCIA DOS UTILIZADORES-->
+        <section id="experiencia">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <img src="img/experiencia_user/exp.jpeg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <h2>EXPERIÊNCIA</h2>
+                        <!--LIST GROUP Flush DO BOOTSTRAP-->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Inscrição simples:</strong> Processo rápido para criar
+                                conta e começar o curso escolhido.</li>
+                            <li class="list-group-item"><strong>Progresso visível:</strong> Painel de controle com
+                                progresso, metas semanais e lembretes de conclusão.</li>
+                            <li class="list-group-item"><strong>Interacção e comunidade:</strong>Fóruns, grupos de
+                                estudo e feedback entre pares para estimular o engajamento.</li>
+                            <li class="list-group-item"><strong>Aprendizado móvel:</strong>Plataforma responsiva e
+                                adaptável para qualquer dispositivo que permite assistir aulas e fazer exercícios em
+                                qualquer lugar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--FIM EXPERIENCIA DOS UTILIZADORES-->
+
+        <!--INICIO FAQ - PERGUNTAS FREQUENTES-->
+        <section id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>PERGUNTAS FREQUENTES</h2>
+                    </div>
+                    <!--ACCORDION DO BOOTSTRAP-->
+                    <div class="col-lg-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Como criar a uma conta?
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>No nosso <a href="https://itfocursos.co.ao/">site, ITFocursos,</a> clique em
+                                            Cadastrar-se, preencha os dados solicitados (email, senha, confirme a sua
+                                            senha) e clique em Salvar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Posso ter mais de uma conta?
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Recomendamos, <strong>fortemente,</strong> utilizar só uma conta para acompanhar
+                                        o histórico dos seus cursos, progressos e certificados. Se for necessário, entre
+                                        em contacto com o nosso suporte para assistência.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        A ITFocursos fornece certificados?
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Sim</strong>, ao concluir os nossos cursos, você receberá um
+                                        certificado. No entanto, terá de fazer a avaliação, disponível na área do aluno,
+                                        para cada curso.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM FAQ - PERGUNTAS FREQUENTES-->
+
+        <!--INICIO INSCRICAO-->
+        <section id="inscricao">
+            <div class="inscricao_background">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>INSCREVA-SE</h2>
+                                    <p>Faça a sua inscrição preenchendo o formulário e começe a estudar hoje mesmo.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Nome</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Nº telemóvel</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Informe o seu melhor email</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingSenha"
+                                                placeholder="Password">
+                                            <label for="floatingSenha">Senha</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingConfirmSenha"
+                                                placeholder="Password">
+                                            <label for="floatingConfirmSenha">Confirmar senha</label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-inscricao">Cadastrar-se</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM INSCRICAO-->
+
+        <!--INICIO TESTEMUNHO-->
+        <section id="testemunhos">
+            <div class="container">
+                <div class="row testemunho_linha">
+                    <div class="col-lg-12">
+                        <h2>O QUE NOSSOS CLIENTES DIZEM</h2>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="carouselTestemunho" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselTestemunho" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselTestemunho" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselTestemunho" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item item active">
+                                    <div class="testemunho_item">
+                                        <img src="img/testemunho/test4.jpg" class="d-block" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Belmiro Constantino</h5>
+                                            <p>Some representative placeholder content for the first slide.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item item">
+                                    <div class="testemunho_item">
+                                        <img src="img/testemunho/test2.png" class="d-block" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Cliente 2</h5>
+                                            <p>Some representative placeholder content for the first slide.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item item">
+                                    <div class="testemunho_item">
+                                        <img src="img/testemunho/test3.png" class="d-block" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Cliente 3</h5>
+                                            <p>Some representative placeholder content for the first slide. Some
+                                                representative placeholder content for the first slide.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestemunho"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestemunho"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM TESTEMUNHO-->
+
+        <section>
+              <div class="posicionamento">
+            <div class="container">             
+
+                <div class="row">
+                    <div class="col-4 col-sm-12 col-md-4 col-lg-4">
+                        <h3>Contactos</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> Luanda - Angola</p>
+                        <p><i class="bi bi-telephone-fill"></i> +244922686394</p>
+                        <p><i class="bi bi-envelope"></i> contacto@itfocuros.co.ao</p>
+                        <div class="redes_sociais">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-whatsapp"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-12 col-md-4 col-lg-4">
+                        <h3>Links Rápidos</h3>
+
+                        <ul>
+                            <li><a href=""><i class="bi bi-arrow-right-square-fill"></i> Início</a></li>
+
+                            <li><a href=""><i class="bi bi-arrow-right-square-fill"></i> Sobre</a></li>
+                            <li><a href=""><i class="bi bi-arrow-right-square-fill"></i> Cursos</a></li>
+                            <li><a href=""><i class="bi bi-arrow-right-square-fill"></i> Inscrição</a></li>
+                            <li><a href=""><i class="bi bi-arrow-right-square-fill"></i> Notícias</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-sm-12 col-md-4 col-lg-4">
+                        <h3>NewsLatter</h3>
+                        <P>Subscreva-se à nossa newslatter e fique a par de todas as novidades.</P>
+                        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text-primary">Nunca compartilharemos seu email com estranhos.</div>
+  </div>
+  <button type="submit" class="btn btn-newslatter">Subscrever</button>
+</form>
+                    </div>
+                </div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="row copyrigth">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2016 - <span id="ano-copyright"></span> <strong>| Site Desenvolvido pela <a href="#"
+                            target="_blank">ITFocursos</a>. Todos os direitos reservados.</strong> </p>
+                <script>
+                    // Obtém o ano actual
+                    const anoActual = new Date().getFullYear();
+                    // Encontra o elemento pelo ID e insere o ano
+                    document.getElementById('ano-copyright').textContent = anoActual;
+                </script>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

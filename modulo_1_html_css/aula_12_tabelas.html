@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabelas em HTML</title>
+
+	<style>
+	/*Formatações*/
+
+	table{
+		width: 80%;
+		margin: auto; /*Define a margem de forma automática (centralizando)*/
+		border-collapse: collapse; /*Remove as bordas das células*/
+	}
+
+	th, td{
+		padding: 8px;
+	}
+	th{
+		text-align: center;
+	}
+    .vermelho{
+        background-color: red;
+    }
+    .amarelo{
+        background-color: yellow;
+    }
+    .azul{
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+<h1>Tabelas em HTML</h1>
+<p> <b>O que são tabelas em HTML?</b> </p>
+<p>Tabelas em HTML são estruturas para organizar dados em linhas e colunas, usando tags como < table>, < tr> (linha) e < td> (célula), para exibir informações de forma estruturada, como listas ou relatórios, sendo a forma semântica correta para dados tabulares, e não para layouts de página, que devem ser estilizados com CSS. Elas permitem separar cabeçalhos (<th>), corpo (<tbody>) e rodapé (<tfoot>), facilitando a apresentação de dados complexos na web. </p>
+
+<h1>Principais Tags</h1>	
+<ul> <li> < table>: Define o início e o fim da tabela.</li>
+<li>< tr> (Table Row): Define uma linha na tabela.</li>
+<li>< td> (Table Data): Define uma célula de dados dentro de uma linha.</li>
+<li>< th> (Table Header): Define uma célula de cabeçalho (texto em negrito e centralizado por padrão). </li></ul>
+<h1> Estrutura semântica (opcional, mas recomendado)</h1>
+
+<ul> <li>< thead>: Agrupa as linhas de cabeçalho.
+<li>< tbody>: Agrupa as linhas de dados principais (corpo da tabela).</li>
+<li>< tfoot>: Agrupa as linhas de rodapé (totais, resumos).</li> </ul>
+
+<h1> Para que servem</h1>
+<ul> <li> Exibir dados tabulares: Listas de produtos, estatísticas, orçamentos, cadastros de usuários, placares de jogos, etc..</li>
+<li>Comparar e classificar informações: Dados que precisam ser cruzados ou organizados. 
+O que não fazer</li></ul>
+Não usar para layout: Antigamente, usavam-se tabelas para posicionar elementos da página, mas hoje isso é considerado uma má prática; para isso, use CSS (Flexbox ou Grid). 
+
+<h1>Exemplos de Tabelas</h1>
+<table>
+    <tr>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Profissão</td>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>100</td>
+        <td>Director da ITFocursos</td>
+    </tr>
+    <tr>
+        <td>Aluno 1</td>
+        <td>26</td>
+        <td>Estudante</td>
+    </tr>
+</table>
+<hr>
+<h1>Adicionando Borda na Tabela</h1>
+<table border="1">
+    <tr>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Profissão</td>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>100</td>
+        <td>Director da ITFocursos</td>
+    </tr>
+    <tr>
+        <td>Aluno 1</td>
+        <td>26</td>
+        <td>Estudante</td>
+    </tr>
+</table>
+<h1> Célula de título da tabela HTML</h1>
+<p> Caso queira incluir uma ou mais células que representem títulos, ganhando um destaque em relação às demais células, pode utilizar a tag < th>.</p>
+
+<p>Então, a partir do exemplo anteriormente apresentado, vamos modificar a primeira linha para que todas as células dessa linha sejam do tipo título: (Site da HOME HOST)</p>
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Profissão</th>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>100</td>
+        <td>Director da ITFocursos</td>
+    </tr>
+    <tr>
+        <td>Aluno 1</td>
+        <td>26</td>
+        <td>Estudante</td>
+    </tr>
+</table>
+
+<p>Podemos ainda aplicar o <th> para títulos verticais, ou seja, na primeira coluna. Dessa forma, vamos para o seguinte exemplo de tabela HTML:</p>
+
+	<table border="1">
+   <tr>
+       <th>Nome:</th>
+       <td>Belmiro Constantino</td>
+   </tr>
+   <tr>
+       <th>Idade:</th>
+       <td>100</td>
+   </tr>
+</table>
+<hr>
+<table border="1">
+   <thead>
+   <tr>
+       <th>Título 1</th>
+       <th>Título 2</th>
+       <th>Título 3</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td>Body1 linha1</td>
+       <td>Body2 linha1</td>
+       <td>Body3 linha1</td>
+   </tr>
+   <tr>
+       <td>Body1 linha2</td>
+       <td>Body2 linha2</td>
+       <td>Body3 linha2</td>
+   </tr>
+   </tbody>
+   <tfoot>
+       <td>Foot 1</td>
+       <td>Foot 2</td>
+       <td>Foot 3</td>
+   </tfoot>
+</table>
+
+<hr>
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th>Valor</th>
+    </tr>
+    <tr>
+        <td>Item 1</td>
+        <td>Kzs10,00</td>
+    </tr>
+    <tr>
+        <td>Item 2</td>
+        <td>Kzs20,00</td>
+    </tr>
+</table>
+<hr>
+<h1>Células que abrangem mais que uma linha/coluna</h1>
+<p>Em algumas situações, temos a necessidade de utilizar uma mesclagem de célula, ou seja, criar uma célula que abrange mais do que uma linha ou coluna. Dessa forma, podemos utilizar os atributos colspan e rowspan. O colspan=”x” vai fazer uma mesclagem de colunas, e o rowspan=”x” vai mesclar linhas, bastando substituir o x pelo número de colunas ou linhas que deseja ocupar. Além disso, podemos também mesclar os dois em uma mesma célula. Com isso, vamos ver os exemplos a seguir:</p>
+<p><b>Primeiro, utilizando o colspan:</b></p>
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th colspan="2">Telefones</th>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>8888-8888</td>
+        <td>9999-9999</td>
+    </tr>
+    <tr>
+        <td>Junior</td>
+        <td>1111-1111</td>
+        <td>2222-2222</td>
+    </tr>
+</table>
+
+<p><b>Depois, utilizando o rowspan:</b></p>
+<table border="1">
+<tr>
+  <th>Primeiro Nome:</th>
+  <td>Belmiro Constantino</td>
+</tr>
+<tr>
+  <th rowspan="2">Telefone:</th>
+  <td>8888-8888</td>
+</tr>
+<tr>
+  <td>9999-9999</td>
+</tr>
+</table>
+
+<hr>
+<h1>Título da tabela</h1>
+<p>Em HTML há uma tag particular para definir um título da tabela. Essa tag é a <caption></caption>. Em contraste com os demais elementos da tabela, a tag <caption> não será composta por células, portanto ficará acima da tabela, como um título.</p>
+
+<p> Desta forma, veja então o exemplo a seguir:</p>
+<table border="1">
+    <caption>Exemplo de Título</caption>
+    <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>Junior</td>
+    </tr>
+    <tr>
+        <td>Belmiro Constantino</td>
+        <td>Neto</td>
+    </tr>
+</table>
+<hr>
+<h1> Utilizando o colgroup e col</h1>
+<p> Anteriormente, explicamos que hoje em dia, boa parte dos atributos de uma tabela se encontra depreciado. Portanto, a estilização deve ser feita através do CSS. Dessa forma, existe um elemento muito importante que nos permite criar um grupo de colunas, podendo assim estilizar diversas colunas de uma só vez. Esse elemento é a tag < colgroup></ colgroup>. Posteriormente, dentro do grupo de colunas, incluímos então as tags < col/> para poder definir cada coluna.</p>
+
+<p> Vejamos então o seguinte exemplo, aplicando o CSS às classes que utilizaremos nas < col>:</p>
+
+
+
+<table border="1">
+  <colgroup>
+    <col class="vermelho">
+    <col class="amarelo">
+    <col class="azul">
+  </colgroup>
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Profissao</th>
+  </tr>
+  <tr>
+    <td>Belmiro Constantino</td>
+    <td>22</td>
+    <td>Director da ITFocursos</td>
+  </tr>
+  <tr>
+    <td>Junior</td>
+    <td>26</td>
+    <td>Escritor</td>
+  </tr>
+</table>
+
+<p> Além dessa forma de trabalhar, podemos ainda aplicar um grupo que abranja mais que uma coluna, utilizando o atributo span=”x”. Assim, basta substituir o x pelo número de colunas que desejamos atribuir esse grupo.</p>
+
+<p>Em seguida, vejamos então o exemplo:</p>
+<table border="1">
+  <colgroup>
+    <col span="2" style="background-color:red">
+    <col style="background-color:yellow">
+  </colgroup>
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Profissao</th>
+  </tr>
+  <tr>
+    <td>Belmiro Cosntantino</td>
+    <td>22</td>
+    <td>Director da ITFocuros</td>
+  </tr>
+  <tr>
+    <td>Junior</td>
+    <td>26</td>
+    <td>Escritor</td>
+  </tr>
+</table>
+</body>
+</html>

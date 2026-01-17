@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | ITFocursos, Capacitar Hoje para Liderar Amanhã</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivo.css">
+</head>
+
+<body>
+
+	<!--	
+<h1>Aula 24 - Projecto Final | Preparando o Ambiente do Projecto</h1>
+
+<ol>
+	<li>
+		Criar a Pasta projecto_final dentro de modulo_1_html_css
+	</li>
+	<li>
+		Criar as Pastas css e img dentro de projecto_final
+	</li>
+	<li>
+		Criar os Arquivos style.css e responsivo.css dentro de css
+	</li>
+	<li>
+		No arquivo style.css, adicione o conteúdo default:</li>
+		Resetar todas as margens, paddings e bordens automaticas
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+		background: pink;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li{
+font-family: Ariel Rounded MT, Arial, sans-serif;
+}
+<li>no arquivo responsivo.css, adicione o código *{
+	/*background: pink;*/
+} para testar.
+	</li>
+</ol>
+<hr>
+<h1>Aula 25 - Projecto Final | Menu de Navegação</h1>
+	-->
+	<!--HEADER-->
+	<header>
+		<!--INICIO LOGO-->
+		<div class="logo">
+			<img src="img/logo.png">
+		</div>
+		<!--FIM LOGO-->
+
+		<!--INICIO MENU NAVEGACAO-->
+		<nav class="nav">
+				<!--INICIO HAMBURGUE-->
+<input type="checkbox" id="menu_toggle" class="menu_toggle">
+<!--&#9776; simbolo do hamburgue--> 
+<label for="menu_toggle" 
+class="menu_icon">&#9776;</label>
+				<!--FIM HAMBURGUE-->
+			<ul class="menu">
+				<li>
+					<a href="">Início</a>
+					<a href="">Sobre</a>
+					<a href="">Serviços</a>
+					<a href="">Portfólio</a>
+					<a href="">Clientes</a>
+					<a href="">Contactos</a>
+				</li>
+			</ul>
+		</nav>
+		<!--FIM MENU NAVEGACAO-->
+	</header>
+
+	<!--MAIN-->
+	<main>
+		<!--INICIO SLIDE-->
+		<!--<h1>Aula 26 - Projecto Final | Slide show</h1>-->
+		<section id="slide">
+			<!--1º. Definir as propriedades do id slide no CSS
+	2. Adicionar a div com a classe carrosel
+	3º. Add as imagens
+	4. Formatar as imgs com .carrosel img no css-->
+			<div class="carrossel">
+				<img src="img/slide/img1.jpg">
+				<img src="img/slide/img2.jpg">
+				<img src="img/slide/img3.jpg">
+				<img src="img/slide/img4.jpg">
+				<img src="img/slide/img5.jpg">
+				<img src="img/slide/img6.jpg">
+			</div>
+
+			<!--<h1>Aula 27 - Projecto Final | Sobre por Slide show</h1>
+1. Add uma div com class slide_content;
+2. Estilizar no css o class slide_content
+3. Testar se vai aparecer ou nao na area do slide (Claro que nao vai aparecer porque o slide ocupa toda a area e o sobre slide_content esta por baixo, nao ultrapassa a area porque adicionamos o overflow: hidden; que impede ultrapassar a area. Portanto, vamos ao css para dar uma mexida)
+4. Add 3 divs com classes para titulo, conteudo e botao e um class para todos slide_text:
+width: 100%;
+	margin-bottom: 20px;
+5. Formatar no css:
+.slide_content{
+	width: 30%;
+	height: 100%;
+	background: rgba(173,216,230,0.9); /*0.9 para definir a transparencia*/
+	/*POsicionar um elemento filho por cima do alemento pai
+	No elemento pai vai o positio relative 
+	e no filho um position absoluto e posicionar para cima com top:0;*/
+	position: absolute;
+	top: 0; /*Posicionar para cima*/
+	/*left: 40%; Posicionar para a 40% da esquerda*/
+	right: 0;/*Posicionar para a 40% da direita*/
+	/*bottom: 0;Posicionar para a 40% da esquerda*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; /*Posicionar um em cima do outro*/
+	padding: 2rem;
+}
+
+
+.slide_text{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.slide_text h2{
+	text-align: center;
+	font-size: 64px;
+	color: #fff;
+}
+
+.slide_text h4{
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+}
+
+.slide_content_btn {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.slide_text a{
+	padding: 15px;
+	border: 3px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.slide_text a:hover{
+	background: #fff;
+	color: #000;
+	border: 3px solid rgba(173,216,230,0.9);
+
+}
+	-->
+			<div class="slide_content">
+				<div class="slide_content_title slide_text">
+					<h2>ITFocuros</h2>
+				</div>
+				<div class="slide_content_text slide_text">
+					<h4>Capacitar hoje para liderar amanhã</h4>
+				</div>
+				<div class="slide_content_btn slide_text">
+					<a href="">Saiba mais</a>
+				</div>
+			</div>
+		</section>
+		<!--FIM SLIDE-->
+
+		<!--<h1>Aula 28 - Projecto Final | Sobre por Slide show</h1>
+1. Add uma section com id destaque;
+2. Personalize o id destaque no CSS:
+width: 70%;
+height: 300px;
+background: lightblue;
+margin: auto; 70% de largura para 100% faltam 30, com margin auto, vai centralizar 15% a esquerda e 15% a direita
+3. Add os itens de destaque
+4. Formatar o id destaque e a classe dest
+-->
+		<!--INICIO SECCAO DESTAQUE-->
+		<h1>Temos as Soluções que os Seus Quadros Precisam Para Digitalizarem a Sua Empresa</h1>
+		<section id="destaque">
+					
+			<div class="dest">
+		
+				<div class="dest_content">
+					<h3>Desenvolvimento Web</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book.</p>
+
+				</div>
+				<div class="dest_btn">
+					<a href="">Saiba mais...</a>
+				</div>
+			</div>
+
+			<div class="dest">
+				<div class="dest_content">
+					<h3>Desenvolvimento Mobile</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book.</p>
+				</div>
+
+				<div class="dest_btn">
+					<a href="#">Saiba mais...</a>
+				</div>
+			</div>
+
+			<div class="dest">
+				<div class="dest_content">
+					<h3>Curso de Fullstack</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book.</p>
+				</div>
+				<div class="dest_btn">
+					<a href="#">Saiba mais...</a>
+				</div>
+			</div>
+
+		</section>
+
+		<!--FIM SECCAO DESTAQUE-->
+
+		<!--INCIO SECCAO SOBRE-->
+
+		<!--<h1>Aula 29 - Projecto Final | Section Sobre</h1>
+-->
+		<section id="sobre">
+			<div class="sobre_title">
+				<h2>SOBRE NÓS</h2>
+				<div class="line">
+					<div class="line_blue"></div>
+					<div class="line_black"></div>
+				</div>
+			</div>
+			<div class="sobre_content">
+				<div class="sobre_content_img">
+					<img src="img/home_abautus.jpg">
+				</div>
+
+				<div class="sobre_content_text">
+
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book.</p>
+					<ul>
+						<li>Sites personalizados</li>
+						<li>Lija Virtual (e-Commerce)</li>
+						<li>Plataforma de Cursos Online</li>
+						<li>Software de Facturação</li>
+						<li>Aplicativo Mobile</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</section>
+		<!--FIM SECCAO SOBRE-->
+
+		<!--INCIO SECCAO ESTATISTICA PARA O SITE-->
+
+		<!--<h1>Aula 30 - Projecto Final | Section Estatisca</h1>
+-->
+
+		<section id="estatistica">
+			<div class="estatistica_background">
+				<div class="estatistica_content">
+					<div class="estatistica_content_text">
+						<h3>8+</h3>
+						<div class="estatistica_content_line"></div>
+						<h5>Anos de Experiência</h5>
+					</div>
+					<div class="estatistica_content_text">
+						<h3>500+</h3>
+						<div class="estatistica_content_line">
+
+						</div>
+						<h5>Clientes Satisfeitos</h5>
+					</div>
+					<div class="estatistica_content_text">
+						<h3>512+</h3>
+						<div class="estatistica_content_line">
+
+						</div>
+						<h5>Alunos Formados</h5>
+					</div>
+					<div class="estatistica_content_text">
+						<h3>50+</h3>
+						<div class="estatistica_content_line">
+
+						</div>
+						<h5>Soluções</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--FIM SECCAO ESTATISTICA PARA O SITE-->
+
+		<!--INCIO SECCAO SERVICOS PARA O SITE-->
+
+		<!--<h1>Aula 31 - Projecto Final | Section Serviços</h1>
+-->
+		<section id="servicos">
+			<div class="container">
+				<div class="servicos_title">
+					<h2>NOSSOS SERVIÇOS</h2>
+					<div class="line">
+						<div class="line_white"></div>
+						<div class="line_black"></div>
+					</div>
+				</div>
+				<div class="servicos_content">
+					<div class="servicos_content_text">
+						<img src="img/icon/desenvolvimento_software.png" alt="">
+						<h3>Desenvolvimento de Software</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="servicos_content_text">
+						<img src="img/icon/consultoria_d_i.png" alt="">
+						<h3>Consultoria e Desenvolvimento</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="servicos_content_text">
+						<img src="img/icon/infraestrutura_redes.png" alt="">
+						<h3>Infra-Estrutura e Redes</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--FIM SECCAO SERVICOS PARA O SITE-->
+
+		<!--INCIO SECCAO PORIFOLIO PARA O SITE-->
+
+		<!--<h1>Aula 32 - Projecto Final | Section Portfolio</h1>
+-->
+		<section id="portfolio">
+			<div class="container">
+				<div class="portfolio_title">
+					<h2>PORTIFÓLIO</h2>
+					<div class="line">
+						<div class="line_blue"></div>
+						<div class="line_black"></div>
+					</div>
+				</div>
+				<div class="portfolio_img">
+					<img src="img/portfolio/img-1.jpg" alt="">
+
+					<img src="img/portfolio/img-2.jpg" alt="">
+
+					<img src="img/portfolio/img-3.jpg" alt="">
+
+					<img src="img/portfolio/img-4.jpg" alt="">
+
+					<img src="img/portfolio/img-5.jpg" alt="">
+
+					<img src="img/portfolio/img-6.jpg" alt="">
+
+					<img src="img/portfolio/img-7.jpg" alt="">
+
+					<img src="img/portfolio/img-8.jpg" alt="">
+
+					<img src="img/portfolio/img-9.jpg" alt="">
+
+					<img src="img/portfolio/img-1.jpg" alt="">
+
+					<img src="img/portfolio/img-2.jpg" alt="">
+
+					<img src="img/portfolio/img-3.jpg" alt="">
+
+				</div>
+			</div>
+		</section>
+		<!--FIM SECCAO PORTFOLIO PARA O SITE-->
+
+
+		<!--INCIO SECCAO FEEDBACK PARA O SITE-->
+
+		<!--<h1>Aula 33 - Projecto Final | Section Feedback</h1>
+-->
+
+<section id="feedback">
+<div class="feedback_content">
+<div class="feedback_content_text">
+	<h3>FALE CONNOSCO | O que vier de si é Importante para Nós!</h3>
+	<p>Agradecemos seu interesse pelos serviços da ITFOCURSOS! Queremos que sua experiência seja incrível. Se tiver qualquer pergunta, sugestão ou precisar de suporte, estamos aqui para você.</p>
+</div>
+<div class="feedback_content_btn">
+	<a href="">Contacte-nos</a>
+</div>
+</div>
+</section>
+		<!--FIM SECCAO FEEDBACK PARA O SITE-->
+
+			<!--INCIO SECCAO CONTACTO PARA O SITE-->
+
+		<!--<h1>Aula 33 - Projecto Final | Section Contacto</h1>
+-->
+
+<section id="contact">
+	<div class="contact">
+		<div class="contact_title">
+				<h2>CONTACTE-NOS</h2>
+				<p>Preencha o formulário abaixo ou fale connosco pelas nossas redes sociais. Estamos à disposição para tirar suas dúvidas e oferecer o melhor suporte e serviço!</p>
+				<div class="line">
+					<div class="line_blue"></div>
+					<div class="line_black"></div>
+				</div>
+			</div>
+			<div class="contact_form">
+				<form>
+					<input type="text" placeholder="Nome" class="nome_email">
+					<input type="email" placeholder="Email" class="nome_email">
+					<input type="text" placeholder="Assunto" class="assunto">
+					<textarea placeholder="Mensagem"></textarea>
+					<div class="btn_form">
+						<button>Enviar mensagem</button>
+					</div>
+				</form>
+			</div>
+	</div>
+</section>
+			<!--FIM SECCAO CONTACTO PARA O SITE-->
+	</main>
+
+	<!--FOOTER-->
+	  <footer>
+        <p>&copy; 2016 - <span id="ano-copyright"></span> <strong>| Site Desenvolvido pela <a href="#"
+                    target="_blank">ITFocursos</a>. Todos os direitos
+                reservados.</strong> </p>
+    </footer>
+
+    <script>
+        // Obtém o ano actual
+        const anoActual = new Date().getFullYear();
+        // Encontra o elemento pelo ID e insere o ano
+        document.getElementById('ano-copyright').textContent = anoActual;
+    </script>
+	</main>
+</body>
+
+</html>

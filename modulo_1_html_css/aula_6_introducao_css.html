@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Introdução ao CSS</title>
+	<style>
+		<!--CSS INTERNO-->
+		#cssInterno{
+			width:100%; height: 10px; background: red;
+		}
+	</style>
+		<!--CSS EXTERNO-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Introdução ao CSS</h1>
+
+	O CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é a linguagem utilizada para definir a aparência visual de uma página web estruturada em HTML. Enquanto o HTML cuida do conteúdo (textos, links e imagens), o CSS cuida do design (cores, fontes, espaçamentos e layouts). 
+<p><b>1. Estrutura Básica (Sintaxe)</b></p>
+<p>O CSS funciona através de regras que dizem ao navegador como um elemento deve ser exibido. Uma regra básica é composta por: </p>
+<p><b>Seletor:</b> Indica qual elemento HTML será estilizado (ex: h1, p, .minha-classe);</bpody>
+<p><b>Propriedade:</b> O aspecto que você quer mudar (ex: color, font-size);</p>
+<p><b>Valor:</b> A configuração específica da propriedade (ex: blue, 20px).</p>
+<b>Exemplo:</b><br>
+h6 {
+  color: blue;        /* Propriedade color: Valor blue (cor azul)*/
+  font-size: 24px;
+}
+
+<p><b>2. Formas de usar o CSS</b></p>
+<p><b>Existem três maneiras principais de aplicar estilos a um documento: </b></p>
+<b>CSS Inline:</b> Escrito diretamente no atributo style da tag HTML;</br>
+<p><b>Exemplo de CSS inline:</b></p>
+<div style="width:100%; height: 10px; background: red;"></div>
+<hr>
+<b>CSS Interno:</b> Dentro da tag < style> no cabeçalho (< head>) do HTML;</br>
+<p><b>Exemplo de CSS interno:</b></p>
+
+<!--CSS INLINE com o atributo id-->
+<div id="cssInterno"></div>
+<hr>
+<b>CSS Externo:</b> Em um arquivo separado (ex: style.css), vinculado ao HTML pela tag < link>. Esta é a prática recomendada para facilitar a manutenção de grandes projectos.</br>
+<p><b>Exemplo de CSS externo:</b></p>
+<div id="cssExterno"></div>
+<p>Na pasta modulo_1_..., criamos um arquivo com o nome de style.css e chamos ele com a tag link no head da página: 	<link rel="stylesheet" type="text/css" href="style.css"></p>
+<hr>
+<p><b>3. Selectores Comuns</b></p>
+Para aplicar estilos de forma precisa, você pode usar diferentes tipos de seletores: <br>
+<b>Tag:</b> Seleciona todos os elementos de um tipo (ex: p para todos os parágrafos);<br>
+<b>Classe (.):</b> Seleciona elementos que possuem um atributo class. Pode ser usado em vários elementos;<br>
+<b>ID (#):</b> Seleciona um único elemento específico que possui um id exclusivo;<br>
+<b>Universal (*):</b> Aplica o estilo a todos os elementos da página.<br> 
+<p><b>4. Por que o nome "Cascata"?</b></p>
+<p>O termo "cascata" refere-se à ordem de prioridade que o navegador segue quando existem regras conflitantes para o mesmo elemento. O navegador decide qual estilo aplicar com base na especificidade do seletor e na ordem em que as regras aparecem no código.<p> 
+Para começar a praticar, você pode consultar o Guia Básico da MDN Web Docs ou o tutorial interactivo do W3Schools.
+
+<p><b>Qual é o melhor tipo de css a utilizar num projecto, inline, interno ou externo e por que?</b></p>
+
+O CSS externo é considerado a melhor prática e o método mais recomendado para quase todos os projetos web em 2025. 
+Abaixo está o porquê de cada um ser usado e a razão da preferência pelo externo:
+<p><strong>1. CSS Externo (O Melhor e Mais Usado)</strong></p>
+É um arquivo separado (ex: estilo.css) conectado ao HTML via tag < link>. 
+<p><b>Por que usar:</b></p>
+<b>Manutenibilidade:</b> Você altera o design de centenas de páginas editando apenas um arquivo;<br>
+<b>Performance (Cache):</b> O navegador baixa o arquivo CSS uma única vez e o armazena em cache, tornando o carregamento das outras páginas do site muito mais rápido;<br>
+<b>Organização:</b> Separa completamente o conteúdo (HTML) do design (CSS).<br>
+<p><strong>2. CSS Interno (Uso Pontual)</strong></p>
+<p>Escrito dentro da tag < style> no < head> do próprio HTML. </p>
+<b>Quando usar:</b> É útil para protótipos rápidos ou quando uma única página do site precisa de um estilo exclusivo que não será repetido em nenhum outro lugar;<br>
+<b>Desvantagem:</b> Aumenta o tamanho do arquivo HTML e dificulta a manutenção se o projeto crescer.<br>
+<p><strong>3. CSS Inline (Evite ao máximo) </strong></p>
+<p>Escrito diretamente dentro da tag HTML (ex: < h1 style="color: blue;">). </p>
+<b>Quando usar:</b> Apenas para correções rápidas de última hora, testes imediatos ou em e-mails marketing (onde o suporte a arquivos externos é limitado);<br>
+<b>Desvantagem:</b> Polui o código, tem a maior prioridade (sobrescrevendo outros estilos) e torna quase impossível manter um padrão visual em larga escala.<br><br>
+<b>Tabela resumo de Escolha em 2025</b><br>
+<p>Tipo 	Recomendação	Uso Principal</p>
+<p>Externo	Sempre (Padrão)	Sites profissionais e escaláveis.</p>
+<p>Interno	Raramente	Páginas únicas ou landing pages específicas.</p>
+<p>Inline	Apenas em emergências	E-mails HTML ou overrides temporários.</p>
+
+</body>
+</html>

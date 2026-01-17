@@ -1,0 +1,31 @@
+Para trabalhar com html:
+1. Um navegador
+
+Principais Navegadores (Exemplos):
+Google Chrome: Conhecido pela velocidade, integração com serviços Google e ampla compatibilidade em diversos dispositivos.
+
+Mozilla Firefox: Focado em privacidade e personalização, sendo uma ótima alternativa de código aberto.
+
+Microsoft Edge: O navegador da Microsoft, baseado no Chromium, que oferece boa integração com o Windows e produtividade.
+
+Safari: O navegador padrão para dispositivos Apple (Mac, iPhone, iPad), conhecido por sua eficiência no ecossistema Apple.
+
+Opera: Famoso por recursos inovadores como VPN gratuita e bloqueador de anúncios.
+
+Brave: Com forte ênfase em privacidade, bloqueia anúncios e rastreadores por padrão.
+
+Vivaldi: Direcionado a usuários avançados, com muitas opções de personalização.
+
+Tor Browser: Focado em anonimato e navegação privada, usando a rede Tor.
+
+2. Um editor de textos
+
+Visual Studio Code (VS Code), conhecido pela versatilidade e extensões; 
+
+Sublime Text, focado em velocidade e edição múltipla; 
+
+Notepad++, leve e ótimo para Windows; 
+
+Vim/Emacs, poderosos editores baseados em terminal para usuários avançados; 
+
+e opções online como CodeSandbox e Codeshare.io para colaboração.

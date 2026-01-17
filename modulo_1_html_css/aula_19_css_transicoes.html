@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS - Transições</title>
+	<style>
+		.meu-botao {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Define a transição para a propriedade 'transform' com duração de 0.3s e suavidade 'ease' */
+  transition: transform 0.3s ease;
+}
+
+.meu-botao:hover {
+  /* Quando o mouse estiver sobre, o botão aumenta em 10% */
+  transform: scale(1.1);
+}
+
+.caixa{
+	width: 300px;
+	height: 200px;
+	background: lightblue;
+transition: background-color 1.5s ease, transform 0.5s ease; /*Aplicamos uma transicao suave ao background-color e ao transform, ambos do :hover*/
+}
+
+.caixa:hover{
+	/* Alteramos o tamanho com wid e hei
+	width: 200px;
+	height: 300px;*/
+
+	background-color: lightcoral;
+	/*Alteramos o tamanho com transform:scale()*/
+	transform: scale(1.2);
+
+}
+
+
+</style>
+</head>
+<body>
+<h1>CSS - Transições em HTML</h1>
+<p>Trabalhar com transições em HTML envolve usar CSS para criar efeitos suaves, definindo propriedades como transition (para tempo, função e propriedade a animar), transform (para mudar tamanho, rotação, etc.), e ::before/::after para pseudo-elementos, com @keyframes para animações mais complexas, tudo isso ativado por estados como :hover. É uma técnica de CSS para animar mudanças de estilo em elementos HTML quando um evento acontece, resultando em um visual mais dinâmico e profissional. </p>
+
+<h2>Conceitos Chave</h2>
+<ul> <li><b>HTML (Estrutura):</b> Define o elemento (ex: < button>, < div>) que receberá a transição.</li>
+<li><b>CSS (Estilo e Comportamento):</b> Define como a transição acontece. </li></ul>
+
+<h2>Propriedades CSS Essenciais</h2>
+<ol> <li>
+	transition (A propriedade "mãe"): Define a transição como um todo.</li>
+	<ol>
+	<li>transition-property: Qual propriedade CSS será animada (ex: background-color, transform, opacity, all).</li>
+	<li>transition-duration: Quanto tempo a transição leva (ex: 0.5s, 500ms).</li>
+	<li>transition-timing-function: Define a velocidade da transição (ex: linear, ease-in, ease-out, cubic-bezier).</li>
+	<li>transition-delay: Tempo de espera antes da transição começar.</li>
+	<li>Atalho: transition: < property> < duration> < timing-function> < delay>;</li> </ol>
+
+	<li>transform (Para movimento e forma): Aplica transformações (mover, escalar, girar, inclinar).</li>
+	<ol>
+		<li> <b>translate(x, y):</b> Move o elemento.</li>
+<li> <b>scale(n):</b> Aumenta ou diminui o tamanho (ex: scale(1.2)).</li>
+<li> <b>rotate(angle):</b> Gira o elemento.</li>
+<li> <b>skew(x, y):</b> Inclina o elemento.</li> 
+	</ol>
+
+	<li>:hover (Pseudo-classe): Activa a transição quando o mouse passa sobre o elemento.</li>
+	<li>@keyframes (Para animações complexas): Define estágios de uma animação (um "roteiro") para criar movimentos complexos. </li>
+</ol>
+<hr>
+<h2>Exemplo Prático: Botão que Aumenta ao Passar o Mouse</h2>
+<button class="meu-botao">Passe o Mouse</button>
+
+<h3>No style:</h3>
+.meu-botao {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Define a transição para a propriedade 'transform' com duração de 0.3s e suavidade 'ease' */
+  transition: transform 0.3s ease;
+}
+
+.meu-botao:hover {
+  /* Quando o mouse estiver sobre, o botão aumenta em 10% */
+  transform: scale(1.1);
+}
+
+<hr>
+<h2> Exemplo Prático: Menu Interactivo</h2>
+<p>Neste exemplo, um botão muda de largura e cor quando o mouse passa por cima:</p>
+
+<div class="box"></div>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 8px;
+    /* Transiciona todas as propriedades alteradas em 0.4 segundos */
+    transition: all 0.4s ease;
+  }
+
+  .box:hover {
+    width: 200px;
+    background-color: #2ecc71;
+    transform: rotate(10deg);
+    cursor: pointer;
+  }
+</style>
+
+<h3>Dicas Importantes para 2025</h3>
+<ul><li>Performance: Prefira animar transform (escala, rotação, posição) e opacity. Essas propriedades são processadas pela GPU, o que evita travamentos na página.</li>
+<li>Acessibilidade: Respeite usuários que preferem movimentos reduzidos usando a media query prefers-reduced-motion.</li>
+<li>Documentação: Para detalhes técnicos completos, consulte o Guia de Transições CSS da MDN Web Docs.</li> </ul>
+Para criar curvas de velocidade personalizadas, você pode utilizar ferramentas como o Cubic-Bezier.com, que gera o código exato para movimentos mais orgânicos.
+
+<hr>
+
+<h1>Exemplo </h1>
+
+<div class="caixa"></div>
+<p>Para criar curvas de velocidade personalizadas, você pode utilizar ferramentas como o
+<a href="https://fga-eps-mds.github.io/2023-2-GEROcuidado-Doc/treinamentos/treinamento_HTML_CSS/" target="_blank"> Cubic-Bezier.com</a> que gera o código exacto para movimentos mais orgânicos.</p>
+</body>
+</html>

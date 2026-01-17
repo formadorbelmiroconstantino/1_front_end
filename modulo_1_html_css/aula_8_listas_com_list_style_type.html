@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listas em HTML com list-style-type</title>
+	
+</head>
+<body>
+	<h1>Listas em HTML com a Propriedade list-style-type</h1>
+<p>A propriedade list-style-type em CSS serve para definir o estilo do marcador (ou "bullet") dos itens de uma lista, como círculos (disc), quadrados (square), números (decimal), algarismos romanos (lower-roman), letras (lower-latin), ou até mesmo remover os marcadores (none), personalizando a aparência das listas < ul> e < ol> no HTML. </p>
+<h2>Exemplos de valores e seus efeitos:</h2>
+
+<h1>CSS</h1>
+<b> /* Para listas não ordenadas (< ul>) */</b>
+<p>ul {
+  list-style-type: square; /* Quadrados */ <br>
+  list-style-type: disc; /* Círculos (padrão) */ <br>
+  list-style-type: circle; /* Círculos vazios */ <br>
+  list-style-type: none; /* Sem marcador */</b> <br>
+}</p>
+<hr>
+<b> /* Para listas ordenadas (< ol>) */ <br>
+ol {
+  list-style-type: decimal; /* 1, 2, 3 (padrão) */ <br>
+  list-style-type: lower-roman; /* i, ii, iii */ <br>
+  list-style-type: upper-alpha; /* A, B, C */ <br>
+  list-style-type: lower-greek; /* α, β, γ */ <br>
+}
+
+<p>Para que servem na prática?</p>
+
+<ul style="list-style-type: upper-alpha;">
+	<li><b> Controlo Visual:</b> Permite que você mude de um marcador simples para algo mais complexo ou temático, como um ícone ou um número específico.</li>
+<li><b> Listas Semânticas:</b> Ajuda a diferenciar listas não ordenadas (símbolos) de listas ordenadas (números/letras), mantendo a semântica do documento.</li>
+<li><b> Alternativa ao type do HTML:</b> É a forma moderna e recomendada via CSS para estilizar listas, substituindo o antigo atributo type da tag < ol>.</li>
+<li><b> Acessibilidade:</b> Usar list-style-type: none; para remover marcadores deve ser feito com cuidado, pois pode impactar leitores de tela; considere alternativas acessíveis se remover os marcadores for essencial.</li> 
+
+</ul>
+</body>
+</html>

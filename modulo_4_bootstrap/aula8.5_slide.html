@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes no Bootstrap</title>
+
+  <!--CSS PARA O BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">   
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+
+        <h1>Componentes no Bootstrap - Carousel (Slide)</h1>
+
+        <p>No Bootstrap, o Carousel (ou carrossel) é um componente de apresentação que funciona como um slider de slides para ciclar elementos como imagens ou textos.</p>
+
+        <h2>Principais Características</h2>
+        <p>As principais características deste componente incluem:</p>
+<ul>
+    <li>  
+      Multimídia: Permite exibir sequencialmente diversos tipos de conteúdo, como imagens com legendas ou banners rotativos, em um único espaço na tela
+    </li>
+    <li>
+      Controlo de Navegação: Inclui botões de "anterior" e "próximo", além de indicadores (pontos ou traços) que permitem ao utilizador saltar para slides específicos.
+    </li>
+    <li>
+      Responsividade: É construído com HTML, CSS e JavaScript, adaptando-se automaticamente a diferentes tamanhos de tela (mobile e desktop).</li>
+    <li>
+      Personalização: Suporta transições suaves, reprodução automática (autoplay) e pode ser configurado para pausar ao passar o mouse. 
+    </li>
+</ul>
+   <p>Para implementá-lo, utiliza-se a classe principal .carousel juntamente com elementos internos como .carousel-inner (para os itens) e .carousel-item (para cada slide individual).</p>
+<hr>
+   <p><strong>Exemplos Básicos - Fonte Bootstrap</strong></p>
+
+   <p>Abaixo, mostramos-lhe um exemplo básico de carrossel com três slides. Observe os controles anteriores/seguintes. Recomendamos o uso de elementos &lt;button&gt;, mas você também pode usar elementos &lt;a&gt; com role="button".</p>
+  
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/slid1_360_200.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/slid2_360_200.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/slid3_360_200.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+<br><br>
+   <p><strong>Exemplos Com Legendas - Fonte Bootstrap</strong></p>
+<p>Você pode adicionar legendas aos seus slides com a classe .carousel-caption dentro de qualquer .carousel-item. Elas podem ser facilmente ocultadas em telas menores, como mostrado abaixo, com utilitários de exibição opcionais. Inicialmente, nós as ocultamos com .d-none e as exibimos novamente em dispositivos de tamanho médio com .d-md-block.</p>
+
+ <div id="carrosselCompleto" class="carousel slide" data-bs-ride="carousel">        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrosselCompleto" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carrosselCompleto" data-bs-slide-to="1"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="img/slid1_360_200.jpg" class="d-block w-100" alt="Primeiro Slide">
+                <!-- Legenda sem classes de ocultação -->
+                <div class="carousel-caption">
+                    <h5 class="fs-5 fs-md-2">Título Sempre Visível</h5>
+                    <p class="small">Esta legenda aparece tanto no celular quanto no desktop.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="img/slid2_360_200.jpg" class="d-block w-100" alt="Segundo Slide">
+                <div class="carousel-caption">
+                    <h5 class="fs-5 fs-md-2">Totalmente Responsivo</h5>
+                    <p class="small">Remover 'd-none' garante a exibição em telas pequenas.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselCompleto" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselCompleto" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    
+</div>
+</section>
+</main>
+
+  <!--JS PARA O BOOTSTRAP e jQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+
+
+  <!--JS DO PROJECTO-->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+
+
+</script>

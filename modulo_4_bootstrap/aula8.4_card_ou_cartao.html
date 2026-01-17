@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes no Bootstrap</title>
+
+  <!--CSS PARA O BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <style>
+    .row:hover{
+cursor: pointer;
+box-shadow: 3px 3px 3px black;
+padding: 10px;
+    }
+.col_personalizada{
+  background-color: rgba(0, 0, 0, 0.318);
+  color: white;
+}
+    .col_personalizada:hover{
+      border: 1px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+
+        <h1>Componentes no Bootstrap - Card (Cartões)</h1>
+
+        <p>No Bootstrap, Cards (ou cartões) são recipientes de conteúdo flexíveis e extensíveis que substituíram os antigos componentes panels, wells e thumbnails em versões recentes como o Bootstrap 5. Eles funcionam como blocos de informação visualmente organizados, ideais para exibir produtos, resumos de posts ou perfis de usuários.</p>
+
+        <h2>Principais Características</h2>
+<ul>
+    <li>
+        Estrutura Adaptável: Um card pode conter imagens, títulos, textos, links, listas e botões em uma única moldura.</li>
+    <li>
+        Design Padrão: Possuem bordas discretas, cantos levemente arredondados e preenchimento (padding) interno por padrão.</li>
+    <li>
+        Componentes Internos: Podem incluir secções específicas como cabeçalhos (card-header) e rodapés (card-footer).</li>
+    <li>
+        Responsividade: Integram-se ao sistema de grid do Bootstrap, permitindo que vários cards sejam exibidos lado a lado em telas grandes e empilhados em dispositivos móveis.
+    </li>
+</ul>
+    <h2>Classes Comuns</h2>
+<p>Para criar um card, utiliza-se uma estrutura de classes CSS pronta:</p>
+<ul>
+    <li>
+        .card: O container principal.</li>
+    <li>
+        .card-body: A secção de conteúdo principal, que aplica o espaçamento necessário.</li>
+    <li>
+        .card-title e .card-text: Estilizam títulos e parágrafos dentro do corpo do cartão.</li>
+    <li>
+        .card-img-top: Posiciona uma imagem no topo do cartão.
+    </li>
+</ul> 
+<p>Você pode consultar exemplos e códigos detalhados na Documentação Oficial do Bootstrap.</p>
+
+<h2>Visão Geral - Fonte: Site Oficial do Bootstrap</h2>
+
+<p>Os cards do Bootstrap oferecem um contêiner de conteúdo flexível e extensível com múltiplas variantes e opções.</p>
+
+<h3>Sobre</h3> 
+<p>Um <strong>card</strong> é um contêiner de conteúdo flexível e extensível. Ele inclui opções para cabeçalhos e rodapés, uma ampla variedade de conteúdo, cores de fundo contextuais e opções de exibição avançadas. Se você já conhece o Bootstrap 3, os cards substituem nossos antigos painéis, colunas e miniaturas. Funcionalidades semelhantes a esses componentes estão disponíveis como classes modificadoras para cards.</p>
+
+<p><strong>Exemplo</strong></p>
+
+<p>Os cards são construídos com o mínimo de marcação e estilos possível, mas ainda assim oferecem muito controle e personalização. Construídos com flexbox, eles oferecem alinhamento fácil e combinam bem com outros componentes do Bootstrap. Eles não possuem espaçamento, margin e padding padrão, então use <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/" target="_blank">utilitários de espaçamento</a> conforme necessário.</p>
+
+<p>Abaixo, você encontrará um exemplo de um cartão básico com conteúdo misto e largura fixa. Os cartões não possuem largura fixa inicialmente, portanto, naturalmente, preencherão toda a largura do elemento pai. Isso pode ser facilmente personalizado com nossas diversas <a href="https://getbootstrap.com/docs/5.3/components/card/#sizing" target="_blank">opções de dimensionamento</a>.</p>
+
+&lt;div class="card" style="width: 18rem;"&gt; <br>
+  &lt;img src="..." class="card-img-top" alt="..."&gt; <br>
+  &lt;div class="card-body"&gt; <br>
+    &lt;h5 class="card-title">Card title&lt;/h5&gt; <br>
+    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.&lt;/p&gt; <br>
+    &lt;a href="#" class="btn btn-primary">Go somewhere&lt;/a&gt; <br>
+  &lt;/div&gt; <br>
+&lt;/div&gt; <br>
+
+<br>
+<p><strong>Resultado:</strong></p>
+<div class="card" style="width: 18rem;">
+  <img src="img/foto-telemovel.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<br><br>
+<h2>Tipos de Conteúdos de um Card</h2>
+<p>Os cards suportam uma ampla variedade de conteúdo, incluindo imagens, texto, grupos de listas, links e muito mais. Abaixo estão exemplos do que é suportado.</p>
+
+<h3>Corpo</h3>
+<p>O elemento básico de um cartão é o .card-body. Use-o sempre que precisar de uma secção com espaço em branco dentro do cartão.</p>
+
+&lt;div class="card"&gt; <br>
+  &lt;div class="card-body"&gt; <br>
+    Este é um texto contido no corpo de um cartão.
+  &lt;/div&gt; <br>
+&lt;/div&gt; <br><br>
+
+<p><strong>Resultado:</strong></p>
+<div class="card">
+  <div class="card-body">
+    Este é um texto contido no corpo de um cartão.
+  </div>
+</div>
+<br><br>
+<h3>Títulos, Texto e Links</h3>
+<p>Os títulos dos cards são usados ​​adicionando-os .card-title à uma tag &lt;h*&gt;. Da mesma forma, os links são adicionados e colocados lado a lado adicionando-os .card-link à uma tag &lt;a&gt;.</p>
+
+  <p>As legendas são usadas adicionando um .card-subtitle á uma tag <h*>. Se os itens .card-title e .card-subtitle forem colocados em um item .card-body, o título e o subtítulo do cartão ficarão alinhados correctamente.</p>
+
+  <p><strong>Exemplo</strong></p>
+
+  &lt;div class="card" style="width: 18rem;"&gt; <br>
+  &lt;div class="card-body"&gt; <br>
+    &lt;h5 class="card-title">Card title&lt;/h5&gt; <br>
+    &lt;h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle&lt;/h6&gt; <br>
+    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.&lt;/p&gt; <br>
+    &lt;a href="#" class="card-link">Card link&lt;/a&gt; <br>
+    &lt;a href="#" class="card-link">Another link&lt;/a&gt; <br>
+  &lt;/div&gt; <br>
+&lt;/div&gt; <br>
+
+<p><strong>Resultado:</strong></p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+<br><br>
+<h3>Imagens</h3>
+<p>.card-img-top e .card-img-bottom, respectivamente, definem os cantos superior e inferior arredondados para corresponder às bordas do card. Com .card-text, texto pode ser adicionado ao card. O texto dentro de .card-text também pode ser estilizado com tags HTML padrão.</p>
+
+<p><strong>Exemplo</strong></p>
+&lt;div class="card" style="width: 18rem;"&gt; <br>
+  &lt;img src="..." class="card-img-top" alt="..."&gt; <br>
+  &lt;div class="card-body"&gt; <br>
+    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.&lt;/p&gt; <br>
+  &lt;/div&gt; <br>
+&lt;/div&gt; <br><br>
+
+<p><strong>Resultado:</strong></p>
+<div class="card" style="width: 18rem;">
+  <img src="img/foto-telemovel.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+  </div>
+</div>
+<br><br>
+<p><strong>Adicionando 3 Cards:</strong></p>
+<div class="row">
+  <div class="col">
+<div class="card col_personalizada" style="width: 18rem;">
+  <img src="img/slid1_360_200.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Saiba mais...</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+    <div class="card col_personalizada" style="width: 18rem;">
+  <img src="img/slid2_360_200.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Saiba mais...</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+    <div class="card col_personalizada" style="width: 18rem;">
+  <img src="img/slid3_360_200.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Saiba mais...</a>
+  </div>
+</div>
+  </div>
+</div>
+<p><strong>Observação:</strong> Dê uma olhada ao site Oficial do Bootstrap para saber mais sobre os cards.</p>
+      </div>
+    </section>
+  </main>
+
+  <!--JS PARA O BOOTSTRAP e jQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+
+
+  <!--JS DO PROJECTO-->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+
+
+</script>

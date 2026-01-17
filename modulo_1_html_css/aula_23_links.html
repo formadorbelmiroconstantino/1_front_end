@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Links</title>
+</head>
+<body>
+<h1>Trabalhando com Links em HTML</h1>
+<p>Trabalhar com links em HTML envolve usar a tag <a> (âncora) com o atributo href para direccionar o utilizador/usuário para outros recursos, como páginas ou sites externos, usando URLs absolutas (https://...) ou relativas (caminhos dentro do seu site). Para links internos (na mesma página), use # seguido do id do elemento de destino. O texto ou imagem entre <a> e </a> é o que o utilizador clica, e o atributo target="_blank" abre o link em uma nova aba. </p>
+
+<h2>Sintaxe Básica</h2>
+<ul><li><b>< a>:</b> A tag de âncora.</li>
+<li><b>href:</b> Atributo que contém o destino do link (URL).</li>
+<li><b>Texto/Imagem:</b> Conteúdo clicável.</li> </ul>
+<a href="https://www.google.com">Visite o Google</a>
+
+<h2>Tipos de Links</h2>
+<ul>
+	<li>
+		Links Externos (Outros Sites): Use o URL completo.
+		<a href="https://www.youtube.com" target="_blank">Abrir YouTube em nova aba</a>
+
+	</li>
+	<li>
+		Links Internos (Mesma Página): Crie um id no destino e use #id no href
+		<!-- No destino -->
+<h2 id="secao1">Secção 1</h2>
+
+<!-- No link -->
+<a href="#secao1">Ir para Seção 1</a>
+
+	</li>
+
+<li>Links de E-mail: Use mailto:.
+<a href="mailto:contato@exemplo.com">Envie um E-mail</a>
+</li>
+
+<h2>Atributos Úteis</h2>
+<ul>
+	<li><b>target="_blank":</b>
+</b> Abre o link em uma nova aba/janela.</li>
+<li><b>title="Texto":</b>
+</b> Mostra uma dica de ferramenta ao passar o mouse.</li>
+<li><b>rel="noopener noreferrer":</b>
+</b> Adicionado a links target="_blank" para segurança, impedindo o site de acessar a página original.</li> </ul>
+</ul>
+
+<a href="https://www.google.com" target="_blank" rel="noopener noreferrer" title="Site Exemplo">
+  Visite Exemplo (nova aba)
+</a>
+
+<h2>Boas Práticas</h2>
+<ul>
+	<li><b>Links Internos:</b> Use caminhos relativos para facilitar a organização do site.</li>
+<li><b>Experiência do Usuário:</b> Use target="_blank" com moderação para não "expulsar" o usuário do seu site.</li></ul> 
+
+</body>
+</html>

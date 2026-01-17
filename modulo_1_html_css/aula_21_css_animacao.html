@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Animação CSS</title>
+    <style>
+        /* Estilização do fundo */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*height: 100vh;*/
+             height: 500px;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        /* 1. Definindo o objeto da animação */
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 6px solid lightcoral; /* Cor da borda estática */
+            border-top: 6px solid lightblue; /* Cor da parte que gira */
+            border-radius: 50%; /* Torna o quadrado um círculo */
+            
+            /* 2. Aplicando a animação: nome | duração | curva | repetição */
+            animation: girar 1s linear infinite;
+        }
+
+        /* 3. Criando os frames da animação */
+        @keyframes girar {
+            from {
+                transform: rotate(0deg); /* Posição inicial */
+            }
+            to {
+                transform: rotate(360deg); /* Giro completo */
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>CSS - Animações em HTML</h1>
+<p>Daremos um exemplo clássico e moderno de uma animação CSS: um Spinner de Carregamento (Loader). Este tipo de animação é muito comum em sites para indicar que um conteúdo está sendo processado.</p>
+<h3>Exemplo: Spinner de Carregamento</h3>
+<p>Este exemplo usa @keyframes para girar continuamente um círculo com uma borda colorida.</p>
+    <!-- O elemento que será animado -->
+    <!-- O elemento que será animado -->
+    <div class="container">
+    <div class="loader"></div>
+    </div>
+<br>
+    <h3>Explicação do Código:</h3>
+<ol><li><b>border-radius:</b> 50%: Transforma uma div quadrada em um círculo perfeito.
+<li><b>border-top:</b> Ao colorir apenas um lado da borda, criamos o efeito visual de uma "faixa" que se move.</li>
+<li><b>@keyframes girar:</b> Define que o elemento deve começar em 0 graus e terminar em 360 graus.</li>
+<li><b>animation:</b></li>
+<ol>
+    <li><b>girar:</b> O nome da animação que criamos.</li>
+<li><b>1s:</b> A velocidade (um giro por segundo).</li>
+<li><b>linear:</b> Mantém a velocidade constante (sem acelerar ou desacelerar).</li>
+<li><b>infinite:</b> Garante que ela nunca pare.</li></ol></ol>
+
+<p>Para explorar mais estilos, você pode consultar bibliotecas como o <a href="https://animate.style/" target="_blank">Animate.css</a>  ou ver exemplos interativos no MDN Web Docs.</p>
+
+</body>
+</html>

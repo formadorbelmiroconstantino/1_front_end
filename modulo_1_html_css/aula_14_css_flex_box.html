@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS - FlexBox | FlexDecotion</title>
+	<style>
+		.container {
+			display: flex; /* Transforma o container em um flex container */
+			/* Propriedades adicionais para o pai */
+			flex-direction: row; /* Direção padrão: linha */
+			justify-content: center; /* Alinha no eixo principal */
+			align-items: center; /* Alinha no eixo transversal */
+			flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+			gap: 20px; /*Dar espaço entre os itens 1, 2 e 3 */
+		}
+
+		.item {
+			/* Propriedades para os filhos */
+			/* flex-grow, flex-shrink, flex-basis (atalho: flex) */
+			/* order */
+		}
+
+table{
+	width: 80%;
+	margin: auto; /*Defina a margem de forma automática (centralizando)*/
+		border-collapse: collapse; /*Remove as bordas das células*/
+	
+}
+</style>
+</head>
+<body>
+	<h1>CSS - FlexBox</h1>
+
+	<p><b>O que é FlexBox?</b></p>
+	<p>Flexbox (Flexible Box Layout) é uma ferramenta do CSS3 para criar layouts flexíveis e responsivos, organizando itens em uma dimensão (linha ou coluna) de forma eficiente, usando um contêiner pai (display: flex;) e seus itens filhos, permitindo alinhar, distribuir espaços e controlar o fluxo dos elementos sem precisar de floats ou posicionamentos complexos. Ele se adapta a diferentes tamanhos de tela, tornando o desenvolvimento mais fácil e dinâmico, e tem propriedades para o contêiner (pai) e para os itens (filhos), como flex-direction, justify-content, align-items, e flex-wrap</p>
+
+	<h2>Como funciona (HTML e CSS)</h2>
+	<h3>No HTML: Você define um elemento como contêiner e seus filhos como itens</h3>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+	</div>
+
+	<h3>No CSS com o auxílio de style no head: Aplique display: flex; ao elemento pai (.container)</h3>
+	.container {
+		display: flex; /* Transforma o container em um flex container */
+		/* Propriedades adicionais para o pai */
+		flex-direction: row; /* Direção padrão: linha */
+		justify-content: center; /* Alinha no eixo principal */
+		align-items: center; /* Alinha no eixo transversal */
+		flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+	}
+
+	.item {
+		/* Propriedades para os filhos */
+		/* flex-grow, flex-shrink, flex-basis (atalho: flex) */
+		/* order */
+	}
+
+	<h2>Propriedades Chave</h2>
+	<h3>No Contêiner (Pai)</h3>
+	<ul>  <li><b> display: flex; </b>: O principal comando para activar o Flexbox.</li>
+		<li><b> flex-direction: </b> Define o eixo principal (row, column, row-reverse, column-reverse).</li>
+		<li><b> justify-content: </b> Alinha itens no eixo principal (flex-start, flex-end, center, space-between, etc.).</li>
+		<li><b> align-items: </b> Alinha itens no eixo transversal (stretch, flex-start, flex-end, center, baseline).</li>
+		<li><b> flex-wrap: </b> Controla se os itens quebram para uma nova linha (nowrap, wrap, wrap-reverse).</li>
+		<li><b> flex-flow: </b> Atalho para flex-direction e flex-wrap.</li> </ul>
+
+		<h3> Nos Itens (Filhos)</h3>
+		<ul>
+			<b><li> flex-grow: </b> Define a capacidade de um item crescer para preencher espaço extra.</li>
+			<li> flex-shrink: </b> Define a capacidade de um item encolher.</li>
+			<li> flex-basis: </b> Define o tamanho inicial de um item.</li>
+			<li> flex: </b> Atalho para flex-grow, flex-shrink e flex-basis.</li>
+			<li> order: </b> Altera a ordem visual dos itens sem mudar o código HTML, afetando a acessibilidade.</li></ul> 
+
+			<h2>Vantagens</h2>
+
+			<ul> <li><b> Layouts Responsivos:</b> Adapta-se a telas de diversos tamanhos.</li>
+				<li><b>Alinhamento Fácil:</b> Centralizar itens é simples (ex: justify-content: center; e align-items: center;).</li>
+				<li><b>Distribuição de Espaço:</b> Controle sobre como o espaço é distribuído entre os itens.</li>
+				<li><b>Ordem Visual Flexível:</b> Reordene elementos sem alterar o HTML (com a propriedade order). </li> </ul>
+
+				<h2>Resumo de Propriedades Flexbox</h2>
+				<table border="1">
+					 <caption>Exemplo de Título</caption>
+					<th>Objectivo</th>
+					<th>Propriedade</th>
+					<tr>
+						<td>Definir direcção:</td>
+						<td>flex-direction</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Permitir quebra de linha:</td>
+						<td>flex-wrap</td>
+					</tr>
+					<tr>
+						<td>Atalho para direcção e quebra:</td>
+						<td>flex-flow</td>
+					</tr>
+					<tr>
+						<td>Espaço entre itens:</td>
+						<td>gap</td>
+					</tr>
+					<tr>
+						<td>Alinhamento horizontal:</td>
+						<td>justify-content</td>
+					</tr>
+				</table>
+
+					
+				
+					
+					
+					
+			</body>
+			</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS FlexBox | Align Items</title>
+
+	<style>
+		.item{
+			width: 25%;
+			height: 50px;
+			background: lightblue;
+			margin: 10px;
+			text-align: center;
+			box-shadow: 5px 5px 10px gray; /*Add uma sombra*/
+		}
+	</style>
+</head>
+<body>
+<h1>CSS FlexBox | Align Items</h1>
+<p>Para trabalhar com align-items no HTML/CSS, (Flexbox), você define a propriedade no container pai (com display: flex;) para alinhar os itens filhos no eixo transversal (perpendicular à direcção principal, que por padrão é horizontal) e usar valores como flex-start, flex-end, center, stretch (padrão), ou baseline para controlar seu posicionamento vertical, podendo sobrescrever isso para itens individuais com align-self. </p>
+
+<h1>Como usar align-items</h1>
+<h2>1. No HTML: Você tem um container e seus itens filhos.</h2>
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<h2>2. No CSS (Container): Defina o container como flexível e use align-items</h2>
+.container {
+  display: flex; /* Transforma em container flex */
+  align-items: center; /* Alinha os itens ao centro no eixo transversal */
+  height: 200px; /* Para ver o alinhamento vertical */
+  border: 1px solid black;
+}
+
+.item {
+  padding: 20px;
+  background-color: lightblue;
+  margin: 5px;
+}
+
+<h2>Valores comuns para align-items</h2>
+<ul><li>stretch: (Padrão) Estica os itens para preencher o container no eixo transversal, a menos que tenham altura definida.</li>
+<li>flex-start: Alinha os itens no início do eixo transversal (topo, se flex-direction for row).</li>
+<li>flex-end: Alinha os itens no final do eixo transversal (base, se flex-direction for row).</li>
+<li>center: Centraliza os itens no eixo transversal.</li>
+<li>baseline: Alinha os itens pela sua linha de base do texto.</li> </ul>
+
+<h2>Alinhando um item específico: align-self</h2>
+<p>Para alinhar apenas um item, use align-self no próprio item, com os mesmos valores de align-items: </p>
+
+.item:nth-child(2) {
+  align-self: flex-end; /* O segundo item vai para o final */
+}
+<hr>
+<h2>Exemplo alignitems: flex-start | Posiciona os ítens no topo do container</h2>
+<div class="container" style="width: 100%;height: 200px; background: red; display:flex; align-items: flex-start;">
+	<div class="item">Item A</div>
+	<div class="item">Item B</div>
+	<div class="item">Item C</div>
+	<div class="item">Item D</div>
+	<div class="item">Item E</div>
+</div>
+<hr>
+<h2>Exemplo alignitems: center | Posiciona os ítens no centro do container pela ordem vertical (de cima para baixo)</h2>
+<div class="container" style="width: 100%;height: 200px; background: red; display:flex; align-items: center;">
+	<div class="item">Item A</div>
+	<div class="item">Item B</div>
+	<div class="item">Item C</div>
+	<div class="item">Item D</div>
+	<div class="item">Item E</div>
+</div>
+
+<hr>
+<h2>Exemplo alignitems: center | Posiciona os ítens no fim do container (de cima para baixo)</h2>
+<div class="container" style="width: 100%;height: 200px; background: red; display:flex; align-items: flex-end;">
+	<div class="item">Item A</div>
+	<div class="item">Item B</div>
+	<div class="item">Item C</div>
+	<div class="item">Item D</div>
+	<div class="item">Item E</div>
+</div>
+
+<hr>
+<h2>Exemplo alignitems: stretch | Se não definirmos a altura dos ítens, a propriedade stretch atribuirá uma altura uniforma para os elementos de acordo a altura do elemento pai</h2>
+<div class="container" style="width: 100%;height: 200px; background: red; display:flex; align-items: stretch;">
+	<div class="item">Item A</div>
+	<div class="item">Item B</div>
+	<div class="item">Item C</div>
+	<div class="item">Item D</div>
+	<div class="item">Item E</div>
+</div>
+</body>
+</html>

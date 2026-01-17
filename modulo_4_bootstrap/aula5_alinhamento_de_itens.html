@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de Itens no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Alinhamento de Itens no Bootstrap</h1>
+
+            <p>No Bootstrap, o alinhamento de itens é feito principalmente com classes de utilitários, usando Flexbox
+                (d-flex) para alinhamento horizontal (justify-content-*) e vertical (align-items-*), ou classes de texto
+                (.text-*) para alinhar texto dentro de elementos, além de classes de alinhamento vertical (.align-*)
+                para itens inline e células de tabela, permitindo centralizar, alinhar ao início/fim e ajustar
+                verticalmente de forma responsiva.</p>
+            <hr>
+            <h2>1. Alinhamento com Flexbox (Vertical e Horizontal)</h2>
+            <p>Use d-flex no container e classes específicas no container para os itens:</p>
+            <ul>
+                <li>
+                    flex-row (padrão): Itens em linha (horizontal). </li>
+                <li>flex-column: Itens em coluna (vertical). </li>
+                <li>justify-content-* (eixo principal): start, center, end, between, around, evenly. </li>
+                <li>align-items-* (eixo cruzado): start, center, end, baseline, stretch.
+                </li>
+            </ul>
+            <p><strong>Exemplo</strong></p>
+            &lt;div class="d-flex justify-content-center align-items-center" style="height: 200px;"&gt; <br>
+            &lt;div&gt;Conteúdo Centralizado&lt;/div&gt; <br>
+            &lt;/div&gt;
+
+            <p><strong>Resultado</strong></p>
+            <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                <div>Conteúdo Centralizado</div>
+            </div>
+
+            <hr>
+            <h2>2. Alinhamento de Texto</h2>
+            <p>Classes para alinhar texto em blocos e componentes:</p>
+            <ul>
+                <li>
+                    text-start: Alinha o texto à esquerda (padrão). </li>
+                <li>text-center: Centraliza o texto. </li>
+                <li>text-end: Alinha o texto à direita. </li>
+                <li>Responsivo: Adicione breakpoints (ex: text-md-center) para alinhar em telas médias e maiores.
+                </li>
+            </ul>
+
+            <p><strong>Exemplo</strong></p>
+            &lt;p class="text-center"&gt;Este texto é centralizado.&lt;/p&gt;
+
+            <p><strong>Resultado</strong></p>
+            <p class="text-center">Este texto é centralizado.</p>
+            <hr>
+            <h2>3. Alinhamento Vertical (Itens Inline e Células)</h2>
+            <p>Classes para alinhar elementos inline, inline-block, e células de tabela:</p>
+            <ul>
+                <li>
+                    align-baseline </li>
+                <li>align-top </li>
+                <li>align-middle </li>
+                <li>align-bottom </li>
+                <li>align-text-top / align-text-bottom.
+                </li>
+            </ul>
+
+            <p><strong>Exemplo</strong></p>
+            &lt;span class="align-middle"&gt;Texto com alinhamento médio&lt;/span&gt;
+
+            <p><strong>Resultado</strong></p>
+            <span class="align-middle">Texto com alinhamento médio</span>
+            <hr>
+            <h2>4. Alinhamento Individual de Itens Flex (Align Self)</h2>
+            <p>Use em um item dentro de um container flex para mudar o alinhamento dele no eixo cruzado:</p>
+            <ul>
+                <li>align-self-*: start, end, center, baseline, stretch.</li>
+            </ul>
+
+            <p><strong>Exemplo</strong></p>
+
+            &lt;div class="d-flex u"&gt; <br>
+            &lt;div>Item 1&lt;/div&gt; <br>
+            &lt;div class="align-self-center">Item 2 (Centralizado) <br> &lt;/div&gt; <br>
+            &lt;div>Item 3&lt;/div&gt; <br>
+            &lt;/div&gt;
+
+            <p><strong>Resultado</strong></p>
+            <div class="d-flex u">
+                <div>Item 1</div>
+                <div class="align-self-center">Item 2 (Centralizado)</div>
+                <div>Item 3</div>
+            </div>
+            <hr>
+            <h2>5. Centralizar Blocos (com Margem Auto)</h2>
+            <p>Para centralizar um bloco (div, etc.) que tem largura definida, use margens automáticas:</p>
+            <ul>
+                <li>
+                    mx-auto: Centraliza horizontalmente (margens esquerda e direita automáticas). </li>
+                <li>my-auto: Centraliza verticalmente (em containers flex/grid).
+                </li>
+            </ul>
+
+            <p><strong>Exemplo</strong></p>
+            &lt;div class="mx-auto u" style="width: 200px;"&gt; <br>
+            Bloco centralizado horizontalmente <br>
+            &lt;/div&gt;
+
+            <p><strong>Resultado</strong></p>
+            <div class="mx-auto u" style="width: 200px;">
+                Bloco centralizado horizontalmente
+            </div>
+
+            <h3>Mais Exemplos</h3>
+
+            <h4>Exemplo 1 - Centralizar no Início da Linha</h4>
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row <strong>fundo</strong> align-items-<strong>start</strong>"&gt; <br>
+            &lt;div class="col u"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col d"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col t"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            <p>
+                <strong>No CSS:</strong> <br>
+                .fundo{ <br>
+                background-color: gray; <br>
+                height: 200px; <br>
+                }
+            </p>
+            <p><strong>Explicação</strong></p>
+            <p>Este código usa o sistema de grid do Bootstrap para criar uma estrutura de três colunas de largura igual,
+                centralizadas em um contêiner, que se ajustam automaticamente ao tamanho da tela, mostrando "One of
+                three columns" em cada uma. As classes .container (largura fixa ou fluida), .row (linha), .col (colunas
+                automáticas) e text-center (texto centralizado) definem o layout responsivo e o alinhamento.</p>
+
+            <p>Aqui está a explicação detalhada de cada classe:</p>
+            <ul>
+                <li>
+                    &lt;div class="container text-center"&gt;: </li>
+                <ul>
+                    <li>
+                        container: Define uma largura máxima para o conteúdo e o centraliza horizontalmente na página. É
+                        a base necessária para o sistema de grid.</li>
+                    <li> text-center: Uma classe utilitária que alinha todo o texto dentro deste container ao centro.
+                    </li>
+                </ul>
+                <li>&lt;div class="row align-items-start"&gt;: </li>
+                <ul>
+                    <li>
+                        row: Cria uma "linha" para envolver as colunas. Ela utiliza Flexbox para organizar os elementos
+                        filhos.</li>
+                    <li>align-items-start: Alinha as colunas no topo da linha. Se as colunas tiverem alturas diferentes,
+                        todas ficarão alinhadas pela borda superior.
+                    </li>
+                </ul>
+                <li>&lt;div class="col"&gt;: </li>
+                <ul>
+                    <li>col: Esta classe indica uma coluna de largura automática. Como existem três divs com a classe
+                        .col dentro da mesma linha, o Bootstrap divide o espaço igualmente (33,33% para cada uma).</li>
+                </ul>
+                </li>
+            </ul>
+
+
+            <p><strong>Resultado</strong></p>
+
+            <div class="container text-center">
+                <div class="row fundo align-items-start">
+                    <div class="col u">
+                        One of three columns
+                    </div>
+                    <div class="col d">
+                        One of three columns
+                    </div>
+                    <div class="col t">
+                        One of three columns
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Resumo do comportamento:</strong> O código exibe três frases lado a lado, centralizadas
+                horizontalmente na tela e alinhadas ao topo da linha. </p>
+            <p>Para mais detalhes sobre como personalizar o layout, você pode consultar a Documentação oficial do Grid
+                do Bootstrap.</p>
+            <hr>
+            <h4>Exemplo 2</h4>
+
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row <strong>fundo</strong> align-items-<strong>center</strong>"&gt; <br>
+            &lt;div class="col u"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col d"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col t"&gt; <br>
+            One of three columns <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>Explicação</strong></p>
+            <p>A principal diferença entre este código e o anterior está na classe de alinhamento vertical da linha.</p>
+            <p>Enquanto no exemplo anterior o conteúdo ficava no topo, aqui ele é centralizado verticalmente. Confira a
+                explicação detalhada:</p>
+
+            <h2>1. align-items-center (A grande mudança)</h2>
+            <p>Esta classe do Bootstrap utiliza o Flexbox para alinhar as colunas no centro vertical da linha. </p>
+            <ul>
+                <li>Se a linha (row) tiver uma altura maior que o conteúdo das colunas (por exemplo, se uma coluna tiver
+                    muito texto ou se você definiu uma altura fixa com CSS), as colunas menores ficarão perfeitamente
+                    centralizadas entre o topo e o fundo da linha.</li>
+            </ul>
+            <hr>
+            <h2>2. Recapitulando as outras partes:</h2>
+            <ul>
+                <li>
+                    &lt;div class="container text-center"&gt;:</li>
+
+                <ul>
+                    <li>
+                        container: Centraliza o bloco na página e define uma largura máxima responsiva.
+                    </li>
+                    <li>text-center: Alinha horizontalmente o texto dentro das colunas para o centro.
+                    </li>
+                </ul>
+                <li>
+                    row: Cria o grupo horizontal que contém as colunas e ativa o comportamento de Flexbox.
+                </li>
+                <li>
+                    col: Define colunas de largura igual. Como são três divs, cada uma ocupará exatamente 33.33% da
+                    largura total da linha automaticamente.
+                </li>
+            </ul>
+            <p>Resultado Visual: Você terá três colunas lado a lado, com o texto centralizado horizontalmente dentro
+                delas, e todas as colunas alinhadas ao meio (altura) da linha onde estão inseridas.</p>
+            <p><strong>Resultado</strong></p>
+
+            <div class="container text-center">
+                <div class="row fundo align-items-center">
+                    <div class="col u">
+                        One of three columns
+                    </div>
+                    <div class="col d">
+                        One of three columns
+                    </div>
+                    <div class="col t">
+                        One of three columns
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h4>Exemplo 3</h4>
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row <strong>fundo</strong> align-items-<strong>end</strong>"&gt; <br>
+            &lt;div class="col u"&gt;
+            One of three columns
+            &lt;/div&gt; <br>
+            &lt;div class="col d"&gt;
+            One of three columns
+            &lt;/div&gt; <br>
+            &lt;div class="col t"&gt;
+            One of three columns
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt;
+            <p><strong>Explicação</strong></p>
+            <p>A diferença entre os demais códigos está na linha &lt;div class="row align-items-end"&gt;,
+                align-items-end (Alinhamento na Base)</p>
+            <p>Diferente das classes start (topo) ou center (meio), a classe align-items-end alinha todas as colunas na
+                parte inferior (base) da linha.</p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container text-center">
+                <div class="row fundo align-items-end">
+                    <div class="col u">
+                        One of three columns
+                    </div>
+                    <div class="col d">
+                        One of three columns
+                    </div>
+                    <div class="col t">
+                        One of three columns
+                    </div>
+                </div>
+            </div>
+            <p>Até ao momento, alinhamos os elementos de uma vez, mas também podemos alinhá-los de forma separada.</p>
+            <hr>
+            <h3>Alinhamenrto Individual dos Itens</h3>
+
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row <strong>fundo</strong>"&gt; <br>
+            &lt;div class="col align-<strong>self-start</strong> u"&gt;
+            COLUNA 1 CENTRALIZADA NO INÍCIO DA LINHA
+            &lt;/div&gt; <br>
+            &lt;div class="col align-<strong>self-center</strong> d"&gt;
+            COLUNA 2 CENTRALIZADA NO MEIO DA LINHA
+            &lt;/div&gt; <br>
+            &lt;div class="col align-<strong>self-end</strong> t"&gt;
+            COLUNA 1 CENTRALIZADA NO FIM DA LINHA
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>Explicação</strong></p>
+            <p>
+                Este código apresenta a maior flexibilidade de alinhamento até agora. A principal diferença é que o
+                alinhamento vertical não é mais aplicado à linha (row), mas sim a cada coluna individualmente.
+            </p>
+
+            <p>Aqui está a explicação detalhada:</p>
+            <h5>1. Alinhamento Individual (align-self-*)</h5>
+            <p>Em vez de todas as colunas seguirem a mesma regra, cada uma tem sua própria posição vertical:</p>
+            <ul>
+                <li>
+                    align-self-start (na primeira coluna): Esta coluna específica fica alinhada ao topo da linha.</li>
+                <li>align-self-center (na segunda coluna): Esta coluna fica centralizada verticalmente no meio da linha.
+                </li>
+                <li>align-self-end (na terceira coluna): Esta coluna fica alinhada à base (fundo) da linha.
+                </li>
+            </ul>
+
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container text-center">
+                <div class="row fundo">
+                    <div class="col align-self-start u">
+                        COLUNA 1 CENTRALIZADA NO INÍCIO DA LINHA (Veja o fundo vermelho)
+                    </div>
+                    <div class="col align-self-center d">
+                        COLUNA 2 CENTRALIZADA NO MEIO DA LINHA (Veja o fundo verde)
+                    </div>
+                    <div class="col align-self-end t">
+                        COLUNA 3 CENTRALIZADA NO FIM DA LINHA (Veja o fundo azul turquesa)
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Observação:</strong>Fique atento as cores e não aos textos. O resultado é visto pela posição do
+                vermelho, do verde e do azul turco.</p>
+
+
+            <hr>
+            <h2>Diferentes Formas de Distribuir Colunas Horizontalmente Dentro de uma Linha (row) no Bootstrap, </h2>
+
+            <p>
+                &lt;div class="container text-center"&gt; <br>
+                &lt;div class="row fundo justify-content-start"&gt; <br>
+                &lt;div class="col-4 u"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;div class="row fundo justify-content-center"&gt; <br>
+                &lt;div class="col-4 u"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;div class="row fundo justify-content-end"&gt; <br>
+                &lt;div class="col-4 u"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;div class="row fundo justify-content-around"&gt; <br>
+                &lt;div class="col-4 u"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;div class="row fundo justify-content-between"&gt; <br>
+                &lt;div class="col-4 u"&gt; <br>
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;div class="row fundo justify-content-evenly"&gt; <br>
+                &lt;div class="col-4 u"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;div class="col-4 d"&gt;
+                One of two columns
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            </p>
+
+            <p><strong>Explicação</strong></p>
+
+            <p>Este código demonstra as diferentes formas de distribuir colunas horizontalmente dentro de uma linha
+                (row) no Bootstrap, utilizando as classes justify-content.</p>
+
+            <p>Em todos os exemplos, cada linha possui apenas duas colunas de tamanho fixo (col-4). Como o sistema de
+                grid do Bootstrap vai até 12, as duas colunas somam 8, deixando um espaço vazio de 4 unidades que é
+                distribuído de formas diferentes:</p>
+
+            <h3>1. Alinhamento por Lado</h3>
+            <ul>
+                <li>
+                    <strong>justify-content-start:</strong> Alinha as colunas à esquerda (no início da linha). O espaço
+                    sobra todo à
+                    direita.
+                </li>
+                <li><strong>justify-content-center:</strong> Alinha as colunas ao centro. O espaço vazio é dividido
+                    igualmente à esquerda
+                    e à direita.</li>
+                <li><strong>justify-content-end:</strong> Alinha as colunas à direita (no fim da linha). O espaço sobra
+                    todo à esquerda.
+                </li>
+            </ul>
+            <h3>2. Distribuição Espaçada (Flexbox)</h3>
+            <ul>
+                <li>
+                    <strong>justify-content-around:</strong> Distribui o espaço ao redor das colunas. O espaço entre as
+                    colunas é o dobro
+                    do espaço entre as bordas e as colunas.
+                </li>
+                <li><strong>justify-content-between:</strong> Empurra as colunas para as extremidades. Todo o espaço
+                    sobra apenas entre
+                    as duas colunas, eliminando margens externas.</li>
+                <li><strong>justify-content-evenly:</strong> Distribui o espaço de forma totalmente igual. O espaço
+                    entre as colunas e as
+                    bordas é exactamente o mesmo que o espaço entre elas.
+                </li>
+            </ul>
+            <h4>Resumo das Classes</h4>
+            <ul>
+                <li>
+                    col-4: Define que cada coluna ocupa 4 de 12 espaços (33.3% da largura). </li>
+                <li>container text-center: Centraliza o layout na página e o texto dentro das colunas.
+                </li>
+            </ul>
+            <p>Este código é um guia visual perfeito para entender como o sistema de alinhamento horizontal (Justify) do
+                Bootstrap 5 funciona.</p>
+
+            <p><strong>Resultado:</strong></p>
+
+            <div class="container text-center">
+                <div class="row fundo justify-content-start">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+                <div class="row fundo justify-content-center">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+                <div class="row fundo justify-content-end">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+                <div class="row fundo justify-content-around">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+                <div class="row fundo justify-content-between">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+                <div class="row fundo justify-content-evenly">
+                    <div class="col-4 u">
+                        One of two columns
+                    </div>
+                    <div class="col-4 d">
+                        One of two columns
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2>Imagem e Texto</h2>
+
+            <div class="clearfix">
+                <img src="img/responsivo.png" class="col-md-6 float-md-start mb-3 ms-md-3 img" alt="Texto da Imagem">
+
+                <p>
+                    Um parágrafo de texto de exemplo. Estamos usando-o aqui para mostrar o uso da classe clearfix.
+                    Adicionamos algumas frases sem sentido para demonstrar como as colunas interagem com a imagem
+                    flutuante.
+                </p>
+
+                <p>
+                    Como você pode ver, os parágrafos envolvem a imagem flutuante de forma elegante. Agora imagine como
+                    ficaria com algum conteúdo real aqui, em vez desse texto genérico e tedioso que se estende
+                    indefinidamente, mas que não transmite nenhuma informação concreta. Ele simplesmente ocupa espaço e
+                    não deveria ser lido.
+                </p>
+
+                <p>
+                    A documentação do Bootstrap é vasta. Você pode explorar todo o conteúdo que aparece em Layout,
+                    Colums.
+                </p>
+            </div>
+
+            <p><strong>Explicação</strong></p>
+            <p>
+                Este código demonstra o uso da técnica de flutuação (float) combinada com um Clearfix para fazer com que
+                o texto envolva uma imagem, um layout muito comum em artigos e blogs/portais de notícias.
+            </p>
+
+            <p>Abaixo está a explicação detalhada de cada componente:</p>
+            <h3>1. A Classe clearfix</h3>
+            <p>A classe .clearfix é um utilitário essencial quando se usa elementos flutuantes.</p>
+            <ul>
+                <li>
+                    Problema: Quando você usa um float, o elemento é "removido" do fluxo normal da página, o que pode
+                    fazer com que o container pai (a div) "encolha" e não reconheça a altura da imagem.
+                </li>
+                <li>
+                    Solução: O clearfix força o container a expandir sua altura para envolver completamente os elementos
+                    flutuantes dentro dele, evitando que o conteúdo abaixo (fora dessa div) quebre ou suba para lugares
+                    indesejados.
+                </li>
+            </ul>
+
+            <h3>2. Posicionamento da Imagem</h3>
+            <ul>
+                <li>
+                    col-md-6: Define que, em dispositivos médios ou maiores, a imagem ocupará 50% da largura total (6 de
+                    12 colunas).
+                </li>
+                <li>
+                    float-md-start: Faz a imagem "flutuar" à esquerda em telas médias ou superiores, permitindo que o
+                    texto suba e preencha o lado direito.
+                </li>
+                <li>
+                    mb-3: Adiciona uma margem na parte inferior (margin-bottom) para o texto não encostar na imagem por
+                    baixo.
+                </li>
+                <li>
+                    ms-md-3: Adiciona uma margem à esquerda (margin-start) apenas em telas médias, útil para criar
+                    espaçamento se houvesse algo à esquerda.
+                </li>
+            </ul>
+
+            <h3>3. Comportamento do Texto</h3>
+            <p>Os parágrafos &lt;p&gt; não possuem classes de grid. Por causa do float-md-start na imagem, o texto flui
+                naturalmente ao redor dela. Se o texto for longo o suficiente, ele começará ao lado da imagem e
+                continuará abaixo dela assim que o espaço lateral terminar.</p>
+
+            <h4>Resumo Visual</h4>
+            <ul>
+                <li>
+                    Em telas grandes: A imagem fica à esquerda ocupando metade da largura, e o texto a envolve pelo lado
+                    direito e por baixo.
+                </li>
+                <li>
+                    Em telas pequenas (celulares): Como as classes possuem o prefixo -md-, o efeito de flutuação é
+                    desativado. A imagem ocupará a largura total (ou o padrão do navegador) e o texto aparecerá
+                    normalmente abaixo dela, garantindo a responsividade do layout.
+                </li>
+            </ul>
+            <p><strong>Resultado:</strong></p>
+            <div class="clearfix">
+                <img src="img/responsivo.png" class="col-md-6 float-md-start mb-3 ms-md-3 img" alt="Texto da Imagem">
+
+                <p>
+                    Um parágrafo de texto de exemplo. Estamos usando-o aqui para mostrar o uso da classe clearfix.
+                    Adicionamos algumas frases sem sentido para demonstrar como as colunas interagem com a imagem
+                    flutuante.
+                </p>
+
+                <p>
+                    Como você pode ver, os parágrafos envolvem a imagem flutuante de forma elegante. Agora imagine como
+                    ficaria com algum conteúdo real aqui, em vez desse texto genérico e tedioso que se estende
+                    indefinidamente, mas que não transmite nenhuma informação concreta. Ele simplesmente ocupa espaço e
+                    não deveria ser lido.
+                </p>
+
+                <p>
+                    A documentação do Bootstrap é vasta. Você pode explorar todo o conteúdo que aparece em Layout,
+                    Colums.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

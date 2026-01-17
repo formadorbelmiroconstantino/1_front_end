@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listas em HTML com list-style-type</title>
+</head>
+<body>
+<h1>Listas em HTML com a Propriedade type</h1>
+<p>A propriedade type em listas ordenadas (< ol>) no HTML serve para definir o estilo da numeração ou marcador dos itens, como números (1, 2, 3), letras (a, b, c), ou algarismos romanos (i, ii, iii), embora hoje seja mais comum usar CSS (com a propriedade list-style-type) para estilizar listas, a tag < ol> ainda suporta o atributo type com valores como '1', 'a', 'A', 'i', 'I' para definir o tipo de sequência, indicando a ordem é importante. 
+</p>
+<h1>Como funciona:</h1>
+
+<ul><li> Propósito: Usada dentro da tag < ol>, ela controla a aparência dos marcadores (os números ou letras que aparecem antes de cada < li>).</li>
+
+<li> 
+	Valores Comuns (Atributo type):
+    <ul>
+    	<li>'1' (Padrão): Números arábicos (1, 2, 3).</li>
+    	 	<li>'a': Letras minúsculas (a, b, c).</li>
+    	 	 	<li>'A': Letras maiúsculas (A, B, C).</li>
+    	 	 	 	<li>'i': Algarismos romanos minúsculos (i, ii, iii).</li>
+    	 	 	 	 	<li>'I': Algarismos romanos maiúsculos (I, II, III).</li>
+    </ul>
+</li>
+</ul>
+
+<p>Exemplo</p>
+<ol type="A"><li>Primeiro</li><li>Segundo</li></ol>
+ resultaria em: 
+ A. Primeiro
+B. Segundo 
+
+<p>Diferença entre type (HTML) e list-style-type (CSS):</p>
+<ol type="A">
+	<li>O atributo type no HTML é uma forma mais antiga de estilização de listas ordenadas, focando no tipo de sequência.</li>
+	<li>A propriedade CSS list-style-type oferece um controle muito maior e mais moderno sobre o estilo de listas (ordenadas e não ordenadas), com mais valores como disc, circle, square, decimal-leading-zero, etc.. </li>
+</ol>
+<p><b>Quando utilizar:</b></p>
+<p>Use < ol> quando a ordem dos itens for importante (passo a passo, ranking) e < ul> quando a ordem não importa (lista de compras, tópicos). A propriedade type (ou CSS) define como essa ordem é apresentada visualmente. </p>
+</body>
+</html>

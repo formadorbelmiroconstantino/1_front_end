@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Tabelas no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Imagem e Tabelas no Bootstrap</h1>
+            <p>
+                No Bootstrap 5 (versão actual em 2026), a estilização de imagens e tabelas é feita através de classes
+                utilitárias que garantem responsividade e design moderno.
+            </p>
+
+            <h2>1. Imagens</h2>
+            <p>Para tornar imagens adaptáveis a diferentes tamanhos de tela e aplicar estilos rápidos: </p>
+            <ul>
+                <li>
+                    Responsividade: A classe .img-fluid aplica max-width: 100% e height: auto, fazendo com que a imagem
+                    se ajuste ao elemento pai.
+                </li>
+                <li>
+                    Miniaturas: Use .img-thumbnail para adicionar uma borda arredondada de 1px em volta da imagem.
+                </li>
+                <li>
+                    Formas: .rounded arredonda os cantos, enquanto .rounded-circle torna a imagem circular.
+                </li>
+                <li>
+                    Alinhamento: Use classes auxiliares como .float-start, .float-end ou as classes de margem automática
+                    .mx-auto .d-block para centralizar.
+                </li>
+            </ul>
+            <h2>2. Tabelas</h2>
+            <p>
+                As tabelas no Bootstrap exigem a classe base .table para a estilização padrão.
+
+            </p>
+            <ul>
+                <li>Estilos Visuais:</li>
+                <ul>
+                    <li>
+                        .table-striped: Adiciona o efeito "zebrado" (linhas alternadas com cores diferentes).</li>
+                    <li>
+                        .table-hover: Activa um estado de realce quando o mouse passa sobre as linhas.
+                    </li>
+                    <li>
+                        .table-bordered: Adiciona bordas em todos os lados da tabela e células.
+                        .table-dark: Inverte as cores para um tema escuro.
+                    </li>
+                </ul>
+                <li>Cores de Contexto: Você pode aplicar cores específicas a linhas (&lt;tr&gt;) ou células (&lt;td&gt;)
+                    qusando classes como .table-primary, table-success, .table-danger, entre outras..</li>
+                <li>Tabelas Compactas: A classe .table-sm reduz o preenchimento (padding) das células pela metade.</li>
+                <li>Responsividade: Envolva a tabela em um elemento com a classe .table-responsive para habilitar a
+                    barra de rolagem horizontal em dispositivos pequenos. </li>
+            </ul>
+
+            <h3>Exemplos</h3>
+            <p><strong>Exemplo 1</strong> - Imagem não Responsiva</p>
+            <p>
+                &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                &lt;div class="col"&gt; <br>
+                &lt;img src="img/responsivo.jpg" alt="Imagem Responsiva"&gt; <br>
+                &lt;/div>&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            </p>
+
+            <p><strong>Explicação:</strong> Essa imagem que foi adicionada ainda não obedece à responsividade. Se a tela
+                estiver em versões pequenas, notará que a largura da imagem vai causar um scroll horizontal.</p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/responsivo.jpg" alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+            <p>Como vimos mais acima, o Bootstrap tem a classe .img-fluid, que aplica max-width: 100% e height: auto,
+                fazendo com que a imagem
+                se ajuste ao elemento pai.</p>
+
+            <p><strong>Exemplo 2</strong> - Imagem Responsiva com .img-fluid</p>
+            <p>
+                &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                &lt;div class="col"&gt; <br>
+                &lt;img src="img/responsivo.jpg" <strong>class="img-fluid"</strong> alt="Imagem Responsiva"&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            </p>
+
+            <p><strong>Explicação</strong></p>
+            <p>Só pelo facto de termos adicionado a classe .img-fluid no atributo class da tag img, conseguimos tornar a
+                imagem responsiva.</p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/responsivo.jpg" class="img-fluid" alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Exemplo 3</strong> - Miniaturas de Imagens</p>
+            &lt;div class="container"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col"&gt; <br>
+            &lt;img src="img/responsivo.jpg" <strong>class="img-thumbnail"</strong> alt="Imagem Responsiva"&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt;
+            <p><strong>Explicação</strong></p>
+            <p>Além das <a href="https://getbootstrap.com/docs/5.3/utilities/borders/" target="_blank">ferramentas de
+                    raio de borda</a>, você pode utilizar a classe .img-thumbnail para dar à imagem uma aparência de
+                borda arredondada de 1px.</p>
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/responsivo.jpg" class="img-thumbnail" alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+            <p><em>Note</em> que também já tornou a imagem responsiva.</p>
+            <hr>
+            <h2>Alinhamento de Imagens</h2>
+            &lt;div class="container"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col"&gt; <br>
+            &lt;img src="img/responsivo.jpg" class="rounded float-start" width="200px" height="200px" alt="Imagem"
+            title="Imagem alinha à esquerda"&gt; <br>
+            &lt;img src="img/responsivo.jpg" class="rounded float-end" width="200px" height="200px" alt="Imagem"
+            title="Imagem alinha à direita"&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            <p><strong>Explicação</strong></p>
+
+            <p>Com as classes .rounded .float-start e .rounded .float-end, alinhamos uma imagem à esquerda e a outra à
+                direita do elemento div com classe col. .float-start para o início, esquerda, e .float-end para o final,
+                direita. E para podermos notar bem o alinhamo, definimos uma largura e altura de 200px, imagens
+                quadradas.</p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/responsivo.jpg" class="rounded float-start" width="200px" height="200px"
+                            alt="Imagem" title="Imagem alinha à esquerda">
+                        <img src="img/responsivo.jpg" class="rounded float-end" width="200px" height="200px"
+                            alt="Imagem" title="Imagem alinha à direita">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2>Fotografia</h2>
+            <p>A tag &lt;picture&gt; é utilizada no Bootstrap 5 (versão actual em 2026) para oferecer diferentes versões
+                de uma mesma imagem de acordo com o tamanho da tela ou formato de arquivo (como WebP), optimizando a
+                performance.</p>
+            <p>Para manter a fotografia responsiva dentro do Bootstrap, você deve aplicar a classe .img-fluid
+                directamente na tag &lt;img&gt; que está dentro do elemento &lt;picture&gt;.</p>
+
+            <p><strong>Exemplo</strong></p>
+            <p>Este exemplo carrega uma fotografia diferente dependendo da largura da janela do navegador:</p>
+            &lt;div class="container"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col"&gt; <br>
+            &lt;picture class="d-flex justify-content-center align-items-center"&gt; <br>
+            &lt;!-- Imagem para telas grandes (Desktop) --&gt; <br>
+            &lt;source srcset="img/foto-computador.jpg" media="(min-width: 992px)"&gt; <br>
+
+            &lt;!-- Imagem para telas médias (Tablet) --&gt; <br>
+            &lt;source srcset="img/foto-tablet.jpg" media="(min-width: 768px)"&gt; <br>
+
+            &lt;!-- Imagem padrão e para dispositivos móveis --&gt; <br>
+            &lt;img src="img/foto-telemovel.jpg" class="img-fluid rounded img-thumbnail" alt="Descrição da fotografia
+            para acessibilidade"&gt; <br>
+            &lt;/picture&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <picture class="d-flex justify-content-center align-items-center">
+                            <!-- Imagem para telas grandes (Desktop) -->
+                            <source srcset="img/foto-computador.jpg" media="(min-width: 992px)">
+
+                            <!-- Imagem para telas médias (Tablet) -->
+                            <source srcset="img/foto-tablet.jpg" media="(min-width: 768px)">
+
+                            <!-- Imagem padrão e para dispositivos móveis -->
+                            <img src="img/foto-telemovel.jpg" class="img-fluid rounded  img-thumbnail"
+                                alt="Descrição da fotografia para acessibilidade">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Explicação</strong></p>
+
+            <ol>
+                <li>
+                    &lt;source&gt;: Define as condições de mídia. O navegador lê de cima para baixo e escolhe a primeira
+                    que for verdadeira.
+                </li>
+                <li>
+                    .img-fluid: Obrigatória para que a fotografia se comporte como uma imagem do Bootstrap, ajustando-se
+                    à largura da coluna ou container.
+                </li>
+                <li>
+                    .rounded ou .img-thumbnail: Você pode adicionar as classes de estilo (como bordas arredondadas ou
+                    molduras) na tag &lt;img&gt;.
+                </li>
+                <li>
+                    Optimização: Você também pode usar o &lt;picture&gt; para servir formatos modernos:
+                </li>
+            </ol>
+            &lt;picture&gt; <br>
+            &lt;source srcset="foto.webp" type="image/webp"&gt; <br>
+            &lt;img src="img/responsivo.jpg" class="img-fluid" alt="Fotografia em formato optimizado"&gt; <br>
+            &lt;/picture&gt;
+
+            <hr>
+            <h2>Tabelas</h2>
+            <hr>
+<p>As tabelas no Bootstrap 5 são estilizadas para serem limpas e responsivas com o uso mínimo de classes.
+</p>
+
+<p>Para aplicar o estilo padrão, adicione a classe .table à tag &lt;table&gt;.</p>
+<h3>1. Estrutura Básica</h3>
+<p>Para aplicar o estilo padrão, adicione a classe .table à tag <table>.</p>
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Estado</th>
+          <th>Responsável</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Projeto 1</td>
+          <td>Em andamento</td>
+          <td>Belmiro</td>
+          <td>xx/xx/xxxx</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Projeto 2</td>
+          <td>Concluído</td>
+          <td>Constantino</td>
+          <td>xx/xx/xxxx</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<h3>2. Classes de Estilização Comuns</h3>
+<p>Você pode combinar classes para personalizar a aparência:</p>
+<ul>
+    <li>
+        .table-striped: Adiciona listras (zebra) nas linhas.</li>
+    <li>
+    .table-hover: Activa um estado de "hover" (destaque) ao passar o mouse sobre as linhas.</li>
+    <li>
+    .table-bordered: Adiciona bordas em todos os lados da tabela e células.</li>
+    <li>
+    <li>
+        .border-class: Adiciona cor na borda da tabela (Ex.: .border-info, cor azul)
+    </li>
+    .table-borderless: Remove todas as bordas da tabela.</li>
+    <li>
+    .table-sm: Torna a tabela mais compacta cortando o preenchimento (padding) das células.
+    </li>
+</ul> 
+
+<h3>3. Cores de Contexto</h3>
+<p>Use classes como .table-primary, .table-success, .table-danger ou .table-dark tanto na tabela inteira quanto em linhas (&lt;tr&gt;) ou células (&lt;td&gt;) específicas para indicar estados.</p>
+<h3>4. Responsividade</h3>
+<p>Para tornar uma tabela responsiva (adicionar barra de rolagem horizontal em telas pequenas), envolva a tabela em um elemento &lt;div&gt; com a classe .table-responsive. Mesmo sem envolvê numa div com a classe .container, ela já será responsiva.</p> 
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Status (2026)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Projeto 1</td>
+          <td>Em andamento</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Projeto 2</td>
+          <td>Concluído</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+<hr>
+            <h3>Visão geral - Fonte (<em><a href="https://getbootstrap.com/docs/5.3/content/tables/"
+                        target="_blank">Bootstrap</a></em>)</h3>
+                        <hr>
+            <p>Devido ao uso generalizado de &lt;table&gt; elementos em widgets de terceiros, como calendários e
+                selectores de data, as tabelas do Bootstrap são opcionais. Adicione a classe base .table qualquer
+                `&lt;table&gt;` &lt;table&gt;, e então estenda-a com nossas classes modificadoras opcionais ou estilos
+                personalizados. Os estilos de tabela não são herdados no Bootstrap, o que significa que qualquer tabela
+                aninhada pode ser estilizada independentemente da tabela pai.</p>
+
+            <p>
+                Usando a formatação de tabela mais básica, veja como .table, tabelas baseadas em elementos &lt;table&gt;,
+                ficam no Bootstrap:
+            </p>
+            <div class="container">
+                <table class="table  table-bordered border-info table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>@social</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <h3>Cores na Tabelas, nas Linhas  ou nas Colunas</h3>
+            <p>Use classes contextuais para colorir tabelas, linhas de tabelas ou células individuais.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/cores_na_tabela_linhas_e_colunas.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                </div>
+            </div>
+          
+                <p>
+                    &lt;!-- On tables --&gt; <br> <br>
+                    &lt;table class="table-primary"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-secondary"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-success"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-danger"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-warning"&gt;...&lt;/table&gt;<br> 
+                    &lt;table class="table-info"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-light"&gt;...&lt;/table&gt; <br>
+                    &lt;table class="table-dark"&gt;...&lt;/table&gt; <br>
+                </p>
+
+<p>
+    &lt;!-- On rows --&gt; <br> <br>
+    &lt;tr class="table-primary"&gt;...&lt;/tr&gt; <br>
+    &lt;tr class="table-secondary"&gt;...&lt;/tr&gt;<br>
+    &lt;tr class="table-success"&gt;...&lt;/tr&gt; <br>
+    &lt;tr class="table-danger"&gt;...&lt;/tr&gt; <br>
+    &lt;tr class="table-warning"&gt;...&lt;/tr&gt;<br>
+    &lt;tr class="table-info"&gt;...&lt;/tr&gt; <br>
+    &lt;tr class="table-light"&gt;...&lt;/tr&gt;<br>
+    &lt;tr class="table-dark"&gt;...&lt;/tr&gt; <br>
+</p>
+
+<p>
+    &lt;!-- On cells (`td` or `th`) --&gt; <br> <br>
+    &lt;tr&gt;
+      &lt;td class="table-primary"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-secondary"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-success"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-danger"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-warning"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-info"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-light"&gt;...&lt;/td&gt; <br>
+      &lt;td class="table-dark"&gt;...&lt;/td&gt; <br>
+    &lt;/tr&gt;
+</p>
+           
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+*{
+	/*background: pink;*/
+}
+
+/*
+Design Responsivo PARA TABLET
+
+Aula 34, (Section Slide)
+
+INICIO */
+@media(max-width:820px){
+	/*Inverter as larguras da logo e da nav, menu*/
+	.logo{
+		width: 69%;
+		/*Psocionar a logo no inicio*/
+		display: flex;
+		justify-content: flex-start;
+		padding-left: 50px;
+	}
+	.nav{
+		width: 30%;
+	}
+/*Esconder o menu quando estivermos em max-width:820px*/
+	.menu{
+		display: none;
+		width: 180px;
+		flex-direction: column;
+		
+	background-color: black;
+	position: absolute; /*Se nao definirmos quem e relative,o pai, que e o header, o abosule nao vai aparecer*/
+	top: 75px;
+	right: 10px;
+	border-radius: 10px;
+	}
+
+.menu li{
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #f6be27;
+	border-radius: 10px;
+}
+
+/*Exibe o ícone do hamburgue quando a largura for max-width:820px*/
+.menu_icon{
+	
+	display: block; 
+}
+
+/*Quando houver um check, exibe o menu*/
+.menu_toggle:checked + .menu_icon + .menu{
+	display: flex; /*Exibe o menu na tela*/
+}
+
+/*Aula 34, Slide Responsivo*/
+#slide{
+	height: 400px;
+}
+
+.slide_content{
+	width: 70%;
+	height: 100%;
+	
+}
+.slide_content_btn{
+margin-top: 5px;	
+}
+
+/*Deixar o destaque em uma coluna*/
+
+#destaque{
+height: 1200px;
+flex-direction: column;
+}
+
+#destaque .dest{
+width: 100%;
+height: 400px;
+padding: 0 5%;
+margin-bottom: 20px;
+}
+
+/*Aula 35, SOBRE, SERVICOS, PORTFOLIO, FEEDBACK, CONTACTO e FORM,  Responsivo*/
+#sobre{
+	height: 900px;
+}
+
+.sobre_content{
+	flex-direction: column; /*Posicionar os elementos na vertical */
+}
+
+.sobre_content_img,
+.sobre_content_text {
+	width: 100%;
+	height: 350px;
+	/*background: red;*/
+	margin-bottom: 20px;
+}
+
+/*ESTATISTICA*/
+
+#estatistica{
+height: 600px;
+}
+
+.estatistica_content{
+	width: 80%; 
+	flex-wrap: wrap; /*Para quebrar os elementos flexiveis*/
+}
+
+.estatistica_content_text{
+	width: 44%;
+	height: 40%;
+}
+
+/*SERVICOS*/
+
+#servicos{
+	height: 1200px;
+}
+
+/*Quebrar para ocuparem 1 coluna*/
+.servicos_content{
+	flex-wrap: wrap;
+}
+
+.servicos_content_text{
+width: 100%;
+height: 290px;
+margin-bottom: 20px;
+}
+
+/*PORTFOLIO*/
+
+#portfolio{
+height: 1400px;
+}
+
+.portfolio_img img{
+width: 49%;
+padding: 10px;
+}
+/*FEEDBACK*/
+.feedback_content {
+	width: 90%;
+}
+
+/*CONTACTO*/
+
+.contact_title{
+	padding: 20px; 
+}
+/*FORM*/
+
+.contact_form {
+	width: 90%;
+}
+}
+
+/*
+Design Responsivo PARA MOBILE
+
+Aula 36,  (Section Slide)
+
+INICIO */
+@media(max-width:512px){
+
+	h1,h2, p{
+		font-size: 15px;
+	}
+	.servicos_content_text h3, .dest_content h3, .feedback_content_text h3{
+font-size: 15px;
+text-align: center;
+	}
+
+	
+	#slide{
+		height: 300px;
+	}
+.carrossel{
+	height: 300px;
+}
+/*Remover o detalhe do slide*/
+	.slide_content{
+		display: none; 
+	}
+
+	/*PORTFOLIO*/
+
+#portfolio{
+height: 950px;
+}
+
+/*FEEDBACK*/
+	#feedback{
+		width: 100%;
+		height: 300px;
+		
+	}
+	.feedback_content{
+		width: 70%;
+		height: 100%;
+		flex-wrap: wrap; /*Quebra a linha se o conteudo ocupar mais de 70%*/
+		
+	}
+
+	.feedback_content_text{
+		width: 100%;
+		padding: 20px;
+	}
+		.feedback_content_btn{
+			width: 100%;
+			
+		}
+
+		.feedback_content_text h3{
+			margin-bottom: 10px;
+		}
+
+		.feedback_content_text p{
+			margin-bottom: 10px;
+		}
+
+footer p{
+	font-size: 10px;
+}
+}
+
+/*FIM*/

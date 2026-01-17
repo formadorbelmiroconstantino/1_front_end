@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS FlexBox | Justify Content</title>
+
+	<style>
+		.container {
+  display: flex;
+  /* flex-direction: row; (padrão) ou column */
+}
+
+.container1 {
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: row; /* Eixo principal: horizontal (linha) */
+  justify-content: space-between; /* Espaça os itens */
+  width: 100%;
+  padding: 20px;
+  margin: 30px;
+  border: 1px solid black;
+
+}
+.item {
+	width: 25%;
+  background-color: #40e0d0; /*Cor turquesa*/
+  padding: 10px;
+}
+	</style>
+</head>
+<body>
+<h1>CSS FlexBox | Justify Content</h1>
+<p>Para trabalhar com justify-content no HTML usando CSS Flexbox, você define display: flex no contêiner e usa justify-content com valores como flex-start, center, flex-end, space-between, space-around ou space-evenly para alinhar os itens filhos ao longo do eixo principal (horizontal ou vertical, dependendo do flex-direction), controlando o espaço livre e a posição dos elementos.</p>
+
+<h1>Como usar justify-content</h1>
+
+<p> 1. No HTML: Crie um contêiner e seus itens flexíveis.</p>
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<p> 2. No CSS (no contêiner): Aplique display: flex</p>
+.container {
+  display: flex;
+  /* flex-direction: row; (padrão) ou column */
+}
+
+<p> 3. Use justify-content para alinhar:</p>
+<ol> <li><b> flex-start:</b> Alinha os itens no início do eixo principal (esquerda, se row).</li>
+<li><b>flex-end:</b> Alinha os itens no final do eixo principal (direita, se row).</li>
+<li><b>center:</b> Centraliza os itens no eixo principal.</li>
+<li><b>space-between:</b> Espaça os itens igualmente; o primeiro e o último ficam nas extremidades.</li>
+<li><b>space-around:</b> Espaço igual em todas as direções, com o dobro do espaço entre os itens do que nas bordas.</li>
+<li><b>space-evenly:</b> Espaço igual entre todos os itens e nas extremidades.</li> </ol>
+.container {
+  display: flex;
+  justify-content: center; /* Exemplo: centraliza os itens */
+  /* justify-content: space-between; */
+  /* justify-content: flex-end; */
+}
+
+<h2>Exemplo prático - FlexBox | justify-content: space-between</h2>
+<div class="container1">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+.container1 {
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: row; /* Eixo principal: horizontal (linha) */
+  justify-content: space-between; /* Espaça os itens */
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+<h2> Observações importantes</h2>
+<ul> <li><b>justify-content</b> sempre actua no eixo principal (main axis), determinado por flex-direction (row ou column).</li>
+<li>Para alinhar no eixo secundário (perpendicular), usa-se <b>align-items</b>.</li> </ul>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: flex-start || Alinha os itens no início, 
+à esquerda</h2>
+<div class="container2" style="display:flex; justify-content: start;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: center || Alinha os itens no centro</h2>
+<div class="container2" style="display:flex; justify-content: center;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: end || Alinha os itens no fim, à direita</h2>
+<div class="container2" style="display:flex; justify-content: end;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: space-between ||  Espaço entre os itens, igualmente; o primeiro e o último ficam nas extremidades</h2>
+<div class="container2" style="display:flex; justify-content: space-between;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: space-around ||  Atribui espaços iguais ao redor dos ítens</h2>
+<div class="container2" style="display:flex; justify-content: space-around;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+<hr>
+<h2>Exemplo prático - FlexBox | justify-content: space-evenly ||  Atribui espaços iguais entre dos ítens e maior nos extremos do container</h2>
+<div class="container2" style="display:flex; justify-content: space-evenly;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+</body>
+</html>

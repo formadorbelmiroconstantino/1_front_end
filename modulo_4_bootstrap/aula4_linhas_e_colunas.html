@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linhas e Colunas no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Linhas e Colunas no Bootstrap </h1>
+            <p>
+                Vamos criar uma div e no CSS, atribuiremos uma largura, uma altura e um fundo vermelho. Com margin:auto,
+                ficará
+                centralizada.
+            </p>
+            <p><strong>No HTML:</strong></p>
+            <!--Div com class tema-->
+            &lt;div class="tema"&gt;&lt;/div&gt;
+
+            <p><strong>No CSS:</strong></p>
+
+            <p>
+                .tema{ <br>
+                width: 80%; <br>
+                height: 600px; <br>
+                background-color:red; <br>
+                margin: auto; <br>
+                }
+            </p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="tema"></div>
+
+            <p>Tivemos de informar a largura e centralizar o container (div) com margin:auto. Com os elementos de layout
+                do Bootstrap, não será necessário nos darmos esse trabalho porque eles fazem isso por nós. </p>
+            <hr>
+            <h3>Linhas (row) e Colunas (col)</h3>
+            <p>As classes row e col desempenham uma função importante para distribuir os elementos que se estivéssemos a
+                utilizar o FlexBox. Abaixo, vamos dar um exemplo.</p>
+            <hr>
+            <h4>HTML do Bootstrap</h4>
+            <p>No site do Bootstrap, vá em Layout, clique em Grid, copie o HTML do primeiro exemplo que lá está e cole
+                no seu arquivo HTML:</p>
+
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col u"&gt;
+            Column 1
+            &lt;/div&gt; <br>
+            &lt;div class="col d"&gt;
+            Column 2
+            &lt;/div&gt; <br>
+            &lt;div class="col t"&gt;
+            Column 3
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            <hr>
+            <h4>CSS Adicional</h4>
+            <p>No modelo que tiramos da página do Bootstrap, adicionamos em cada coluna uma classe com os valores
+                <strong>u</strong> de um, <strong>d</strong> de dois e <strong>t</strong> de três e formatamo-las no CSS
+                externo desse curco com as seguintes propriedade:
+            </p>
+
+            <p>
+
+                /*Se adicionarmos a altura so aqui, vai afectar as 3 colunas*/ <br>
+                .u{ <br>
+                background-color: red; <br>
+                height: 600px; <br>
+                } <br>
+
+                .d{ <br>
+                background-color: green; <br>
+                height: 500px; <br>
+                } <br>
+
+                /*Não adicionamos altura nessa coluna, mas ela pegou a maior altura que definimos mais acima*/ <br>
+                .t{ <br>
+                background-color: aqua; <br>
+                }
+            </p>
+
+            <p>
+                Não adicionamos altura na terceira coluna, mas ela pegou a maior altura que definimos mais acima e
+                também não foi necessário centralizarmos nem definirmos a largura total da tela porque o cantainer fez
+                tudo isso por nós. Olhe que se quiser definir uma altura uniforme/geral para todas as colunas, basta
+                defini-la no .row com width:600px ou com um valor que achar melhor.
+            </p>
+            <p><strong>Resultado:</strong></p>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col u">
+                        Column 1
+                    </div>
+                    <div class="col d">
+                        Column 2
+                    </div>
+                    <div class="col t">
+                        Column 3
+                    </div>
+                </div>
+            </div>
+            <p>
+                <strong>Mas, atenção!</strong>O Grid está a funcionar como se tivêssemos adicionado um disply:flex no
+                css porque ele adicionou as colunas em linhas. Tanto mais é que se adicionarmos mais uma coluna, vai
+                ajustar automaticamente à tela.
+            </p>
+            &lt;div class="container text-center"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col u"&gt; <br>
+            Column 1
+            &lt;/div&gt; <br>
+            &lt;div class="col d"&gt; <br>
+            Column 2
+            &lt;/div&gt; <br>
+            &lt;div class="col t"&gt; <br>
+            Column 3
+            &lt;/div&gt; <br>
+            &lt;div class="col q"&gt; <br>
+            Column 4
+            &lt;/div&gt; <br>
+            &lt;/div&gt;
+            <p>Vamos adicionar uma cor de fundo a class q para cinzento:</p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col u">
+                        Column 1
+                    </div>
+                    <div class="col d">
+                        Column 2
+                    </div>
+                    <div class="col t">
+                        Column 3
+                    </div>
+                    <div class="col q">
+                        Column 3
+                    </div>
+                </div>
+            </div>
+            <p><strong>Note que</strong> também pegou a mesma altura e as quatro colunas estão bem distribuídas na tela.
+                E o valor text-center serve para alinhar o texto no centro.
+                O mais lindo nessa história é que já são responsivas.</p>
+            <hr>
+            <h3>Elementos Ocupando Tamanhos Diferentes no Bootstrap</h3>
+
+            <p>Para fazer elementos ocuparem tamanhos de colunas diferentes no Bootstrap, use classes como
+                col-quantidade de colunas, lembrando que o modelo do Bootstrap é de 12 colunas, dentro de uma div com a
+                classe row, aproveitando , onde a soma dos números das colunas na mesma linha não pode exceder 12, e o
+                número indica quantas das 12 divisões cada elemento ocupará. </p>
+
+            <h4>Exemplo</h4>
+            &lt;div class="container"&gt; <br>
+            &lt;div class="row"&gt; <br>
+            &lt;!-- Coluna 1: Ocupa 4 colunas --&gt; <br>
+            &lt;div class="col-4 u"&gt; <br>
+            Conteúdo da Coluna 1 (4/12)
+            &lt;/div&gt; <br>
+
+            &lt;!-- Coluna 2: Ocupa 6 colunas --&gt; <br>
+            &lt;div class="col-6 d"&gt; <br>
+            Conteúdo da Coluna 2 (6/12)
+            &lt;/div&gt; <br>
+
+            &lt;!-- Coluna 3: Ocupa 2 colunas --&gt; <br>
+            &lt;div class="col-2 t"&gt; <br>
+            Conteúdo da Coluna 3 (2/12)
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <!-- Coluna 1: Ocupa 4 colunas -->
+                    <div class="col-4 u">
+                        Conteúdo da Coluna 1 (4/12)
+                    </div>
+
+                    <!-- Coluna 2: Ocupa 6 colunas -->
+                    <div class="col-6 d">
+                        Conteúdo da Coluna 2 (6/12)
+                    </div>
+
+                    <!-- Coluna 3: Ocupa 2 colunas -->
+                    <div class="col-2 t">
+                        Conteúdo da Coluna 3 (2/12)
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>
+                    Observação importante:
+                </strong>só poderá ter o resultado esperado se o seu arquivo HTML estiver bem configurado como por
+                exemplo a importação dos links Bootstrap e do nosso style.css.</p>
+
+            <hr>
+
+            <h3>Como funciona:</h3>
+            <ol>
+                <li>
+                <li> &lt;div class="row"&gt;: Define uma linha na grid. </li>
+                <li>&lt;div class="col-X"&gt;: Define uma coluna. O número X (de 1 a 12) indica quantas das 12 colunas
+                    disponíveis ela ocupará. </li>
+                <li>Soma: No exemplo, 4 + 6 + 2 = 12, preenchendo a linha inteira. Se a soma for menor que 12, haverá
+                    espaço vazio; se for maior, as colunas seguintes quebrarão para a próxima linha.
+                </li>
+            </ol>
+            <p>
+                Responsividade (Opcional, mas recomendado):
+                Você pode combinar tamanhos para diferentes telas (xs, sm, md, lg, xl, xxl) para layouts responsivos.
+            </p>
+            <ul>
+                <li>
+                    col-md-4: Ocupa 4 colunas em telas médias e maiores.
+                </li>
+                <li>
+                    col-sm-6: Ocupa 6 colunas em telas pequenas e maiores.
+                </li>
+            </ul>
+
+            <p><strong>No HTML:</strong></p>
+
+            &lt;div class="row"&gt; <br>
+            &lt;div class="col-12 col-md-4 u">Coluna 1 (12 no mobile, 4 no desktop)&lt;/div&gt; <br>
+            &lt;div class="col-12 col-md-6 d">Coluna 2 (12 no mobile, 6 no desktop)&lt;/div&gt; <br>
+            &lt;div class="col-12 col-md-2 t">Coluna 3 (12 no mobile, 2 no desktop)&lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>No CSS:</strong></p>
+            <p>
+                .row{ <br>
+                margin-bottom: 20px; <br>
+
+                } <br>
+                .u{ <br>
+                background-color: red; <br>
+                height: 600px; <br>
+                } <br>
+
+                .d{ <br>
+                background-color: green; <br>
+                height: 500px; <br>
+                } <br>
+
+                .t{ <br>
+                background-color: aqua; <br>
+                height: 700px; <br>
+                }
+            </p>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="row">
+                <div class="col-12 col-md-4 u">Coluna 1 (12 no mobile, 4 no desktop)</div>
+                <div class="col-12 col-md-6 d">Coluna 2 (12 no mobile, 6 no desktop)</div>
+                <div class="col-12 col-md-2 t">Coluna 3 (12 no mobile, 2 no desktop)</div>
+            </div>
+
+            <p><em>Este exemplo mostra um layout flexível, ideal para design responsivo, usando as classes col-md-X e
+                    col-12, sendo que col-12 garante que em telas menores (mobile), cada um ocupe a largura total
+                    (12/12). </em></p>
+
+            <hr>
+            <h3>Distribuindo os Elementos para a Responsividade com o Uso dos Breakpoints</h3>
+
+            <p>Para definirmos a responsividade no submódulo de HTML e CSS, tivemos de utilizar o media query. No
+                entanto, com o auxílio de cols na row e com o Breakpoints fica mais fácil.</p>
+
+            <p>Para criar layouts responsivos no Bootstrap (ou frameworks similares baseados em Flexbox), utiliza-se,
+                como já vimos, a estrutura de 12 colunas. A distribuição dos elementos col dentro de uma row é
+                controlada por prefixos que definem o comportamento em diferentes tamanhos de tela.</p>
+
+            <h4>Sintaxe dos Breakpoints</h4>
+            <p>A estrutura segue o formato col-{breakpoint}-{número}, onde o número representa quantas das 12 colunas o
+                elemento ocupará:</p>
+            <ul>
+                <li>
+                    col-: Telas extra pequenas (telemóveis < 576px). </li>
+                <li>
+                    col-sm-: Telas pequenas (telemóveis em landscape ≥ 576px).
+                </li>
+                <li>
+                    col-md-: Telas médias (tablets ≥ 768px).
+                </li>
+                <li>
+                    col-lg-: Telas grandes (desktops ≥ 992px).
+                </li>
+                <li>
+                    col-xl-: Telas extra grandes (monitores ≥ 1200px).
+                </li>
+                <li>
+                    col-xxl-: Telas ultra grandes (telas ≥ 1400px).
+                </li>
+            </ul>
+            <h4>Exemplo Prático de Distribuição</h4>
+            <p>Se você deseja que três elementos fiquem empilhados no celular, mas lado a lado no desktop, utilize:</p>
+
+            <p><strong>No HTML</strong></p>
+
+            &lt;div class="container"&gt;
+            &lt;div class="row"&gt; <br>
+            &lt;!-- Ocupa 12 colunas (100%) no celular e 4 colunas (33%) no desktop --&gt; <br>
+            &lt;div class="col-12 col-md-4 u"&gt;Coluna 1&lt;/div&gt; <br>
+            &lt;div class="col-12 col-md-4 d"&gt;Coluna 2&lt;/div&gt; <br>
+            &lt;div class="col-12 col-md-4 t"&gt;Coluna 3&lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+
+            <p><strong>Resultado:</strong></p>
+            <div class="container">
+                <div class="row">
+                    <!-- Ocupa 12 colunas (100%) no celular e 4 colunas (33%) no desktop -->
+                    <div class="col-12 col-md-4 u">Coluna 1</div>
+                    <div class="col-12 col-md-4 d">Coluna 2</div>
+                    <div class="col-12 col-md-4 t">Coluna 3</div>
+                </div>
+            </div>
+
+            <h4>Regras de Ouro para Responsividade</h4>
+            <ol>
+                <li>
+                    Soma de 12: Se a soma das classes em uma linha exceder 12, o próximo elemento quebrará
+                    automaticamente para a linha de baixo.</li>
+                <li>Mobile-First: As classes sem breakpoint (ex: col-6) aplicam-se a todos os tamanhos, a menos que
+                    sejam subscritas por um breakpoint maior (ex: col-6 col-lg-3).</li>
+                <li>Auto-layout: Usar apenas .col sem número faz com que o framework divida o espaço igualmente entre
+                    todos os elementos da row.
+                </li>
+            </ol>
+            <p>Para documentação técnica detalhada e testes de grid, consulte o Guia de Grid do Bootstrap ou explore
+                recursos de design no MDN Web Docs sobre Flexbox.</p>
+
+            <h4>Exemplo Completo Envolvendo Todos os Tamanhos</h4>
+
+            <p>Para demonstrar o uso de todos os breakpoints, o exemplo abaixo mostra como um único elemento pode
+                adaptar sua largura dinamicamente conforme a tela aumenta.</p>
+            <p>Neste cenário, imagine que temos 4 cards em uma linha (row). Vamos configurá-los para que eles ocupem
+                todo o espaço em telas minúsculas e se distribuam conforme o monitor aumenta:</p>
+
+            <p><strong>No HTML</strong></p>
+
+            <div class="container text-center">
+                <div class="row">
+
+                    <!-- Configuração de responsividade para cada coluna -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 border bg-success u">
+                        Item 1
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 border bg-primary d">
+                        Item 2
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 border bg-dark t">
+                        Item 3
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 border bg-warning q">
+                        Item 4
+                    </div>
+                </div>
+            </div>
+
+            <h5>Explicação do Comportamento (Breakpoints)</h5>
+            <p>Ao redimensionar a janela, o comportamento será o seguinte:</p>
+            <ol>
+                <li>
+                    col-12 (< 576px): Cada item ocupa a largura total (100%). Você verá um item abaixo do outro.</li>
+                <li>col-sm-6 (≥ 576px): Cada item ocupa metade da largura (50%). Verá 2 itens por linha.</li>
+                <li>col-md-4 (≥ 768px): Cada item ocupa um terço (33.3%). Verá 3 itens por linha (o 4º item pula para
+                    baixo).</li>
+                <li>col-lg-3 (≥ 992px): Cada item ocupa um quarto (25%). Todos os 4 itens ficam na mesma linha.</li>
+                <li>col-xl-2 (≥ 1200px): Cada item ocupa 2 das 12 colunas (aprox. 16%). Sobrará espaço vazio na linha.
+                </li>
+                <li>col-xxl-1 (≥ 1400px): Cada item ocupa apenas 1 das 12 colunas (aprox. 8%). Ficarão bem estreitos em
+                    telas ultra-wide.
+                </li>
+            </ol>
+
+            <h5>Dica Visual</h5>
+            <p>Para visualizar melhor como esses breakpoints interagem em projetos reais, você pode utilizar o Bootstrap
+                Grid Display ou ferramentas de inspeção do navegador (F12) para simular cada dispositivo.</p>
+            <p>Para aprender a criar layouts ainda mais complexos que combinam Grid com Flexbox, o <a
+                    href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Guia Completo de
+                    Flexbox da CSS-Tricks</a> é a referência definitiva para entender o que acontece por trás das
+                classes do Bootstrap.</p>
+
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

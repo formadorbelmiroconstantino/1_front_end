@@ -1,0 +1,797 @@
+/*Resetar todas as margens, paddings e bordens automaticas*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*background: pink;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li {
+	font-family: Ariel Rounded MT, Arial, sans-serif;
+}
+
+.container {
+	width: 70%;
+	height: auto;
+	/*Vai se ajustando em função dos itens que forem add nessa area*/
+	/* Para ver como esta a ficar background-color: red;*/
+	margin: auto;
+}
+
+/*INICIO HEADER*/
+
+header {
+	width: 100%;
+	height: 70px;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*Tambem para o responsivo*/
+	position: relative;
+	z-index: 1; /*Para o menu no responsivo sobrepor tudo*/
+}
+
+.logo {
+	width: 30%;
+	height: 100%;
+	/*background: #40E0D0;*/
+	/*Posicionar correctamento o logo*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background: blue; para ver se a logo está mesmo no centro em relacao a vertical e a horizontal*/
+
+}
+
+.logo img {
+	width: auto;
+	height: 50px;
+
+}
+
+.nav {
+	width: 69%;
+	height: 100%;
+	/*background: red;*/
+	display: flex;
+	justify-content: center;
+	/*Centralizar na horizontal*/
+	align-items: center;
+	/*Centralizar na vertical*/
+}
+
+.menu {
+	width: 60%;
+	display: flex;
+	/*Remove as bolinhas nos links do menu*/
+	list-style: none;	
+	padding: 0;
+	margin: 0;
+
+	
+}
+
+.nav li {
+	flex: 1;
+	/*Exibe os itens com o mesmo tamanho */
+}
+
+.nav a {
+	color: #f6be27;
+	padding: 10px 15px;
+	/* 10px em cima/baixo, 15px nas laterais (esquerda e direita) */
+	text-decoration: none;
+	/* Remove sublinhado */
+	display: inline-block;
+	/* Permite padding e alinhamento */
+	/* Outras estilizações */
+}
+
+.nav a:hover {
+	color: #fff;
+}
+
+/*Esconder o checkbox*/
+.menu_toggle{
+display: none;
+}
+
+/*Personalizar o hamburgue*/
+.menu_icon{
+	font-size: 24px;
+	cursor: pointer;
+	padding: 10px;
+	color: white;
+	display: none; /*Inicialmente, o humburgue fica oculto e so aparece na versao mobile*/
+}
+#slide {
+	width: 100%;
+	height: 700px;
+	background: #40E0D0;
+	overflow: hidden;
+	/*Impede que um elemento filho saia da área do elemento pai*/
+	position: relative;
+}
+
+.carrossel {
+	display: flex;
+	/*Distribuir todas as imgs na mesma linha*/
+	width: 800%;
+	animation: slideAnimacao 50s infinite;
+}
+
+.carrossel img {
+	width: 10%;
+	/*controla o quanto um item flexível deve encolher (diminuir de tamanho) 
+quando não há espaço suficiente no contêiner pai para todos os itens, 
+permitindo um ajuste proporcional ao espaço negativo e evitando que os itens transbordem 
+(overflow).*/
+	flex-shrink: 0;
+}
+
+/*slideAnimacao sera chamdo no .carrossel com 
+animation: slideAnimacao 50s infinite; Animação de 50 segundos e infinito para não parar*/
+@keyframes slideAnimacao {
+	0% {
+		transform: translateX(0);
+
+	}
+
+	10% {
+		transform: translateX(-10%);
+
+	}
+
+	20% {
+		transform: translateX(-20%);
+
+	}
+
+	30% {
+		transform: translateX(-30%);
+
+	}
+
+	40% {
+		transform: translateX(-40%);
+
+	}
+
+	50% {
+		transform: translateX(-50%);
+
+	}
+
+	60% {
+		transform: translateX(0);
+
+	}
+}
+
+.slide_content {
+	width: 30%;
+	height: 100%;
+	background: rgba(64, 224, 208, 0.51);
+	/*0.9 para definir a transparencia*/
+	/*POsicionar um elemento filho por cima do alemento pai
+	No elemento pai vai o positio relative 
+	e no filho um position absoluto e posicionar para cima com top:0;*/
+	position: absolute;
+	/* Colar no top e exibir*/
+	top: 0; 
+	/*Posicionar para cima*/
+	/*left: 40%; Posicionar para a 40% da esquerda*/
+	right: 0;
+	/*Posicionar para a 40% da direita*/
+	/*bottom: 0;Posicionar para a 40% da esquerda*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*Posicionar um em cima do outro*/
+	padding: 2rem;
+	box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 1.9);
+}
+
+.slide_content:hover {
+	box-shadow: 0 4px 10px 2px rgba(64, 224, 208, 0.9);
+	border-radius: 10px;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.slide_text {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.slide_text h2 {
+	text-align: center;
+	font-size: 64px;
+	color: #fff;
+}
+
+.slide_text h4 {
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+}
+
+.slide_content_btn {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.slide_text a {
+	padding: 15px;
+	border: 3px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.slide_text a:hover {
+	background: #fff;
+	color: #000;
+	border: 3px solid rgba(64, 224, 208, 0.9);
+
+}
+
+/*h1*/
+h1{
+	width: 100%;
+	text-align: center;
+	background-color: #f5f5f5;
+	margin: 0px;
+	padding: 50px;
+		box-shadow: 0 4px 10px 2px rgba(64, 224, 208, 0.188);
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		font-weight: bold;
+
+		text-shadow: 0 4px 10px 2px rgba(64, 224, 208, 0.188);
+}
+/*INICIO CSS Section Destaque*/
+#destaque {
+	width: 70%;
+	height: auto;
+	/*background: #40E0D0;*/
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	/*padding: 5%;*/
+	margin-top: 20px;
+
+}
+
+#destaque .dest {
+	width: 30%;
+	height: auto;
+	background: rgba(64, 224, 208, 0.188);
+	padding: 2%;
+	/*Dar espaco entro o conteudo e as caixas dos itens*/
+	box-shadow: 0 4px 10px 2px black;
+	border-radius: 10px;
+}
+
+#destaque .dest:hover {
+	width: 30%;
+	height: auto;
+	background: rgba(222, 240, 239, 0.9);
+	padding: 2%;
+	/*Dar espaco entro o conteudo e as caixas dos itens*/
+	box-shadow: 0 4px 10px 2px rgba(64, 224, 208, 0.188);
+	border-radius: 10px;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.dest {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dest_content {
+	width: 100%;
+	height: 70%;
+	/*background: #40E0D0;*/
+
+}
+
+
+.dest_btn {
+	width: 100%;
+	height: 30%;
+	/*background: lightcoral;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 14px;
+}
+
+.dest h3 {
+	text-align: center;
+	padding: 10px 0;
+	font-size: 20px;
+}
+
+.dest_btn a {
+	padding: 15px 50px;
+	border: 3px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+	background: #40E0D0;
+}
+
+.dest_btn a:hover {
+	background: #fff;
+	color: #000;
+}
+
+
+p {
+	text-align: justify;
+	font-size: 18px;
+}
+
+/*FIM CSS Section Destaque*/
+
+/*INICIO CSS Section SOBRE*/
+
+/*LINE*/
+.line {
+	width: 100px;
+	height: 5px;
+	background: green;
+	display: flex;
+}
+
+.line_blue {
+	flex: 1;
+	background: #40E0D0;
+}
+
+.line_black {
+	flex: 1;
+	background: #000;
+}
+
+.line_white {
+	flex: 1;
+	background: #fff;
+}
+
+#sobre {
+	width: 80%;
+	height: 550px;
+	/*background: #40E0D0;*/
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.sobre_title {
+	width: 100%;
+	height: 30%;
+	background: gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+
+}
+
+.sobre_title h2 {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.sobre_content {
+	width: 100%;
+	height: 70%;
+	/*background: pink;*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.sobre_content_img,
+.sobre_content_text {
+	width: 49%;
+	height: 100%;
+	/*background: red;*/
+	overflow: hidden;
+	/*Evitar com que um elemento filho saida da sua area*/
+
+}
+
+.sobre_content_text {
+	padding: 20px 0;
+}
+
+.sobre_content_text ul {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+
+.sobre_content_img img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*FIM CSS Section SOBRE*/
+
+
+/*INICIO CSS SECTION ESTATISTICA*/
+
+#estatistica {
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+	/* Cor do fundo para testar como esta a ficar background-color: #40E0D0;*/
+	background-image: url('../img/estatistic.jpg');
+	/*
+background-size: cover; serve para redimensionar uma imagem de fundo para que ela cubra completamente a área do elemento, mantendo a proporção original da imagem, mesmo que isso signifique cortar (recortar) partes das bordas da imagem. Ele garante que não haverá espaços em branco, preenchendo todo o container, ao contrário de contain, que garante que a imagem inteira seja visível, podendo deixar espaços vazios. 
+Como funciona:
+Preenchimento total: A imagem é escalada para ser o maior possível sem distorcer, preenchendo toda a largura e altura do elemento onde foi aplicada.
+Manutenção da proporção: A proporção de largura para altura da imagem é sempre preservada, evitando que ela fique esticada ou achatada.
+Recorte: Se as proporções do elemento forem diferentes das da imagem, a imagem será cortada (recortada) nas laterais ou no topo/base para preencher o espaço, sem deixar áreas vazias. */
+	background-size: cover;
+	background-position: center;
+	/* Centraliza a imagem (opcional, mas comum) */
+	background-repeat: no-repeat;
+	/* Não repete a imagem*/
+}
+
+.estatistica_background {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.estatistica_content {
+	width: 70%;
+	/*Largura padrao do nosso conteudo*/
+	height: 100%;
+	/* So para ver o resultado background-color: red;*/
+	margin: auto;
+	/*Centralizar a div*/
+	display: flex;
+	/*Posiciona os itens numa linha*/
+	justify-content: space-between;
+	/*Definir o mesmo espaco entre os itens*/
+	align-items: center;
+	/*Alinhar os itens ao centro em relacao a vertical*/
+}
+
+.estatistica_content_text {
+	width: 22%;
+	/*Da 88% e sobram 12% para dar o espaco entre eles*/
+	height: 50%;
+	/*Deixa uma margem de 25 para cima e 25 para baixo*/
+	/* So para ver o resultado  background-color: white;*/
+	border: 1px solid white;
+	display: flex;
+	flex-direction: column;
+	/*Deixar os elementos em coluna*/
+	justify-content: center;
+	/*Alinhar os itens ao centro em relacao a horizontal*/
+	align-items: center;
+}
+
+.estatistica_content_text h3 {
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 42px;
+}
+
+.estatistica_content_line {
+	width: 50px;
+	height: 2px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.estatistica_content_text h5 {
+	color: white;
+}
+
+/*FIM CSS SECTION ESTATISTICA*/
+
+/*INICIO CSS SECTION SERVICOS*/
+
+#servicos {
+	width: 100%;
+	height: 460px;
+	/*400px de altura total dessa area*/
+	background-color: #f6be27;
+	padding: 50px 0px;
+}
+
+.servicos_title {
+	width: 100%;
+	height: 100px;
+	/*100px de altura total dessa area, dos 460px vao sobrar 360px*/
+	/*background-color: gray;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.servicos_title h2 {
+	margin-bottom: 20px;
+}
+
+.servicos_content {
+	width: 100%;
+	height: 290px;
+	/*290px de altura total dessa area, dos 400px vao sobrar 70px*/
+	/*background-color: gray;*/
+	/*Utilizamos 10px aqui para baixar e tocar na section e deixar um espaco entre o titulo e o conteudo*/
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	/*Dar o mesmo espacamento entre eles*/
+	margin-bottom: 20px;
+}
+
+.servicos_content_text {
+	width: 28%;
+	height: 100%;
+	background-color: white;
+	padding: 20px;
+}
+
+.servicos_content_text img {
+	width: 60px;
+	/*Centralizar os icones*/
+	display: flex;
+	margin: auto;
+	margin-bottom: 1em;
+}
+
+.servicos_content_text h3 {
+	font-size: 26px;
+	height: 100px;
+}
+
+/*FIM CSS SECTION SERVICOS*/
+
+
+/*INICIO CSS SECTION PORTFOLIO*/
+
+#portfolio {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	padding: 50px 0;
+}
+
+.portfolio_title {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio_title h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.portfolio_img {
+	width: 100%;
+	height: auto;
+	display: flex;
+	/*
+	flex-wrap: wrap; permite que seus itens se ajustem em múltiplas linhas
+	*/
+	flex-wrap: wrap;
+	/* justify-content: space-evenly; garante que, em cada linha, os itens e as margens do container tenham um espaçamento visualmente iguais
+	*/
+	justify-content: space-evenly;
+}
+
+.portfolio_img img {
+	width: 24%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+/*FIM CSS SECTION PORTFOLIO*/
+
+/*INICIO CSS SECTION FEEDBACK*/
+#feedback {
+	width: 100%;
+	height: 300px;
+	background-color: #f6be27;
+}
+
+.feedback_content {
+	width: 70%;
+	height: 100%;
+	/*background-color: red;*/
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.feedback_content_text {
+	width: 70%;
+	height: 100px;
+	/*background-color: pink;
+*/
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.feedback_content_btn {
+	width: 25%;
+	height: 100px;
+	/*background-color: green;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feedback_content_btn a {
+	padding: 15px;
+	border: 3px solid white;
+	border-radius: 10px;
+	text-decoration: none;
+	color: black;
+}
+
+.feedback_content_btn a:hover {
+	background-color: white;
+	color: black;
+}
+
+/*FIM CSS SECTION FEEDBACK*/
+
+/*INICIO CSS SECTION CONTACTO*/
+#contact {
+	width: 100%;
+	height: 630px;
+	background-color: #f5f5f5;
+	margin-top: 100px;
+}
+
+.contact {
+	width: 100%;
+	height: 100%;
+	/*background-color: red;*/
+	padding-top: 50px;
+}
+
+.contact_title {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact_title h2 {
+	margin-bottom: 20px;
+}
+
+.contact_title p {
+	margin-bottom: 20px;
+}
+
+.contact_form {
+	width: 70%;
+	height: 440px;
+	/*background-color: red;*/
+	margin: auto;
+	padding-top: 50px;
+}
+
+.contact_form form {
+	box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.8);
+	height: 100%;
+	border-radius: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 4%;
+}
+
+.contact_form .nome_email {
+	width: 48.5%;
+	height: 36px;
+	margin-bottom: 5px;
+	padding: 1%;
+	border: none;
+}
+
+.contact_form .assunto {
+	width: 98%;
+	height: 36px;
+	margin-bottom: 5px;
+	padding: 1%;
+	border: none;
+}
+
+.contact_form textarea{
+	width: 98%;
+	height: 200px;
+	padding: 1%;
+	border: none;
+}
+
+.btn_form{
+	
+	height: 50px;
+	/*background-color: green;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+		padding: 16px;
+	border: 1px solid rgba(255, 0, 0, 0.592);
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	background-color: black;
+	margin-top: 8px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid red;
+}
+/*FIM CSS SECTION CONTACTO*/
+
+
+footer {
+	width: 100%;
+	height: 70px;
+	background: #000;
+	color: white;
+
+	/*background: #f5f5f5;*/
+	text-align: center;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer a {
+	color: red;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #f6be27;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Design Responsivo | Adaptação em Vários Dispositivos</title>
+	<link rel="stylesheet" type="text/css" href="css/responsivo.css">
+</head>
+<body>
+<h1>CSS Design Responsivo | Adaptação em Vários Dispositivos</h1>
+<p>Para design responsivo, use @media queries com pontos de interrupção (breakpoints) para dispositivos móveis (ex: 320px-480px), tablets (ex: 768px-1024px) e desktops (ex: 1024px+), focando em larguras de tela comuns como 360px (móvel), 768px (tablet) e 1440px+ (desktop), adaptando o layout com CSS para cada faixa de tamanho de tela, usando a abordagem "Mobile First" para melhor performance.</p> 
+<hr>
+<h3>Exemplos de Media Queries em CSS</h3>
+
+/* Estilos Padrão (Mobile First - para telas pequenas) */
+<br>
+body {
+    font-size: 16px;
+}
+<hr>
+/* Tablet (ex: a partir de 768px) */
+<br>
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        width: 90%;
+    }
+}
+<hr>
+/* Desktop (ex: a partir de 1024px) */<br>
+@media (min-width: 1024px) {<br>
+    body {
+        font-size: 20px;
+    }<br>
+    .container {
+        width: 80%;
+        max-width: 1200px;<br>
+    }<br>
+}
+
+<h3>Tamanhos de Tela Comuns (Pontos de Interrupção)</h3>
+<ul><li><b>Móvel:</b> 320px a 480px (ex: 360px, 375px).</li>
+<li><b>Tablet:</b> 481px a 1024px (ex: 768px).</li>
+<li><b>Desktop (Pequeno/Médio):</b> 1024px a 1366px (ex: 1024px, 1366px).</li>
+<li><b>Desktop (Grande):</b> 1440px ou mais (ex: 1920px).</li> </ul>
+
+<h3>Boas Práticas</h3>
+<ol><li><b>Mobile First:</b> Comece estilizando para telas pequenas e use min-width para adicionar complexidade em telas maiores.</li>
+<li><b>Use Unidades Relativas:</b> Prefira em, rem, % e vw/vh em vez de px para maior flexibilidade.</li>
+<li><b>Teste:</b> Use as ferramentas de desenvolvedor do navegador para simular diferentes tamanhos de tela e ajuste os breakpoints conforme necessário para o seu público-alvo.</li>
+<li><b>Viewport Meta Tag:</b> Adicione <meta name="viewport" content="width=device-width, initial-scale=1.0"> no <head> do seu HTML para garantir o dimensionamento correcto.</li> </ol>
+
+<h2>Exemplo</h2>
+<div class="body">
+	<div id="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 4</div>
+	</div>
+</div>
+
+</body>
+</html>

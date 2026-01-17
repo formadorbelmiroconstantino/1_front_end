@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS - FlexBox | FlexWrap</title>
+
+	<style>
+		.container {
+  display: flex; /*Activa a propriedade flex no container*/
+  flex-wrap: wrap; /* Permite quebrar a linha */
+  width: 100%; /* Exemplo de largura */
+  border: 1px solid black;
+}
+
+.item {
+  width: 23%; /* Largura fixa para cada item */
+  height: 50px;
+  margin: 5px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+	</style>
+</head>
+<body>
+<h1>CSS - FlexBox | flex-wrap</h1>
+<p>Trabalhar com flex-wrap no HTML (via CSS) é essencial para layouts responsivos, permitindo que itens Flexbox quebrem para a próxima linha quando não há espaço, em vez de ficarem todos em uma única linha e menores; basta aplicar display: flex; ao container e flex-wrap: wrap; para quebrar a linha e flex-wrap: wrap-reverse; para inverter a ordem, controlando o comportamento dos filhos em diferentes tamanhos de tela. </p>
+<h1>Como usar flex-wrap</h1>
+
+<ol> <li> Defina um Flex Container: No seu HTML, tenha um elemento pai (container) e elementos filhos (flex items).</li>
+<li>Aplique display: flex;: No CSS, no seletor do container, adicione display: flex; para ativar o Flexbox.</li>
+<li>Adicione flex-wrap:</li>
+<ol> <li> flex-wrap: wrap; (Mais comum): Faz com que os itens quebrem para uma nova linha quando não couberem na largura do container, mantendo o tamanho dos itens (ótimo para responsividade).</li>
+<li>flex-wrap: nowrap; (Padrão): Os itens tentam ficar na mesma linha, encolhendo se necessário, e não quebram.</li>
+<li>flex-wrap: wrap-reverse;: Quebra os itens para a linha de cima, invertendo a ordem das linhas. </li></ol>
+</ol>
+<hr>
+<h2>Exemplo Prático - flex-wrap: wrap</h2>
+
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+</div>
+
+<p> Com flex-wrap: wrap;, se a tela for pequena e os quatro itens não couberem lado a lado, o "Item 4" (e os seguintes) irá para a linha de baixo, mantendo sua largura de 150px. </p>
+<h2> Benefícios para Design Responsivo</h2>
+<p>flex-wrap é uma ferramenta poderosa para criar layouts que se adaptam a diferentes telas (celular, tablet, desktop), pois ele garante que os elementos se reorganizem naturalmente, sem precisar de muitos media queries complexos, como visto em tutoriais e documentações como MDN Web Docs e Origamid. </p>
+<hr>
+<h2>Exemplo Prático - flex-wrap: wrap</h2>
+
+<p><b>Observação: </b> definimos uma largura de 100% para o container e uma de 25% para a distribuição dos itens no container. Como aplicamos flex-wrap: wrap, os itens vão quebar a linha porque não caberiam por não haver espaço suficiente. Mas, se removermos o flex-wrap: wrap, todos os 24 itens ficarão na mesma linha.  </p>
+
+<p>No entanto, embora tenhamos definido 25% para cada itm, na tela vão aparecer de 3 em 3 ao invés de 4 em 4 porque definimos uma margem. A margem ocupa um espaço de 25%. Se quisermos que fiquem distribuídos de 4 em 4, temos de remover a margem ou dimunuir a largura de 25% para 23%</p>
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+
+   <div class="item">Item 5</div>
+  <div class="item">Item 6</div>
+  <div class="item">Item 7</div>
+  <div class="item">Item 8</div>
+
+   <div class="item">Item 9</div>
+  <div class="item">Item 10</div>
+  <div class="item">Item 11</div>
+  <div class="item">Item 12</div>
+
+   <div class="item">Item 13</div>
+  <div class="item">Item 14</div>
+  <div class="item">Item 15</div>
+  <div class="item">Item 16</div>
+
+   <div class="item">Item 17</div>
+  <div class="item">Item 18</div>
+  <div class="item">Item 19</div>
+  <div class="item">Item 20</div>
+
+   <div class="item">Item 21</div>
+  <div class="item">Item 22</div>
+  <div class="item">Item 23</div>
+  <div class="item">Item 24</div>
+</div>
+<hr>
+<h2>Exemplo Prático - flex-wrap: nowrap | Nunca quebra a linha</h2>
+<div class="container" style="display: flex; flex-wrap: nowrap;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+
+   <div class="item">Item 5</div>
+  <div class="item">Item 6</div>
+  <div class="item">Item 7</div>
+  <div class="item">Item 8</div>
+
+   <div class="item">Item 9</div>
+  <div class="item">Item 10</div>
+  <div class="item">Item 11</div>
+  <div class="item">Item 12</div>
+
+   <div class="item">Item 13</div>
+  <div class="item">Item 14</div>
+  <div class="item">Item 15</div>
+  <div class="item">Item 16</div>
+
+   <div class="item">Item 17</div>
+  <div class="item">Item 18</div>
+  <div class="item">Item 19</div>
+  <div class="item">Item 20</div>
+
+   <div class="item">Item 21</div>
+  <div class="item">Item 22</div>
+  <div class="item">Item 23</div>
+  <div class="item">Item 24</div>
+</div>
+
+<hr>
+<h2>Exemplo Prático - flex-wrap: wrap-reverse | Quebra a linha, mas inverte a ordem dos ítens</h2>
+<div class="container" style="display: flex; flex-wrap: wrap-reverse;">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+
+   <div class="item">Item 5</div>
+  <div class="item">Item 6</div>
+  <div class="item">Item 7</div>
+  <div class="item">Item 8</div>
+
+   <div class="item">Item 9</div>
+  <div class="item">Item 10</div>
+  <div class="item">Item 11</div>
+  <div class="item">Item 12</div>
+
+   <div class="item">Item 13</div>
+  <div class="item">Item 14</div>
+  <div class="item">Item 15</div>
+  <div class="item">Item 16</div>
+
+   <div class="item">Item 17</div>
+  <div class="item">Item 18</div>
+  <div class="item">Item 19</div>
+  <div class="item">Item 20</div>
+
+   <div class="item">Item 21</div>
+  <div class="item">Item 22</div>
+  <div class="item">Item 23</div>
+  <div class="item">Item 24</div>
+</div>
+</body>
+</html>
+

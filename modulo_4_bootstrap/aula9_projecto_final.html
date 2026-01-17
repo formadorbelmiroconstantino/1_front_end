@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes no Bootstrap</title>
+
+  <!--CSS PARA O BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <style>
+    .row:hover {
+      cursor: pointer;
+      box-shadow: 3px 3px 3px black;
+      padding: 10px;
+    }
+
+    .col_personalizada {
+      background-color: rgba(0, 0, 0, 0.318);
+      color: white;
+    }
+
+    .col_personalizada:hover {
+      border: 1px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <h1>Projecto Final - Site para Cursos Online</h1>
+        <h2>1. Preparação do Ambiente</h2>
+        <h3>1.1 Criação das Pastas</h3>
+        <p>Crie uma pasta com o nome aula10_projecto_final_portal_ead. Dentro da pasta aula10_projecto_final_portal_ead,
+          crie as subpastas css, img e js.</p>
+        <p>Abra essa pasta com o VSCode, dentro da subpasta css, crie o arquivo style.css e dentro da pasta js, crie o
+          arquivo script.js.</p>
+        <p>Agora, na pasta raiz,aula10_projecto_final_portal_ead, crie o arquivo index.html e adicione a estruta básica
+          do HTML:</p>
+
+        <p>
+          &lt;!DOCTYPE html&gt; <br>
+          &lt;html lang="en"&gt; <br>
+          &lt;head&gt; <br>
+          &lt;meta charset="UTF-8"&gt; <br>
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br>
+          &lt;title>ITFocursos&lt;/title&gt; <br>
+          &lt;/head&gt; <br>
+          &lt;body&gt; <br>
+
+          &lt;/body&gt; <br>
+          &lt;/html&gt; <br>
+        </p>
+
+
+        <section>
+          <h3>1.2 Carregando o CSS, os Ícones e o JS do Bootstrap</h3>
+          <p>Abaixo, vamos carregar o CSS, os ícones e o JS para o Bootstrap.</p>
+
+          <h4>1.2.1 Carregando o CSS do Bootstrap</h4>
+          <p>Abaixo da tag &lt;/Title&gt;, adicione os links do site oficial do Bootstrap:
+
+            &lt;title&gt;ITFocursos&lt;/title&gt; <br> <br>
+
+            &lt;!--CSS Bootstrap--&gt; <br>
+            &lt;link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"&gt;<br>
+
+          <h4>1.2.2 Carregando os Ícones do Bootstrap</h4>
+          <p>No site do Bootstrap, clique em <a href="https://icons.getbootstrap.com/" target="_blank">Icons</a>, copie
+            o CDN que está mais abaixo da página.</p>
+          <p>Abaixo do carregamento do CSS do Bootstrap, cole o link dos ícones:</p>
+          &lt;!--Icons Bootstrap--&gt; <br>
+          &lt;link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"&gt;
+          </p>
+          <p>Por baixo do link do Bootstrap, carregue o CSS da pasta css: &lt;link rel="stylesheet"
+            href="css/style.css"&gt;</p>
+          <h4>1.2.3 Carregando o JS do Bootstrap</h4>
+          <p>Antes do fechamento da tag &lt;/body&gt;, adicione os links Popper do site oficial do Bootstrap: <br>
+
+            &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">&lt;/script&gt;
+            <br>
+            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js">&lt;/script&gt;
+          </p>
+          <p>Com o Bootstrap carregado, podemos testar adicionando o componente Navbar na corpo da inxe.html.</p>
+          <p>Na index.html, entre as tags &lt;body&gt;&lt;body&gt;, adicione as tags &lt;header&gt;&lt;header&gt; e cole
+            o conteúdo do primeiro exemplo de Navbar do Bootstrap e ajuste-o:</p>
+
+          <br>
+          &lt;nav class="navbar navbar-expand-lg"&gt; <br>
+          &lt;div class="container-fluid"&gt; <br>
+          &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt; <br>
+          &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"&gt; <br>
+          &lt;span class="navbar-toggler-icon">&lt;/span&gt; <br>
+          &lt;/button&gt; <br>
+          &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt; <br>
+          &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt; <br>
+          &lt;li class="nav-item"&gt; <br>
+          &lt;a class="nav-link active" aria-current="page" href="#">Home&lt;/a&gt; <br>
+          &lt;/li&gt; <br>
+          &lt;li class="nav-item"&gt; <br>
+          &lt;a class="nav-link" href="#">Link&lt;/a&gt; <br>
+          &lt;/li&gt; <br>
+          &lt;li class="nav-item dropdown"&gt; <br>
+          &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false"&gt; <br>
+          Dropdown
+          &lt;/a&gt; <br>
+          &lt;ul class="dropdown-menu"&gt; <br>
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a>&lt;/li&gt; <br>
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a>&lt;/li&gt; <br>
+          &lt;li&gt;&lt;hr class="dropdown-divider">&lt;/li&gt; <br>
+          &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt; <br>
+          &lt;/ul&gt; <br>
+          &lt;/li&gt; <br>
+          &lt;li class="nav-item"&gt; <br>
+          &lt;a class="nav-link disabled" aria-disabled="true">Disabled&lt;/a&gt; <br>
+          &lt;/li&gt; <br>
+          &lt;/ul&gt; <br>
+          &lt;form class="d-flex" role="search"&gt; <br>
+          &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/&gt; <br>
+          &lt;button class="btn btn-outline-success" type="submit">Search&lt;/button&gt; <br>
+          &lt;/form&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/nav&gt; <br><br>
+
+          <h3>Instalação do Live Server</h3>
+          <p>No VSCode, instale o Live Server, sem a estrela, para permitir que o navegador faça a actualização
+            automática sem precisarmos de fazer o refresh da página.</p>
+          <p>Com o Live Server instalado, clique em Go Live, aparece no rodapé do VSCode.</p>
+
+        </section>
+        <h2>2. Implementando o Topo do Site</h2>
+        <p>
+          Acima da tag &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;, adicione o conteúdo HTML para o
+          topo do site:</p>
+        <p>
+          &lt;div id="top"&gt; <br>
+          &lt;div class="container"&gt; <br>
+          &lt;div class="row align-items-center"&gt; <br>
+          &lt;div class="col-md-3"&gt; <br>
+          &lt;img src="img/logo_400_100.png" alt="ITFocursos" class="logo img-thumbnail"&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;div class="col-md-3"&gt; <br>
+          &lt;div class="row"&gt; <br>
+          &lt;div class="col-md-2"&gt;&lt;i class="bi bi-person-lines-fill"&gt;&lt;/i&gt;&lt;/div&gt; <br>
+          &lt;div class="col-md-10"&gt; <br>
+          &lt;h6>Email:&lt;/h6&gt; <br>
+          &lt;p>contacto@itfocuros.co.ao&lt;/p&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;div class="col-md-3"&gt; <br>
+          &lt;div class="row"&gt; <br>
+          &lt;div class="col-md-2"&gt;&lt;i class="bi bi-telephone-plus-fill"&gt;&lt;/i&gt;&lt;/div&gt; <br>
+          &lt;div class="col-md-10"&gt; <br>
+          &lt;h6>Telemóvel:&lt;/h6&gt; <br>
+          &lt;p>+244 922 686 394&lt;/p&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;div class="col-md-3"&gt; <br>
+          &lt;a href="#" class="btn btn-inscricao">Inscrever-se&lt;/a&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+          &lt;/div&gt; <br>
+        </p>
+        <p>Para ter um efeito mais fino, adicione o conteúdo do CSS no arquivo style.css:</p>
+        <p>
+          /*INICIO MENU TOP*/ <br>
+          #top{ <br>
+          width: 100%; <br>
+          height: auto; /*Para nao nos preocuparmos em ajustar na versao mobile*/ <br>
+          background-color: white; <br>
+          margin-bottom: 10px; <br>
+          } <br>
+
+          /*Logo*/ <br>
+          .logo{ <br>
+          width: 200px; <br>
+          height: auto; <br>
+          padding: 5px; <br>
+          } <br>
+          /*Icones*/ <br>
+          #top i{ <br>
+          font-size: 26px; <br>
+          color: #de5f17; <br>
+          } <br>
+
+          a.btn-inscricao{ <br>
+          background-color: #de5f17; /*Cor padrao*/ <br>
+          color: #fff; <br>
+          float: right; <br>
+          } <br>
+
+          a.btn-inscricao:hover{ <br>
+          background-color: #ff9100; <br>
+          color: white; <br>
+          } <br>
+          /*FIM MENU TOP*/
+        </p>
+        <hr>
+        <h2>3. Implementando o Menu</h2>
+        <p>
+          Vamos ajustar o conteúdo do menu que testamos com ele o Bootstrap para se adaptar às nossas necessidades:
+        </p>
+        &lt;nav class="navbar navbar-expand-lg"&gt; <br>
+        &lt;div class="container"&gt; <br>
+        &lt;div class="container-fluid"&gt; <br>
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation"&gt; <br>
+        &lt;span class="navbar-toggler-icon">&lt;/span&gt; <br>
+        &lt;/button&gt; <br>
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt; <br>
+        &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt; <br>
+        &lt;li class="nav-item"&gt; <br>
+        &lt;a class="nav-link" aria-current="page" href="#"&gt;Início&lt;/a&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;li class="nav-item"&gt; <br>
+        &lt;a class="nav-link" href="#"&gt;Sobre&lt;/a&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;li class="nav-item dropdown"&gt; <br>
+        &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false"&gt; <br>
+        Cursos
+        &lt;/a&gt; <br>
+        &lt;ul class="dropdown-menu"&gt; <br>
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Todos os cursos&lt;/a&gt;&lt;/li&gt; <br>
+        &lt;li&gt; <br>
+        &lt;hr class="dropdown-divider"&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Promoções&lt;/a&gt;&lt;/li&gt; <br>
+        &lt;li&gt; <br>
+        &lt;hr class="dropdown-divider"&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;li>&lt;a class="dropdown-item" href="#"&gt; <br>Categorias&lt;/a&gt;&lt;/li&gt; <br>
+        &lt;/ul&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;li class="nav-item"&gt; <br>
+        &lt;a class="nav-link" href="#"&gt;Notícias&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#"&gt;Contactos&lt;/a&gt; <br>
+        &lt;/li&gt; <br>
+        &lt;/ul&gt; <br>
+        &lt;form class="d-flex" role="search"&gt; <br>
+        &lt;input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" /&gt; <br>
+        &lt;/form&gt; <br>
+        &lt;/div&gt; <br>
+        &lt;/div&gt; <br>
+        &lt;/div&gt; <br>
+        &lt;/nav&gt; <br><br>
+        <p><strong>No style.css:</strong></p>
+        <p>
+          /*INICIO MENU*/ <br>
+          .navbar{ <br>
+          background-color: #16172c; <br>
+          } <br>
+
+          .navbar a{ <br>
+          color: #de5f17; <br>
+          } <br>
+
+          .nav-link:hover{ <br>
+          color: #fff; <br>
+          } <br>
+          /*FIM MENU*/
+        </p>
+        <hr>
+        <h2>4. Adicionando o Slide e Destaque</h2>
+        <p>Crie uma pasta slide dentro da pasta img e coleque três fotografias para o slide.</p>
+        <p>
+          Abixo do final do header, adicione as tags para o conteúdo principal &lt;main&gt;&lt;/main&gt; e entre elas,
+          adicione o código abaixo:
+        </p>
+
+       
+          <p>
+            &lt;!--INICIO SLIDE--&gt;
+            &lt;div id="carouselExampleCaptions" class="carousel slide">
+            &lt;div class="carousel-indicators"&gt; <br>
+            &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt; <br>
+            &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"&gt;&lt;/button&gt; <br>
+            &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"&gt;&lt;/button&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="carousel-inner"&gt; <br>
+            &lt;div class="carousel-item active"&gt; <br>
+            &lt;img src="img/slide/slide.jpg" class="d-block w-100" alt="..."&gt; <br>
+            &lt;div class="carousel-caption d-none d-md-block"&gt; <br>
+            &lt;h5&lt;First slide label&lt;/h5&gt; <br>
+            &lt;p&lt;Some representative placeholder content for the first slide.&lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="carousel-item"&gt; <br>
+            &lt;img src="img/slide/slid2_360_200.jpg" class="d-block w-100" alt="..."&gt; <br>
+            &lt;div class="carousel-caption d-none d-md-block"&gt; <br>
+            &lt;h5>Second slide label&lt;/h5&gt; <br>
+            &lt;p>Some representative placeholder content for the second slide.&lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="carousel-item"&gt; <br>
+            &lt;img src="img/slide/slid3_360_200.jpg" class="d-block w-100" alt="..."&gt; <br>
+            &lt;div class="carousel-caption d-none d-md-block"&gt; <br>
+            &lt;h5>Third slide label&lt;/h5&gt; <br>
+            &lt;p>Some representative placeholder content for the third slide.&lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"&gt; <br>
+            &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt; <br>
+            &lt;span class="visually-hidden">Previous&lt;/span&gt; <br>
+            &lt;/button&gt; <br>
+            &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"&gt; <br>
+            &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt; <br>
+            &lt;span class="visually-hidden">Next&lt;/span&gt; <br>
+            &lt;/button&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;!--FIM SLIDE--&gt;
+          </p>
+
+          <p>
+            &lt;!--INICIO DESTAQUE--&gt; <br>
+            &lt;section id="destaque"&gt; <br>
+            &lt;div class="row dest"&gt; <br>
+            &lt;div class="col-sm-12 col-md-6 col-lg-3 destaque-item1"&gt; <br>
+            &lt;i class="bi bi-person-bounding-box"&gt;&lt;/i&gt; <br>
+            &lt;h5&gt;Intuitivo&lt;/h5&gt; <br>
+            &lt;p&gt; <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta eveniet
+            aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+            esse mollitia.
+            &lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col-sm-12 col-md-6 col-lg-3 destaque-item2"&gt; <br>
+            &lt;i class="bi bi-arrow-down-up"&gt;&lt;/i&gt; <br>
+            &lt;h5&gt;Aplicável&lt;/h5&gt; <br>
+            &lt;p&gt; <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta eveniet
+            aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+            esse mollitia.
+            &lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col-sm-12 col-md-6 col-lg-3 destaque-item1"&gt; <br>
+            &lt;i class="bi bi-speaker"&gt;&lt;/i&gt; <br>
+            &lt;h5>Acompanhamento&lt;/h5&gt; <br>
+            &lt;p&gt; <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta eveniet
+            aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+            esse mollitia.
+            &lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;div class="col-sm-12 col-md-6 col-lg-3 destaque-item2"&gt; <br>
+            &lt;i class="bi bi-graph-up-arrow"&gt;&lt;/i&gt; <br>
+            &lt;h5&gt;Progresso Visual&lt;/h5&gt; <br>
+            &lt;p&gt; <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum at possimus iste soluta eveniet
+            aliquam molestias a consequatur! Non totam nisi iusto molestias! Id cumque laborum quam velit,
+            esse mollitia.
+            &lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+            &lt;/section&gt; <br>
+            &lt;!--FIM DESTAQUE--&gt;
+          </p>
+<p><strong>No style.css:</strong></p>
+<p>
+  
+/*INICIO SLIDE*/ <br>
+.carousel-item{ <br>
+    height: 700px; <br>
+} <br>
+
+.carousel-item img{ <br>
+    height: 700px; <br>
+} <br>
+/*FIM SLIDE*/ <br>
+
+/*INICIO DESTAQUE*/ <br>
+#destaque{ <br>
+    width: 100%; <br>
+    height: auto; <br>
+margin: auto; <br>
+
+    
+} <br>
+
+.dest{ <br>
+    display: flex; <br>
+    justify-content: center; <br>
+align-items: center; <br>
+} <br>
+.destaque-item1{ <br>
+    width: 24.6%; <br>
+height: 300px; <br>
+background-color: #de5f17; <br>
+color: white; <br>
+display: flex; <br>
+flex-direction: column; <br>
+justify-content: center; <br>
+align-items: center; <br>
+padding: 50px; <br>
+margin: 1px 1px 0 1px; <br>
+
+} <br>
+
+.destaque-item1:hover{ <br>
+    cursor: pointer; <br>
+    background-color: #00000078; <br>
+} <br>
+.destaque-item2{ <br>
+     width: 24.6%; <br>
+height: 300px; <br>
+background-color: #16172c; <br>
+color: white; <br>
+display: flex; <br>
+flex-direction: column; <br>
+justify-content: center; <br>
+align-items: center; <br>
+padding: 50px; <br>
+margin: 1px 1px 0 1px; <br>
+} <br>
+.destaque-item2:hover{ <br>
+    cursor: pointer; <br>
+    background-color: #00000074; <br>
+} <br>
+#destaque i{ <br>
+    font-size: 70px; <br>
+    
+} <br>
+
+#destaque p{ <br>
+    text-align: justify; <br>
+    
+} <br>
+/*FIM DESTAQUE*/ <br>
+</p>
+<hr>
+        <h2>5. Adicionando a Secção Cursos em Destaque</h2>
+  <p>Crie uma pasta cursos dentro da pasta img e coloque três fotografias para os cursos.</p>
+
+  <p>
+    Abaixo da section de destaque, adicione o código abaixo:
+  </p>
+  &lt;!--INICIO CURSO EM DESTAQUE--&gt; <br>
+        &lt;section id="curso_destaque"&gt; <br>
+            &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                    &lt;div class="col-lg-12"&gt; <br>
+                        &lt;h2&gt;CURSOS EM DESTAQUE&lt;/h2&gt; <br>
+                    &lt;/div&gt; <br>
+               &lt;/div&gt; <br>
+
+                &lt;div class="row"&gt; <br>
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;50.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de HTML&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid1_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;50.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de CSS&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;70.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de JavaScript&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid2_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;80.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title">Curso de MySQL&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid3_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque">Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid1_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title">Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title">Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid2_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/c1_html.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+
+                    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt; <br>
+                        &lt;div class="card" style="width: 18rem;"&gt; <br>
+                            &lt;img src="img/cursos/slid3_360_200.jpg" class="card-img-top img" alt="..."&gt; <br>
+                            &lt;div class="price_curse"&gt; <br>
+                                &lt;h4&gt;40.000, 00 &lt;sup&gt;Kz&lt;/sup&gt;&lt;/h4&gt; &lt;!--sup vai por a moeda acima do valor--&gt; <br>
+                            &lt;/div&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Curso de Lógica de Programação&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-curso-destaque"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+        &lt;/section&gt; <br>
+        &lt;!--FIM CURSO EM DESTAQUE--&gt;
+
+        <p><strong>No style.css:</strong></p>
+
+        <p>
+          
+/*INICIO CURSO EM DESTAQUE*/ <br>
+#curso_destaque{ <br>
+width: 100%; <br>
+height: auto; <br>
+margin-top: 50px; <br>
+background-color: rgba(0, 0, 0, 0.113); <br>
+} <br>
+
+/*H2*/ <br>
+#curso_destaque h2{ <br>
+    text-align: center; <br>
+    color: #16172c; <br>
+    padding: 50px 0; <br>
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.397); <br>
+} <br>
+
+a.btn-curso-destaque{ <br>
+width: 100%; <br>
+padding: 10px; <br>
+background-color: white; <br>
+border: 1px solid #de5f17; <br>
+color: #de5f17; <br>
+} <br>
+
+a.btn-curso-destaque:hover{ <br>
+    background-color: #de5f17; <br>
+   color: white; <br>
+} <br>
+
+.price_curse{ <br>
+    width: 180px; <br>
+    height: 40px; /*Altura da base do preço*/ <br>
+    position: absolute; /*Sobrepor todos os elementos, mas o elemento pai deve ser relative*/ <br>
+    background-color: rgba(223, 95, 23, 0.9); <br>
+    top:20px; <br>
+    right: 20px; /*Mais para a direita*/ <br>
+    display: flex; <br>
+    justify-content: center; <br>
+    align-items: center; <br>
+    color: white; <br>
+    font-weight: bold; <br>
+} <br>
+
+.card-title{ <br>
+    text-align: center; <br>
+} <br>
+
+.card-text{ <br>
+    text-align: justify; <br>
+} <br>
+
+.card{ <br>
+margin-bottom: 50px; <br>
+} <br>
+
+.img{ <br>
+    height: 180px; <br>
+} <br>
+/*FIM CURSO EM DESTAQUE*/ <br>
+        </p>
+        <p><strong>Observação:</strong>Se essa secção não estiver bem no modo responsivo, remova o style="width: 18rem;" em todos os cards.</p>
+<hr>
+        <h2>6. Adicionando a Secções Informação Rápida e Sobre</h2>
+<p>
+  Na pasta img, crie as subpastas info e sobre, dentro delas coloque imagens correspondentes para informação e para sobre.
+</p>
+<p>
+  Feito isso, adicione o código abaixo depois da section dos cursos em destaque:
+</p>
+<p>
+  &lt;!--INICIO INFORMACAO RAPIDA--&gt; <br>
+        &lt;section id="informacao"&gt; <br>
+            &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                    &lt;div class="col-sm-12 col-lg-6 align-self-center"&gt; <br>
+                        &lt;!--align-self-center serve para centralizar o conteudo da coluna em relacao a vertical--&gt; <br>
+                        &lt;h2&gt;Torne-se um desenvolvedor Full-Stack sem sair de casa.&lt;/h2&gt; <br>
+                        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad velit nobis nisi numquam
+                            nihil ab, nesciunt accusantium, doloribus quidem culpa odit saepe. Praesentium recusandae
+                            iure vel asperiores quo dignissimos?&lt;/p&gt; <br>
+                    &lt;/div&gt; <br>
+                    &lt;div class="col-sm-12 col-lg-6"&gt; <br>
+                        &lt;img src="img/info/info_rapida.jpg" class="img-fluid virar" alt="informacao"&gt; <br>
+                    &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+        &lt;/section&gt; <br>
+        &lt;!--FIM INFORMACAO RAPIDA--&gt; <br>
+</p>
+
+<p>
+  &lt;!--INICIO SOBRE--&gt; <br>
+        &lt;section id="sobre"&gt; <br>
+            &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                    &lt;div class="col-lg-6 align-self-center"&gt; <br>
+                        &lt;img src="img/logo_400_100.png" class="img-fluid" alt=""&gt; <br>
+                    &lt;/div&gt; <br>
+                    &lt;div class="col-lg-6 align-self-center"&gt; <br>
+                        &lt;p&gt;A ITFocurso oferece lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, commodi
+                            et? Quae cum accusamus nihil necessitatibus accusantium similique nemo totam ea ipsum,
+                            molestiae inventore sint consequuntur! Quia eligendi alias sequi!&lt;/p&gt; <br>
+                    &lt;/div&gt; <br>
+                &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+        &lt;/section&gt; <br>
+        &lt;!--FIM SOBRE--&gt; <br>
+</p>
+<br>
+<p><strong>No style.css</strong></p>
+
+<p>
+  
+/*INICIO INFO RAPIDA*/ <br>
+
+#informacao{ <br>
+    padding: 50px; <br>
+} <br>
+
+#informacao p{ <br>
+    text-align: justify; <br>
+} <br>
+/* <br>
+ Classe para girar 180 graus  <br>
+.girar-180 { <br>
+    transform: rotate(180deg); <br>
+} <br>
+
+ Classe para virar/espelhar horizontalmente  <br>
+.espelhar-h { <br>
+    transform: scaleX(-1); <br>
+} <br>
+*/ <br>
+.virar{ <br>
+     transform: scaleX(-1); <br>
+} <br>
+/*FIM INFO RAPIDA*/ <br>
+
+/*INICIO SOBRE*/ <br>
+#sobre{ <br>
+    width: 100%; <br>
+    height: auto; <br>
+    background-color: rgba(28, 27, 27, 0.914); <br>
+    padding: 50px; <br>
+} <br>
+#sobre img{ <br>
+    width: 400px; <br>
+    box-shadow: 0 4px 10px 20px rgba(0, 0, 0, 0.192); <br>
+} <br>
+#sobre p{ <br>
+    text-align: justify; <br>
+    color: white; <br>
+    font-size: 24px; <br>
+} <br>
+/*FIM SOBRE*/
+
+</p>
+<hr>
+
+ <h2>7. Adicionando a Secções Record com Efeito Paralax</h2>
+<p>
+  Depois da secção sobre, adicione a secção caracteriscas com o código abaixo:
+</p>
+
+<p>
+   &lt;!--INICIO CARACTERISCAS--&gt; <br>
+        &lt;section id="caracteriscas"&gt; <br>
+            &lt;div class="container"&gt; <br>
+                &lt;div class="row"&gt; <br>
+                    &lt;div class="col-lg-12"&gt; <br>
+                        &lt;h2&gt;PRINCIPAIS CARACTERÍSTICAS&lt;/h2&gt; <br>
+                    &lt;/div&gt; <br>
+ &lt;!--COPIA MAIS DAQUI--&gt; <br>
+                      &lt;div class="col-sm-12 col-md-6 col-lg-4"&gt; <br>
+                        &lt;div class="card caracteristica1"&gt; <br>
+                            &lt;i class="bi bi-person-workspace">&lt;/i&gt; <br>
+                            &lt;div class="card-body"&gt; <br>
+                                &lt;h5 class="card-title"&gt;Variedades de cursos&lt;/h5&gt; <br>
+                                &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the
+                                    bulk of the card’s content.&lt;/p&gt; <br>
+                                &lt;a href="#" class="btn btn-caracteristica"&gt;Saiba mais...&lt;/a&gt; <br>
+                            &lt;/div&gt; <br>
+                        &lt;/div&gt; <br>
+                    &lt;/div&gt; <br>
+ &lt;!--ATE AQUI, DE UM ENTER E COLE 5 VEZES--&gt; <br>
+                &lt;/div&gt; <br>
+            &lt;/div&gt; <br>
+        &lt;/section&gt; <br>
+        &lt;!--FIM CARACTERISCAS--&gt; <br>
+</p>
+<br> <br>
+<p><strong>No style.css:</strong></p>
+<p>
+  
+/*INICIO CARACTERISCA*/ <br>
+#caracteriscas{ <br>
+width: 100%; <br>
+height: auto; <br>
+margin-top: 50px; <br>
+background-color: rgba(0, 0, 0, 0.113); <br>
+} <br>
+
+.card i{ <br>
+    font-size: 70px; <br>
+    text-align: center; <br>
+    color:#de5f17; <br>
+}
+
+a.btn-caracteristica{ <br>
+width: 100%; <br>
+padding: 10px; <br>
+background-color: white; <br>
+border: 1px solid #de5f17; <br>
+color: #de5f17; <br>
+} <br>
+
+a.btn-caracteristica:hover{ <br>
+    background-color: #de5f17; <br>
+   color: white; <br>
+} <br>
+
+.caracteristica1{ <br>
+height: auto; <br>
+background-color: #16172c2c; <br>
+color: black; <br>
+display: flex; <br>
+flex-direction: column; <br>
+justify-content: center; <br>
+align-items: center; <br>
+padding: 10px; <br>
+
+} <br>
+
+.caracteristica1:hover{ <br>
+    cursor: pointer; <br>
+    background-color: #00000078; <br>
+} <br>
+
+.caracteristica2{ <br>
+height: auto; <br>
+background-color: #16172c2c; <br>
+color: black; <br>
+display: flex; <br>
+flex-direction: column; <br>
+justify-content: center; <br>
+align-items: center; <br>
+padding: 10px; <br>
+} <br>
+.caracteristica2:hover{ <br>
+    cursor: pointer; <br>
+    background-color: #00000074; <br>
+} <br>
+/*FIM CARACTERISCA*/ <br>
+</p>
+<hr>
+
+ <h2>8. Adicionando a Secções FAQ (Perguntas Frequentes)</h2>
+<p>
+  Na pasta img, crie as subpastas info e sobre, dentro delas coloque imagens correspondentes para informação e para sobre.
+</p>
+      </div>
+    </section>
+  </main>
+
+  <!--JS PARA O BOOTSTRAP e jQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+
+
+  <!--JS DO PROJECTO-->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,507 @@
+/*INICIO MENU TOP*/
+#top{
+    width: 100%;
+    height: auto; /*Para nao nos preocuparmos em ajustar na versao mobile*/
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+/*Logo*/
+.logo{
+    width: 200px;
+    height: auto;
+    padding: 5px;
+}
+/*Icones*/
+#top i{
+font-size: 26px;
+color: #de5f17;
+}
+
+a.btn-inscricao{
+background-color: #de5f17; /*Cor padrao*/
+color: #fff;
+float: right;
+}
+
+a.btn-inscricao:hover{
+    background-color: #ff9100;
+    color: white;
+}
+/*FIM MENU TOP*/
+/*INICIO MENU*/
+.navbar{
+    background-color: #16172c;
+}
+
+.navbar a{
+    color: #de5f17;
+}
+
+.nav-link:hover{
+    color: #fff;
+}
+/*FIM MENU*/
+
+/*INICIO SLIDE*/
+.carousel-item{
+    height: 700px;
+}
+
+.carousel-item img{
+    height: 700px;
+}
+/*FIM SLIDE*/
+
+/*INICIO DESTAQUE*/
+#destaque{
+    width: 100%;
+    height: auto;
+margin: auto;    
+}
+
+.dest{
+    display: flex;
+    justify-content: center;
+align-items: center;
+}
+.destaque-item1{
+    width: 24.6%;
+height: 300px;
+background-color: #de5f17;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 50px;
+margin: 1px 1px 0 1px;
+}
+
+.destaque-item1:hover{
+    cursor: pointer;
+    background-color: #00000078;
+}
+.destaque-item2{
+     width: 24.6%;
+height: 300px;
+background-color: #16172c;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 50px;
+margin: 1px 1px 0 1px;
+}
+.destaque-item2:hover{
+    cursor: pointer;
+    background-color: #00000074;
+}
+#destaque i{
+    font-size: 70px;    
+}
+
+#destaque p{
+    text-align: justify;
+    
+}
+/*FIM DESTAQUE*/
+
+/*INICIO CURSO EM DESTAQUE*/
+#curso_destaque{
+width: 100%;
+height: auto;
+margin-top: 50px;
+background-color: rgba(0, 0, 0, 0.113);
+}
+
+/*H2 - Títulos das Sections*/
+h2{
+    text-align: center;
+    color: #16172c;
+    padding: 50px 0;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.397);
+}
+
+a.btn-curso-destaque{
+width: 100%;
+padding: 10px;
+background-color: white;
+border: 1px solid #de5f17;
+color: #de5f17;
+}
+
+a.btn-curso-destaque:hover{
+    background-color: #de5f17;
+   color: white;
+}
+
+.price_curse{
+    width: 180px;
+    height: 40px; /*Altura da base do preço*/
+    position: absolute; /*Sobrepor todos os elementos, mas o elemento pai deve ser relative*/
+    background-color: rgba(223, 95, 23, 0.9);
+    top:20px;
+    right: 20px; /*Mais para a direita*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.card{
+margin: 20px 0px 20px 0px;
+}
+
+.img{
+    height: 180px;
+}
+/*FIM CURSO EM DESTAQUE*/
+
+/*INICIO INFO RAPIDA*/
+
+#informacao{
+    padding: 50px;
+}
+
+#informacao p{
+    text-align: justify;
+}
+/*
+ Classe para girar 180 graus 
+.girar-180 {
+    transform: rotate(180deg);
+}
+
+ Classe para virar/espelhar horizontalmente 
+.espelhar-h {
+    transform: scaleX(-1);
+}
+*/
+.virar{
+     transform: scaleX(-1);
+}
+/*FIM INFO RAPIDA*/
+
+/*INICIO SOBRE*/
+#sobre{
+    width: 100%;
+    height: auto;
+    background-color: rgba(28, 27, 27, 0.914);
+    padding: 50px;
+}
+#sobre img{
+    width: 400px;
+    box-shadow: 0 4px 10px 20px rgba(0, 0, 0, 0.192);
+}
+#sobre p{
+    text-align: justify;
+    color: white;
+    font-size: 24px;
+}
+/*FIM SOBRE*/
+
+/*INICIO CARACTERISCA*/
+#caracteriscas{
+width: 100%;
+height: auto;
+margin-top: 50px;
+background-color: rgba(0, 0, 0, 0.113);
+}
+
+.card i{
+    font-size: 70px;
+    text-align: center;
+    color:#de5f17;
+}
+
+a.btn-caracteristica{
+width: 100%;
+padding: 10px;
+background-color: white;
+border: 1px solid #de5f17;
+color: #de5f17;
+}
+
+a.btn-caracteristica:hover{
+    background-color: #de5f17;
+   color: white;
+}
+
+.caracteristica1{
+height: auto;
+background-color: #16172c2c;
+color: black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+}
+
+.caracteristica1:hover{
+    cursor: pointer;
+    background-color: #00000078;
+}
+
+.caracteristica2{
+height: auto;
+background-color: #16172c2c;
+color: black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+.caracteristica2:hover{
+    cursor: pointer;
+    background-color: #00000074;
+}
+/*FIM CARACTERISCA*/
+
+/*INICIO RECORD*/
+#record{
+width: 100%;
+height: auto;
+background-image: url('../img/record/record.jpg');
+/*Definicoes para a img*/
+background-size: cover; /**/
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed; /*Paralax, faz com que o conteúdo passe por cima da img ao rolar a pagina*/
+margin-top: 50px;
+}
+
+.record_background{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(20, 22, 42, 0.6);
+    /*Alinhamento dos elementos*/
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.record_center{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+}
+/*Config dos itens do record*/
+.record_item{
+width: 250px;
+height: 250px;
+border-radius: 50%;
+border: 14px solid #de5f17;
+font-weight: bold;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+.record_item sup{
+    font-weight: 34px;
+}
+/*FIM RECORD*/
+
+/*INICIO EXPERIENCIA*/
+#experiencia{
+   width: 100%;
+   height: auto;
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#experiencia img{
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+}
+
+#experiencia ul{
+    margin-top: 40px;
+}
+/*FIM EXPERIENCIA*/
+
+/*INICIO FAQ*/
+
+#faq{
+    margin-top: 50px;
+}
+#faq button{
+    background-color: #16172c;
+    color: white;
+}
+/*FIM FAQ*/
+
+/*INICIO INSCRICAO*/
+#inscricao{
+    width: 100%;
+    height: auto;
+    background-image: url('../img/inscricao/inscricao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+
+.inscricao_background{
+    width: 100%;
+    height: 800px;
+      background-color:rgba(20, 22, 42, 0.6);
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inscricao_background h2{
+    color: white;
+    font-size: 40px;
+}
+
+.inscricao_background p{
+    color: white;
+}
+
+
+button.btn-inscricao{
+width: 100%;
+padding: 10px;
+background-color: white;
+border: 1px solid #de5f17;
+color: #de5f17;
+}
+
+button.btn-inscricao:hover{
+    background-color: #de5f17;
+   color: white;
+}
+
+.form-check-label{
+    color: white;
+}
+/*FIM INSCRICAO*/
+
+/*INICIO TESTEMUNHO*/
+#testemunhos{  
+   height: 500px;
+    margin-top: 50px;
+}
+#testemunhos span{
+    background-color: #de5f16;
+}
+
+.item{
+    height: 400px;
+    padding: 50px;
+}
+.testemunho_item{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.testemunho_item img{
+width: 550px;
+height: 300px;
+border-radius: 50%;
+}
+
+.testemunho_item .carousel-caption{
+    width: 250px;
+    height: auto;
+    margin: auto;
+    background-color: rgba(20, 22, 42, 0.6);
+    border-radius: 50%;
+}
+/*FIM TESTEMUNHO*/
+
+/*INICIO CONTACTOS*/
+
+.posicionamento{
+width: 100%;
+height: auto;
+background-color: #16172c;
+padding: 50px;
+margin-top: 50px;
+color: white;
+}
+.posicionamento i{
+    color: #de5f16;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+.posicionamento a{
+    text-decoration: none;
+    color: white;
+}
+.posicionamento a:hover{
+    color: #de5f17;
+}
+/*Remover o ícone padrão, a bolinha, da lista*/
+.posicionamento ul{
+    list-style: none;
+}
+.posicionamento{
+    width: 100%;
+    height: auto;
+}
+/*FIM CONTACTOS*/
+/*FOOTER*/
+
+footer h3{
+    color: white;
+}
+
+footer p{
+    color: white;
+}
+
+.copyrigth{
+    color: #fff;
+    background-color: #01030c4f;
+    padding: 10px;
+}
+
+.copyrigth a{
+color: red;
+}
+
+.copyrigth a:hover{
+color: #de5f17;
+}
+
+button.btn-newslatter{
+width: 100%;
+padding: 10px;
+ color: white;
+background-color: #de5f17;
+border: 1px solid #de5f17;
+
+}
+
+button.btn-newslatter:hover{
+    background-color: white;
+    color: #de5f17;
+  
+}

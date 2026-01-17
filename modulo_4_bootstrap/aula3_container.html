@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container no Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Container no Bootstrap</h1>
+
+
+            <p>No Bootstrap, um Container é um bloco de construção fundamental para criar layouts responsivos, sendo uma
+            &lt;div&gt; ou outro elemento que envolve e centraliza o conteúdo, definindo suas margens e largura de forma
+                adaptável a diferentes tamanhos de tela (responsividade). Existem os tipos .container (largura fixa com
+                breakpoints), .container-fluid (largura total, 100%) e .container-{breakpoint} (100% até um ponto de
+                quebra específico). </p>
+                <hr>
+                <h2>Tipos Principais de Containeres:</h2>
+                <ul>
+                    <li>
+                        .container: Define uma largura máxima fixa que aumenta em "breakpoints" (tamanhos de tela
+                        específicos), mantendo o conteúdo centralizado e com margens laterais.</li>
+                    <li>.container-fluid: Ocupa 100% da largura da tela em todos os breakpoints, ideal para fundos ou
+                        seções que precisam se estender por toda a viewport.</li>
+                    <li>.container-{breakpoint}: Usa 100% da largura até um ponto de quebra (ex: .container-sm,
+                        .container-md, .container-lg), a partir do qual ele se torna fixo e centralizado, como o
+                        .container padrão, mas em um tamanho diferente.
+                    </li>
+                </ul>
+
+                <h2>Para que serve?</h2>
+                <ul>
+                    <li>
+                        Estrutura: É a base para o sistema de grid do Bootstrap, contendo linhas (.row) e colunas
+                        (.col).</li>
+                    <li>Responsividade: Garante que o conteúdo se ajuste bem a desktops, tablets e celulares.</li>
+                    <li>Alinhamento: Centraliza o conteúdo na página, melhorando a legibilidade.</li>
+                    <li>Padronização: Aplica margens internas (padding) e limites de largura de forma consistente em
+                        todo o projecto.
+                    </li>
+                </ul>
+
+                <h3>Exemplo de Uso</h3>
+                <p>Abra o site do <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, clique em Docs, no
+                    lado esquerdo, procure a secção de Layout e clique em Container. Lê o que eles falam sobre o seu
+                    <strong>Container Padrão</strong>:
+                </p>
+                <p>Default container</p>
+                <p><em>"Nossa classe .container padrão é um container responsivo de largura fixa, o que significa que a
+                        max-width se adapta a cada ponto de interrupção."</em></p>
+                &lt;div class="container"&gt; <br>
+                &lt;!-- Content here --&gt;<br>
+                &lt;/div&gt; <br>
+<p>Logo, com o uso da classe container do Bootstrap, não precisamos nos preocupar em definir a largura porque esse framework já faz isso por nós. Diferente do que tivemos de fazer no módulo de HTML e CSS, que tínhamos de definir a largula dos elementos no CSS com width:valor.</p>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

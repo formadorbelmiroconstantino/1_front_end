@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mídia em HTML</title>
+</head>
+<body>
+	<h1>Mídia em HTML</h1>
+	<p> <b>O que são mídia em HTML?</b> </p>
+	<p>Mídia em HTML refere-se à incorporação de conteúdo multimídia (imagens, áudios, vídeos) diretamente em páginas web usando tags específicas como <img>, <audio>, <video>, e outros elementos como iframes, uma funcionalidade que foi bastante aprimorada com o HTML5, dispensando plugins e permitindo uma experiência mais rica e nativa para o usuário. </p>
+
+		<h1>Principais tags e elementos:</h1>
+		<ul>
+			<li> < img>: Para incluir imagens (JPEG, PNG, SVG, etc.).</li>
+			<li> < audio>: Para áudios (músicas, podcasts), suportando formatos como MP3, WAV, OGG.</li>
+			<li> < video>: Para vídeos, com suporte a MP4, WebM, OGG.</li>
+			<li> < iframe>: Para incorporar conteúdo de outras páginas ou sites (como vídeos do YouTube).</li>
+			<li> < map> e < area>: Para criar "mapas de imagem" onde diferentes áreas da imagem são clicáveis e levam a links diferentes. </li>
+		</ul>
+		<h1>Como funciona:</h1>
+
+		<ul>
+			<li><b> Sem plugins:</b> O HTML5 permitiu que navegadores reproduzam áudio e vídeo nactivamente, sem a necessidade de Flash ou outros plugins, tornando os sites mais leves e rápidos.</li>
+			<li><b> Múltiplas fontes:</b> Para garantir compatibilidade entre navegadores, você pode fornecer várias fontes de mídia (diferentes formatos) dentro das tags <audio> e <video>, e o navegador escolherá a primeira compatível.</li>
+				<li><b> Atributos:</b> As tags possuem atributos para controlar o comportamento, como src (fonte), controls (mostrar controles), autoplay (reprodução automática) e width/height (dimensões).</li>
+			</ul>
+			<p>Em resumo, mídia em HTML é a capacidade de adicionar esses elementos interativos e visuais para enriquecer o conteúdo de uma página, contando histórias e guiando o usuário de forma mais envolvente. </p>
+
+			<hr>
+			<h1>Exemplos de Mídias</h1>
+			<h2>Imagens</h2>
+			<img src="midia/img/background.avif" alt="Imagem" width="100%" height="250px" title="Nossa mídeia de imagem">
+			<hr>
+			<h2>Áudio em HTML</h2>
+
+			<h2> 1. Estrutura Básica</h2>
+			<p> A forma mais simples de inserir um áudio é usando o atributo src e habilitando os controles de reprodução com controls:</p>
+
+			<audio src="musica.mp3" controls>
+				Seu navegador não suporta o elemento de áudio.
+			</audio>
+
+			<h2> 2. Suporte a Múltiplos Formatos</h2>
+			<p> Como nem todos os navegadores suportam os mesmos formatos, a prática recomendada é usar a tag < source> dentro de < audio> para oferecer alternativas:</p>
+			<audio controls>
+				<source src="audio.mp3" type="audio/mpeg">
+					<source src="audio.ogg" type="audio/ogg">
+						<source src="audio.wav" type="audio/wav">
+							Seu navegador não suporta áudio HTML5.
+						</audio>
+
+						<p> Formatos principais: MP3 (mais comum), OGG e WAV.</p> 
+
+						<h2> 3. Atributos Principais</h2>
+						<p>Você pode personalizar o comportamento do player com estes atributos:</p> 
+						<ul> <li> controls: Exibe botões de play, pause, volume e progresso.</li> 
+							<li> autoplay: Inicia o áudio automaticamente (bloqueado por muitos navegadores modernos se não houver interação prévia do usuário).</li> 
+							<li> loop: Faz o áudio reiniciar automaticamente ao terminar.</li> 
+							<li> muted: Inicia o áudio sem som.</li> 
+							<li> preload: Define como o arquivo deve carregar (auto, metadata ou none).</li>  </ul> 
+
+							<h2>4. Controle via JavaScript </h2>
+
+							<p>Para criar interfaces customizadas ou automatizar ações, utilize a API HTMLAudioElement:</p>
+							<script>
+
+								const meuAudio = document.querySelector('audio');
+
+// Funções de controle
+meuAudio.play();  // Iniciar
+meuAudio.pause(); // Pausar
+meuAudio.volume = 0.5; // Ajustar volume (0.0 a 1.0)
+meuAudio.currentTime = 10; // Ir para os 10 segundos	
+</script>
+
+
+<p><b>Exemplo com uma música muito conhecida</b></p>
+
+<audio controls>
+	<source src="midia/audio/4-non-blondes-what-s-up-official-music-video-128-ytshorts.savetube.me.mp3" type="audio/mpeg">	
+	</audio>
+	<hr>
+	<h2>Vídeos em HTML</h>
+
+		<p> Trabalhar com vídeos em HTML envolve usar a tag < video> com o atributo controls para exibir o player, e a tag < source> para especificar o arquivo de vídeo (com src e type, como video/mp4 ou video/webm) para compatibilidade entre navegadores, permitindo autoplay e outras funções com atributos, ou usar um código de incorporação (< iframe>) de plataformas como YouTube para conteúdo externo. </p>
+
+		<h2>1. Incorporando Vídeos Locais (Seu Próprio Arquivo)</h2>
+
+		<video width="320" height="240" controls>
+			<source src="meuvideo.mp4" type="video/mp4">
+				<source src="meuvideo.webm" type="video/webm">
+					Seu navegador não suporta a tag de vídeo.
+				</video>
+				<ul> 
+					<li> <b> < video>:</b> A tag principal para vídeos.</li>
+					<ul> 
+						<li> controls: Adiciona os controles de reprodução (play, pause, volume).</li>
+						<li> width, height: Define as dimensões do player.</li>
+					</ul> 
+
+					<li><b> < source>:</b> Especifica o arquivo de vídeo. Use múltiplos < source> para diferentes formatos (MP4, WebM, Ogg) para garantir compatibilidade.</li>
+					<ul> 
+						<li>src: Caminho para o arquivo de vídeo.</li>
+						<li>type: O tipo MIME do vídeo (ex: video/mp4).</li>
+					</ul> 
+				</ul> 
+
+				<video controls width="100%">
+	<source src="midia/video/4 Non Blondes - What's Up (Official Music Video).mp4" type="video/mp4">
+</video>
+<hr>
+<h2>2. Incorporando Vídeos de Plataformas (YouTube, Vimeo)</h2>
+<ol> <li> Obtenha o Código: No vídeo desejado (ex: YouTube), clique em "Compartilhar", depois em "Incorporar" e copie o código < iframe>.</li>
+	<video>
+<li>Cole no HTML: Cole esse código diretamente na sua página HTML onde o vídeo deve aparecer. </li><ol>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=6NXnxTNIWkc&list=RD6NXnxTNIWkc&start_radio=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</video>
+
+
+<!--
+<video controls width="100%">
+	<source src="midia/video/4 Non Blondes - What's Up (Official Music Video).mp4" type="video/mp4">
+</video>-->
+			</body>
+			</html>

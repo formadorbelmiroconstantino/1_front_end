@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoints no Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Breakpoints no Bootstrap</h1>
+
+
+            <p>Breakpoints no Bootstrap são larguras de tela predefinidas (como 576px, 768px, 992px, etc.) que
+                determinam quando o layout de um site responsivo deve mudar, adaptando-se a diferentes dispositivos
+                (celulares, tablets, desktops) para garantir a melhor experiência do usuário; eles funcionam como
+                "pontos de quebra" para aplicar estilos via Media Queries CSS.</p>
+            <hr>
+            <h2>Como funcionam?</h2>
+            <ol>
+                <li>
+                    Pontos de Transição: São valores de min-width (largura mínima) ou max-width (largura máxima) que o
+                    Bootstrap usa para disparar mudanças no design. </li>
+                <li>Design Mobile First: O Bootstrap é "mobile first", ou seja, os estilos básicos são para telas
+                    pequenas, e os breakpoints adicionam estilos para telas maiores, como tablets e desktops. </li>
+                <li>Classes de Layout: Você usa classes específicas (como col-md-6, d-lg-none) que se aplicam a partir
+                    de um determinado breakpoint, dizendo como os elementos devem se comportar em cada tamanho de tela.
+                </li>
+            </ol>
+            <hr>
+            <h2>Pontos de Interrupção Disponíveis </h2>
+            <p>O Bootstrap inclui seis pontos de interrupção padrão, às vezes chamados de níveis de grid/grade , para
+                construção responsiva. Esses pontos de interrupção podem ser personalizados se você estiver usando
+                nossos arquivos Sass de origem.</p>
+
+            <h3>Tabela de Pontos de Interrupção</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Breakpoint</th>
+                        <th>Class infix</th>
+                        <th>Dimensões</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Extra small</td>
+                        <td>None</td>
+                        <td>
+                            < 576px</td>
+                    </tr>
+                    <tr>
+                        <td>Small</td>
+                        <td>sm</td>
+                        <td> ≥ 576px</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>md</td>
+                        <td> ≥ 768px</td>
+                    </tr>
+                    <tr>
+                        <td>Large</td>
+                        <td>lg</td>
+                        <td> ≥ 992px</td>
+                    </tr>
+                    <tr>
+                        <td>Extra large</td>
+                        <td>xl</td>
+                        <td> ≥ 1200px</td>
+                    </tr>
+                    <tr>
+                        <td>Extra extra large</td>
+                        <td>xxl</td>
+                        <td> ≥ 1400px</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><em>Cada ponto de quebra foi escolhido para acomodar confortavelmente
+                                containeres cujas larguras sejam múltiplos de 12. Os pontos de quebra também representam
+                                um subconjunto de tamanhos de dispositivos e dimensões de viewport comuns — eles não
+                                visam especificamente todos os casos de uso ou dispositivos. Em vez disso, os intervalos
+                                fornecem uma base sólida e consistente para praticamente qualquer dispositivo. Conteúdo
+                                tirado do site oficial do Bootstrap</em></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <hr>
+            <h2>Media Queries</h2>
+            <p>Como o Bootstrap foi desenvolvido com foco em dispositivos móveis, usamos algumas media queries para
+                criar breakpoints adequados para nossos layouts e interfaces. Esses breakpoints são baseados
+                principalmente nas larguras mínimas da viewport e nos permitem redimensionar os elementos conforme a
+                viewport muda.</p>
+
+
+            <h3>Min-width</h3>
+            <p>O Bootstrap utiliza principalmente os seguintes intervalos de media queries — ou breakpoints — em nossos
+                arquivos Sass de origem para nosso layout, sistema de grid e componentes.</p>
+
+
+            <ul>
+                <li>
+                    // X-Small devices (portrait phones, less than 576px)
+                    // No media query for `xs` since this is the default in Bootstrap</li>
+
+                <li>// Small devices (landscape phones, 576px and up)
+                    <ul>
+                        <li>@media (min-width: 576px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// Medium devices (tablets, 768px and up)
+                    <ul>
+                        <li>@media (min-width: 768px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// Large devices (desktops, 992px and up)
+                    <ul>
+                        <li>@media (min-width: 992px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// X-Large devices (large desktops, 1200px and up)
+                    <ul>
+                        <li>@media (min-width: 1200px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// XX-Large devices (larger desktops, 1400px and up)
+                    <ul>
+                        <li>@media (min-width: 1400px) { ... }</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Max-width</h3>
+            <p>Ocasionalmente, usamos media queries que vão na direcção oposta (o tamanho de tela especificado ou
+                menor):</p>
+
+
+            <ul>
+                <li>
+
+
+                    // `sm` applies to x-small devices (portrait phones, less than 576px)
+                    <ul>
+                        <li>@media (max-width: 575.98px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// `md` applies to small devices (landscape phones, less than 768px)
+                    <ul>
+                        <li>@media (max-width: 767.98px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// `lg` applies to medium devices (tablets, less than 992px)
+                    <ul>
+                        <li>@media (max-width: 991.98px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// `xl` applies to large devices (desktops, less than 1200px)
+                    <ul>
+                        <li>@media (max-width: 1199.98px) { ... }</li>
+                    </ul>
+                </li>
+
+                <li>// `xxl` applies to x-large devices (large desktops, less than 1400px)
+                    @media (max-width: 1399.98px) { ... }</li>
+            </ul>
+            </li>
+            </ul>
+
+            <h3>Entre Pontos de Interrupção</h3>
+            <p>As media queries podem abranger várias larguras de breakpoint:</p>
+<p>
+// Apply styles starting from medium devices and up to extra large devices <br>
+@media (min-width: 768px) and (max-width: 1199.98px) { ... }</p>
+            <h3>Exemplos de Breakpoints Comuns (Bootstrap 5):</h3>
+            <ul>
+                <li>
+                    sm (Small): 576px e acima (celulares em paisagem). </li>
+                <li>md (Medium): 768px e acima (tablets). </li>
+                <li>lg (Large): 992px e acima (desktops). </li>
+                <li>xl (Extra large): 1200px e acima (desktops grandes). </li>
+                <li>xxl (Extra extra large): 1400px e acima (desktops ainda maiores).
+                </li>
+            </ul>
+            <p>
+                <strong>Em resumo:</strong> Breakpoints são essenciais para a responsividade, permitindo que seu site se
+                ajuste suavemente a qualquer tela, usando os pontos de largura definidos pelo Bootstrap para controlar a
+                grade e o layout.
+            </p>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

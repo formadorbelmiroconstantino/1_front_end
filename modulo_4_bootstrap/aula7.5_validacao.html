@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container">
+
+            <h1>Formulários no Bootstrap - Validações</h1>
+            <p>As validações de formulário no Bootstrap 5 utilizam majoritariamente as pseudo-classes do CSS3 (:invalid e :valid) e a API de validação do navegador Constraint Validation API.</p>
+
+            <h2>1. Validação do Lado do Cliente (Browser)</h2>
+<p>Para aplicar o estilo visual do Bootstrap, você deve adicionar a classe .needs-validation ao &lt;form&gt; e o atributo novalidate para desativar as bolhas de erro padrão do navegador.</p>
+<p>O feedback é exibido através das classes .valid-feedback ou .invalid-feedback.</p>
+
+
+            <form class="row g-3 needs-validation form-border" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+
+<h2>2. O JavaScript Necessário</h2>
+<p>Para que as cores de erro apareçam apenas após o clique no botão de envio, o Bootstrap exige um pequeno script que adiciona a classe .was-validated ao formulário:</p>
+
+<p>
+  (function () { <br>
+  'use strict' <br>
+  // Busca todos os formulários aos quais queremos aplicar estilos de validação
+  var forms = document.querySelectorAll('.needs-validation') <br>
+
+  // Faz um loop neles e evita o envio <br>
+  Array.prototype.slice.call(forms) <br>
+    .forEach(function (form) { <br>
+      form.addEventListener('submit', function (event) { <br>
+        if (!form.checkValidity()) { <br>
+          event.preventDefault() <br>
+          event.stopPropagation() <br>
+        } <br>
+        form.classList.add('was-validated') <br>
+      }, false) <br>
+    }) <br>
+})()</p>
+
+<h2>3. Validação do Lado do Servido</h2>
+<p>Se vai validar os dados no backend (PHP, Node.js, etc.), não use .was-validated. Em vez disso, adicione manualmente as classes .is-invalid ou .is-valid diretamente nos inputs:</p>
+<ul>
+  <li>
+    .is-invalid: Torna a borda vermelha e exibe o texto de erro. </li>
+  <li>
+    .is-valid: Torna a borda verde.
+  </li>
+</ul>
+
+       </div>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+  (function () {
+  'use strict'
+  // Busca todos os formulários aos quais queremos aplicar estilos de validação
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Faz um loop neles e evita o envio
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+</script>

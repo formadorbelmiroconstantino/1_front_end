@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atributos</title>
+	<style>
+		.title1{
+			color: red;
+			font-size: 48px;
+		}
+	</style>
+</head>
+<body>
+	<h1>O que são atributos em html?</h1>
+	<p>Atributos HTML são palavras especiais dentro da tag de abertura que fornecem informações extras ou controlam o comportamento de um elemento, agindo como modificadores para personalizar sua função ou aparência, como definir um link <strong>(href)</strong>, uma imagem <strong>(src)</strong>, uma classe <strong>(class)</strong>, ou um ID único <strong>(id)</strong>, sempre no formato <strong>nome="valor"</strong>. Eles são essenciais para tornar o conteúdo dinâmico, identificável e estilizado, existindo atributos globais (para quase todas as tags) e específicos (para tags em particular). </p>
+	<hr>
+	<p><b>Como funcionam</b></p>
+	<b>Sintaxe:</b> São adicionados na tag de abertura, como nome="valor" (ex: &lt;img src="imagem.jpg"&gt;).<br>
+	<b>Função:</b> Adicionam dados (metadados) ou modificam a funcionalidade da tag. 
+	<hr>
+	<p><b>Exemplos de Atributos Comuns</b></p>
+	<p><b>href:</b> Define o destino de um link (&lt;a&gt;) ou recurso;</p>
+	<p><b>src:</b> Especifica o caminho de um arquivo de mídia, como uma imagem (&lt;img&gt;) ou vídeo;</p>
+	<p><b>alt:</b> Fornece um texto alternativo para imagens (importante para acessibilidade e SEO);</p>
+	<p><b>class:</b> Atribui uma classe CSS para estilizar um ou mais elementos;</p>
+	<p><b>id:</b> Atribui um identificador único a um elemento, para estilos ou scripts específicos;</p>
+	<p><b>style:</b> Permite aplicar estilos CSS diretamente ao elemento;</p>
+	<p><b>name:</b> Usado em formulários para identificar campos (como em < input>);</p>
+	<p><b>charset:</b> Um atributo que especifica a codificação de caracteres (conjunto de caracteres).</p>
+
+	<hr>
+	<p><strong>Tipos de Atributos</strong></p>
+	<p><b>Globais:</b> Funcionam em quase todas as tags HTML (ex: class, id, style, lang).</p>
+	<p><b>Específicos:</b> Funcionam apenas em determinadas tags (ex: src e alt em <img>). </p>
+	<hr>
+	<p><b>Vantagens dos atributos</b></p>
+	Imaginemos que estejamos a trabalhar em duas informações com a tag &lt;h2&gt;, mas queremos que haja diferença na formatação das informações:
+
+	<h2>1. Conteúdo do h2 sem formatação</h2>
+	<h2>2. Conteúdo do h2 com formatação</h2>
+
+	Se tentarmos formatar, com o auxílio de css, o conteúdo de 1., utilizando a tag &lt;h2&gt;, o conteúdo de 1. também vai receber a mesma formatação. Dentro da tag &lt;head&gt;, abaixo de &lt; title&gt;, cole o código  &lt;style&gt; h2{ color: red;} &lt;/style&gt;. Abra o navegador e notará que ambos os conteúdos estão avermelhados. Para o conteúdo 2. receber formatação diferente, podemos add um atributo class com o valor title1, class="title1", na tag &lt;h2&gt;: 
+
+	<h2 class="title1"> 2. Conteúdo do h2 com formatação</h2>
+
+<p><b>Declaração de atributos:</b></p>
+atributo
+atributo1<br>
+atributo-1<br>
+atribumo_1<br>
+atributoUm<br>
+atributo-um<br>
+atribumo_um
+
+<hr>
+<div style="width:100%; height:100px; background: red;"></div>
+	<hr>
+
+	<p>A tag &lt; meta&gt; com os dois atributos name e content, &lt;meta name=" viewport" content=" width=device-width, initial-scale=1"&gt;, em HTML é essencial para o <b>design responsivo</b>, dizendo ao navegador para ajustar a largura da página à largura da tela do dispositivo (width=device-width) e definir o nível de zoom inicial como 100% (initial-scale=1), garantindo que sites fiquem legíveis e bem dimensionados em celulares e tablets, sem precisar de zoom manual.</p>
+
+	<p><b>O que cada parte faz:</b></p>
+	<p><b>.meta name="viewport":</b> Informa ao navegador que estamos configurando a "área visível" (viewport) da página.</p>
+	<p><b>.width=device-width:</b> Define a largura da página para ser igual à largura da tela do dispositivo (em pixels), fazendo com que o layout se adapte.</p>
+	<p><b>.initial-scale=1:</b> Define o nível de zoom inicial quando a página é carregada, ou seja, 1:1 (sem zoom), para que um pixel do CSS seja equivalente a um pixel do dispositivo. </p>
+	<p><b>Por que é importante?</b></p>
+	<p>Sem essa tag, em dispositivos móveis, o navegador tenta renderizar a página como se fosse um desktop (com largura fixa, como 980px), e depois a reduz para caber na tela, deixando tudo muito pequeno e difícil de ler. Essa tag permite que seu site se adapte automaticamente a qualquer tamanho de tela, essencial para uma boa experiência do usuário (UX) e para o SEO. </p>
+	<p>Em resumo, atributos são as "características" ou "informações adicionais" que você dá às suas tags HTML para que elas funcionem exatamente como você precisa na página.</p> 
+	<strong>No exemplo aula_5, falaremos uma introdução ao CSS.</strong>
+</body>
+</html>

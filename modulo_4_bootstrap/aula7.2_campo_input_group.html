@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários no Bootstrap</title>
+
+    <!--CSS PARA O BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container">
+
+            <h1>Formulários no Bootstrap - Campo Input Group</h1>
+
+    <p>O Input Group (Grupo de Entrada) no Bootstrap é um componente utilizado para estender campos de formulário, permitindo adicionar ícones, textos, botões ou outros elementos visualmente conectados na frente ou atrás do campo de entrada (&lt;input&gt;).</p>
+
+    <h2>Como Funciona</h2>
+<p>Para criar um grupo de entrada, envolve-se o campo e o elemento adicional em um container com a classe .input-group.</p>
+<ul>
+  <li>
+    Complemento de Texto/Ícones: Utilize um elemento (geralmente <span>) com a classe .input-group-text dentro do container. </li> 
+  <li> Posicionamento: </li> 
+    <ul>
+  <li>No Bootstrap 4, usa-se .input-group-prepend para adicionar antes e .input-group-append para adicionar depois do input.</li>
+    <li>No Bootstrap 5, basta colocar o elemento adicional directamente antes ou depois da tag &lt;input&gt; dentro da div .input-group (as classes prepend/append foram removidas para simplificação).</li> 
+</ul>
+  </li> 
+</ul>
+
+<h2>Exemplos de Uso</h2>
+<ol>
+  <li>
+    Símbolos Monetários ou Usuários: Adicionar um "@" antes de um campo de usuário ou "Kz/AOA" antes de um valor numérico. </li>
+    <li>Botões de Acção: Acoplar um botão de "Pesquisar" ou "Enviar" directamente ao lado do campo de texto. </li>
+    <li>Checkboxes e Radios: Inserir uma caixa de selecção dentro do grupo para habilitar/desabilitar campos específicos. </li>
+    <li>Tamanhos: É possível controlar o tamanho do grupo inteiro usando as classes .input-group-sm (pequeno) ou .input-group-lg (grande).
+  </li>
+</ol>
+
+<h2>Diferença entre input-group e form-group</h2>
+<ul>
+  <li>
+    .form-group (ou .mb-3 no v5): Serve para o espaçamento vertical entre diferentes campos de um formulário (margens inferiores).
+  </li>
+  <li>.input-group: Serve para a união visual horizontal de um input com outros elementos.
+  </li>
+</ul>
+<p>Para detalhes técnicos e exemplos de código atualizados para 2026, consulte a documentação oficial do Bootstrap. Mais abaixo, poderá ler informações que o site da Bootstrap nos proporciona.</p>
+
+<h2>Informações do Site Oficial do Bootstrap</h2>
+<p>Amplie facilmente os controllers de formulário adicionando texto, botões ou grupos de botões em ambos os lados de campos de texto, selecções personalizadas e inputs de arquivo personalizadas.</p>
+<hr>
+<p><strong>Exemplos</strong></p>
+<p><strong>Exemplo 1</strong></p>
+<p>Coloque um complemento ou botão de cada lado de um campo do tipo input. Você também pode colocar um em ambos os lados de um campo do tipo input. Lembre-se de colocar &lt;label&gt; os complementos fora do grupo de campos do tipo.</p>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient’s username" aria-label="Recipient’s username" aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2">@example.com</span>
+</div>
+
+<div class="mb-3">
+  <label for="basic-url" class="form-label">Your vanity URL</label>
+  <div class="input-group">
+    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+  </div>
+  <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">AOA</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Valor">
+  <span class="input-group-text">.00</span>
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+  <span class="input-group-text">@</span>
+  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+</div>
+
+<div class="input-group">
+  <span class="input-group-text">With textarea</span>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+
+<p><strong>Exemplo 2 - Tamanhos</strong></p>
+
+<p>Adicione as classes de dimensionamento relativas ao .input-group e o conteúdo dentro dele será redimensionado automaticamente — não é necessário repetir as classes de tamanho do controller de formulário em cada elemento.</p>
+
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group input-group-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+</div>
+
+<h2>Múltiplas Inputs</h2>
+<p>Embora vários &lt;input&gt; sejam suportados visualmente, os estilos de validação estão disponíveis apenas para grupos de entrada com um único campo &lt;input&gt;.</p>
+
+<div class="input-group">
+  <span class="input-group-text">Nome e sobrenome</span>
+  <input type="text" aria-label="First name" class="form-control">
+  <input type="text" aria-label="Last name" class="form-control">
+</div>
+<br><br>
+<h2>Botões com Menus Suspensos</h2>
+<p>Os Input Group Buttons with Dropdowns no Bootstrap servem para agrupar funcionalidades de selecção de contexto ou acções múltiplas directamente vinculadas a um campo de entrada.</p>
+
+<p>Eles são úteis principalmente para:</p> 
+<ul>
+  <li>
+    Selecção de Contexto/Categoria: Permitem que o utilizador escolha o tipo de dado que está inserindo. Por exemplo, em um campo de busca, o dropdown pode permitir filtrar entre "Produtos", "Categorias" ou "Marcas" antes da digitação.</li>
+  <li>
+    Troca de Unidades ou Moedas: Em campos de valores numéricos, o botão dropdown pode servir para seleccionar a moeda (AOA\R\(,US\), €) ou a unidade de medida (kg, g, mg) associada ao número inserido no input.</li>
+  <li>
+    Acções Rápidas Relacionadas: Permitem agrupar várias acções que podem ser realizadas com o valor digitado, como "Salvar", "Salvar e Enviar" ou "Salvar como Rascunho" em um único conjunto visual.</li>
+  <li>
+    Economia de Espaço: Substituem múltiplos botões individuais ou campos de seleção separados por um único componente compacto e integrado ao campo de texto.
+  </li>
+</ul>
+
+<p>Para implementar, utiliza-se a estrutura padrão de um <strong>.input-group</strong> e insere-se um botão com a classe <strong>.dropdown-toggle</strong> e o atributo <strong>data-bs-toggle="dropdown"</strong> ao lado do &lt;input&gt;.</p>
+
+<div class="input-group mb-3">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<div class="input-group">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action before</a></li>
+    <li><a class="dropdown-item" href="#">Another action before</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+  <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+<br><br>
+
+<h2>Formulários Personalizados</h2>
+<p>Os grupos de entrada incluem suporte para selecções e entradas de arquivo personalizadas. As versões <em>default</em> do navegador não são suportadas.</p>
+
+<p><strong>Seleccões</strong></p>
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <select class="form-select" id="inputGroupSelect02">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <label class="input-group-text" for="inputGroupSelect02">Options</label>
+</div>
+
+<div class="input-group mb-3">
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+  <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+</div>
+<br><br>
+<p><strong>Arquivo</strong></p>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupFile01">Upload</label>
+  <input type="file" class="form-control" id="inputGroupFile01">
+</div>
+
+<div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02">
+  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+</div>
+
+<div class="input-group mb-3">
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+  <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+</div>
+
+<div class="input-group">
+  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+</div>
+
+       </div>
+        </section>
+    </main>
+
+    <!--JS PARA O BOOTSTRAP e jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+
+    <!--JS DO PROJECTO-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

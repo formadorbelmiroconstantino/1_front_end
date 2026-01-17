@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS FlexBox | Flex Direction</title>
+	<style>
+
+		.container1{
+			 display: flex;
+  flex-direction: row; 
+		}
+		.grid-container {
+  display: flex;
+  flex-direction: row; /* Alinhamento em linha, itens lado a lado, na horizontal*/
+  justify-content: space-around; /* Espaçamento entre os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
+  height: 200px; /* Apenas para visualização */
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 20px;
+  margin: 5px;
+  flex-grow: 1; /* Faz os itens crescerem igualmente */
+}
+
+.container2{
+
+	display: flex; /*Activamos o flexbos e automaticamente, posiciona todos os itens na mesma linha*/
+	flex-direction: column; /*Elemento em coluna, na vertical*/
+}
+.item{
+	flex-grow: 1; /*Deixa todos os itens com o mesmo tamanho*/
+	height: 100px; /*Aumentamos a altura so para vermos se ficarao, realmente, com o mesmo tamanho*/
+	background: lightblue;
+	margin: 10px; /*Uma margem para nao deixar os elementos muito junto*/
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<h1>CSS - FlexBox | flex-direction</h1>
+
+	<p>Trabalhar com Flexbox em HTML envolve transformar um elemento pai (container) com display: flex; para controlar o layout de seus filhos (itens flex), usando propriedades como flex-direction (dircção), justify-content (alinhamento no eixo principal), align-items (alinhamento no eixo transversal), flex-wrap (quebra de linha) e flex-grow/flex-shrink (crescimento/encolhimento dos itens) para criar layouts responsivos e flexíveis, sem precisar de float ou position complexos,. </p>
+
+	<h2>Conceitos Básicos</h2>
+	<p>Flex Container (Contêiner Flexível): O elemento pai onde você aplica display: flex; ou display: inline-flex;. Todos os seus filhos diretos se tornam "itens flex".
+	Flex Items (Itens Flexíveis): Os filhos diretos do contêiner flexível, cujas propriedades você pode controlar com CSS. </p>
+	<h2>Propriedades do Contêiner (Pai)</h2>
+	<h3>No HTML</h3>
+	<h2>Flex Direction: row</h2>
+	<div class="container1">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+	</div>
+
+	<h3>No CSS</h3>
+
+	
+.container2{
+
+	display: flex; /*Activamos o flexbos e automaticamente, posiciona todos os itens na mesma linha*/
+	flex-direction: column; /*Elemento em coluna, na vertical*/
+}
+	<ul>
+		<li> flex-direction: Define a direção dos itens (linha, coluna).</li>
+		<ul><li> row (padrão), row-reverse, column, column-reverse.</li></ul>
+		<li> flex-wrap: Define se os itens quebram para a próxima linha.</li>
+		<ul><li>nowrap (padrão), wrap, wrap-reverse.</li></ul>
+		<li> flex-flow: Atalho para flex-direction e flex-wrap.</li>
+		<li> justify-content: Alinha itens no eixo principal (horizontal, por padrão).</li>
+		<ul><li>flex-start, flex-end, center, space-between, space-around.</li></ul>
+		<li> align-items: Alinha itens no eixo transversal (vertical, por padrão).</li>
+		<ul><li>flex-start, flex-end, center, baseline, stretch. </li></ul>
+	</ul>
+
+	<h2>Propriedades dos Itens (Filhos)</h2>
+	<ul>
+		<li> flex-grow: Define a capacidade de um item crescer para preencher espaço extra.</li>
+		<li>flex-shrink: Define a capacidade de um item encolher.</li>
+		<li>flex-basis: Define o tamanho inicial do item antes do espaço ser distribuído.</li>
+		<li>align-self: Sobrescreve align-items para um item específico.</li>
+	</ul>
+
+<h3>Exemplo Prático</h3>
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+</div>
+
+<h3>Em resumo, abaixo, estão os conceitos para manipular o layout e a aparência em Flexbox:</h3>
+<h4>1. Organizando o Fluxo (o que muitos confundem com "decoration")
+Se você deseja controlar a direção e o quebra de linha dos itens, utilize o Flex Flow no MDN:</h4>
+.container {
+  display: flex;
+  flex-flow: row wrap; /* Direção horizontal com quebra de linha */
+}
+<h4>2. Espaçamento entre Itens</h4>
+
+<p>
+Para adicionar "espaço" ou decoração visual entre elementos sem usar margens manuais, utilize a propriedade gap:</p>
+.container {
+  display: flex;
+  gap: 20px; /* Cria um espaçamento uniforme entre os itens */
+}
+
+<h4>3. Alinhamento e Eixos</h4>
+<p>Para "decorar" o posicionamento dos itens no container:</p>
+<ul> <li><b> justify-content:</b> Alinha itens no eixo principal (horizontal por padrão).</li>
+<li><b>align-items:</b> Alinha itens no eixo perpendicular (vertical por padrão).</li> </ul>
+<h4>4. Decoração de Texto (Text Decoration)</h4>
+<p>Se você quer decorar o texto dentro de um item flex, use:</p>
+
+.item-flex {
+  text-decoration: underline; /* Sublinhado */
+  text-decoration-color: blue; /* Cor da linha */
+  text-decoration-style: dashed; /* Estilo tracejado */
+}
+
+<h2>Flex Direction: column</h2>
+				<div class="container2">
+					<div class="item">Item 1</div>
+					<div class="item">Item 2</div>
+					<div class="item">Item 3</div>
+
+				</div>
+<!-- row-reverse inverte a ordem dos itens-->
+			<h2>Flex Direction: row-reverse</h2>
+				<div style="display: flex; flex-direction: row-reverse;">
+					<div class="item">Item 1</div>
+					<div class="item">Item 2</div>
+					<div class="item">Item 3</div>
+
+				</div>
+
+				<!-- column-reverse inverte a ordem dos itens-->
+			<h2>Flex Direction: column-reverse</h2>
+				<div style="display: flex; flex-direction: column-reverse;">
+					<div class="item">Item 1</div>
+					<div class="item">Item 2</div>
+					<div class="item">Item 3</div>
+
+				</div>
+</body>
+</html>
